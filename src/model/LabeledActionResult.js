@@ -24,11 +24,11 @@ class LabeledActionResult {
      * Constructs a new <code>LabeledActionResult</code>.
      * @alias module:model/LabeledActionResult
      * @param result {module:model/ActionResult} 
-     * @param objtp {module:model/LabeledActionResult.ObjtpEnum} 
+     * @param type {module:model/LabeledActionResult.TypeEnum} 
      */
-    constructor(result, objtp) { 
+    constructor(result, type) { 
         
-        LabeledActionResult.initialize(this, result, objtp);
+        LabeledActionResult.initialize(this, result, type);
     }
 
     /**
@@ -36,9 +36,9 @@ class LabeledActionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, result, objtp) { 
+    static initialize(obj, result, type) { 
         obj['result'] = result;
-        obj['objtp'] = objtp;
+        obj['type'] = type;
     }
 
     /**
@@ -58,8 +58,8 @@ class LabeledActionResult {
             if (data.hasOwnProperty('result')) {
                 obj['result'] = ActionResult.constructFromObject(data['result']);
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -80,21 +80,21 @@ LabeledActionResult.prototype['name'] = '';
 LabeledActionResult.prototype['result'] = undefined;
 
 /**
- * @member {module:model/LabeledActionResult.ObjtpEnum} objtp
+ * @member {module:model/LabeledActionResult.TypeEnum} type
  * @default 'LabeledActionResult'
  */
-LabeledActionResult.prototype['objtp'] = 'LabeledActionResult';
+LabeledActionResult.prototype['type'] = 'LabeledActionResult';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-LabeledActionResult['ObjtpEnum'] = {
+LabeledActionResult['TypeEnum'] = {
 
     /**
      * value: "LabeledActionResult"

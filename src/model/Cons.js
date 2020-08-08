@@ -26,11 +26,11 @@ class Cons {
      * @alias module:model/Cons
      * @extends module:model/LinkedList
      * @implements module:model/LinkedList
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        LinkedList.initialize(this, objtp);
-        Cons.initialize(this, objtp);
+    constructor(type) { 
+        LinkedList.initialize(this, type);
+        Cons.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class Cons {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
         obj['head'] = head;
         obj['tail'] = tail;
     }
@@ -82,10 +82,10 @@ Cons.prototype['tail'] = undefined;
 
 // Implement LinkedList interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-LinkedList.prototype['objtp'] = '';
+LinkedList.prototype['type'] = '';
 
 
 

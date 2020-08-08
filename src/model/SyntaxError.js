@@ -27,11 +27,11 @@ class SyntaxError {
      * @alias module:model/SyntaxError
      * @extends module:model/AbstractProblem
      * @implements module:model/AbstractProblem
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        AbstractProblem.initialize(this, objtp);
-        SyntaxError.initialize(this, objtp);
+    constructor(type) { 
+        AbstractProblem.initialize(this, type);
+        SyntaxError.initialize(this, type);
     }
 
     /**
@@ -39,10 +39,10 @@ class SyntaxError {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
+        obj['next'] = next;
         obj['node'] = node;
         obj['trace'] = trace;
-        obj['next'] = next;
     }
 
     /**
@@ -58,14 +58,14 @@ class SyntaxError {
             AbstractProblem.constructFromObject(data, obj);
             AbstractProblem.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('next')) {
+                obj['next'] = SyntaxNode.constructFromObject(data['next']);
+            }
             if (data.hasOwnProperty('node')) {
                 obj['node'] = SyntaxNode.constructFromObject(data['node']);
             }
             if (data.hasOwnProperty('trace')) {
                 obj['trace'] = LinkedList.constructFromObject(data['trace']);
-            }
-            if (data.hasOwnProperty('next')) {
-                obj['next'] = SyntaxNode.constructFromObject(data['next']);
             }
         }
         return obj;
@@ -73,6 +73,11 @@ class SyntaxError {
 
 
 }
+
+/**
+ * @member {module:model/SyntaxNode} next
+ */
+SyntaxError.prototype['next'] = undefined;
 
 /**
  * @member {module:model/SyntaxNode} node
@@ -84,18 +89,13 @@ SyntaxError.prototype['node'] = undefined;
  */
 SyntaxError.prototype['trace'] = undefined;
 
-/**
- * @member {module:model/SyntaxNode} next
- */
-SyntaxError.prototype['next'] = undefined;
-
 
 // Implement AbstractProblem interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-AbstractProblem.prototype['objtp'] = '';
+AbstractProblem.prototype['type'] = '';
 
 
 

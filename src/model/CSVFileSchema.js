@@ -25,11 +25,11 @@ class CSVFileSchema {
      * @alias module:model/CSVFileSchema
      * @extends module:model/FileSchema
      * @implements module:model/FileSchema
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        FileSchema.initialize(this, objtp);
-        CSVFileSchema.initialize(this, objtp);
+    constructor(type) { 
+        FileSchema.initialize(this, type);
+        CSVFileSchema.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class CSVFileSchema {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -71,10 +71,10 @@ CSVFileSchema.prototype['types'] = undefined;
 
 // Implement FileSchema interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-FileSchema.prototype['objtp'] = '';
+FileSchema.prototype['type'] = '';
 
 
 

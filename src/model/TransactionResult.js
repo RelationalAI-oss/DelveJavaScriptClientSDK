@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import AbstractProblem from './AbstractProblem';
 import LabeledActionResult from './LabeledActionResult';
-import RelDict from './RelDict';
+import Relation from './Relation';
 
 /**
  * The TransactionResult model module.
@@ -25,11 +25,11 @@ class TransactionResult {
     /**
      * Constructs a new <code>TransactionResult</code>.
      * @alias module:model/TransactionResult
-     * @param objtp {module:model/TransactionResult.ObjtpEnum} 
+     * @param type {module:model/TransactionResult.TypeEnum} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        TransactionResult.initialize(this, objtp);
+        TransactionResult.initialize(this, type);
     }
 
     /**
@@ -37,8 +37,8 @@ class TransactionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -52,20 +52,20 @@ class TransactionResult {
         if (data) {
             obj = obj || new TransactionResult();
 
-            if (data.hasOwnProperty('output')) {
-                obj['output'] = RelDict.constructFromObject(data['output']);
-            }
-            if (data.hasOwnProperty('problems')) {
-                obj['problems'] = ApiClient.convertToType(data['problems'], [AbstractProblem]);
+            if (data.hasOwnProperty('aborted')) {
+                obj['aborted'] = ApiClient.convertToType(data['aborted'], 'Boolean');
             }
             if (data.hasOwnProperty('actions')) {
                 obj['actions'] = ApiClient.convertToType(data['actions'], [LabeledActionResult]);
             }
-            if (data.hasOwnProperty('aborted')) {
-                obj['aborted'] = ApiClient.convertToType(data['aborted'], 'Boolean');
+            if (data.hasOwnProperty('output')) {
+                obj['output'] = ApiClient.convertToType(data['output'], [Relation]);
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('problems')) {
+                obj['problems'] = ApiClient.convertToType(data['problems'], [AbstractProblem]);
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -75,7 +75,18 @@ class TransactionResult {
 }
 
 /**
- * @member {module:model/RelDict} output
+ * @member {Boolean} aborted
+ * @default false
+ */
+TransactionResult.prototype['aborted'] = false;
+
+/**
+ * @member {Array.<module:model/LabeledActionResult>} actions
+ */
+TransactionResult.prototype['actions'] = undefined;
+
+/**
+ * @member {Array.<module:model/Relation>} output
  */
 TransactionResult.prototype['output'] = undefined;
 
@@ -85,32 +96,21 @@ TransactionResult.prototype['output'] = undefined;
 TransactionResult.prototype['problems'] = undefined;
 
 /**
- * @member {Array.<module:model/LabeledActionResult>} actions
- */
-TransactionResult.prototype['actions'] = undefined;
-
-/**
- * @member {Boolean} aborted
- * @default false
- */
-TransactionResult.prototype['aborted'] = false;
-
-/**
- * @member {module:model/TransactionResult.ObjtpEnum} objtp
+ * @member {module:model/TransactionResult.TypeEnum} type
  * @default 'TransactionResult'
  */
-TransactionResult.prototype['objtp'] = 'TransactionResult';
+TransactionResult.prototype['type'] = 'TransactionResult';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-TransactionResult['ObjtpEnum'] = {
+TransactionResult['TypeEnum'] = {
 
     /**
      * value: "TransactionResult"

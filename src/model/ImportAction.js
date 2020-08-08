@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Action from './Action';
-import RelDict from './RelDict';
+import Relation from './Relation';
 
 /**
  * The ImportAction model module.
@@ -26,11 +26,11 @@ class ImportAction {
      * @alias module:model/ImportAction
      * @extends module:model/Action
      * @implements module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        Action.initialize(this, objtp);
-        ImportAction.initialize(this, objtp);
+    constructor(type) { 
+        Action.initialize(this, type);
+        ImportAction.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class ImportAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -55,7 +55,7 @@ class ImportAction {
             Action.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('inputs')) {
-                obj['inputs'] = RelDict.constructFromObject(data['inputs']);
+                obj['inputs'] = ApiClient.convertToType(data['inputs'], [Relation]);
             }
         }
         return obj;
@@ -65,17 +65,17 @@ class ImportAction {
 }
 
 /**
- * @member {module:model/RelDict} inputs
+ * @member {Array.<module:model/Relation>} inputs
  */
 ImportAction.prototype['inputs'] = undefined;
 
 
 // Implement Action interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

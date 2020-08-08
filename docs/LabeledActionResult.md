@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | [optional] [default to &#39;&#39;]
 **result** | [**ActionResult**](ActionResult.md) |  | 
-**objtp** | **String** |  | [default to &#39;LabeledActionResult&#39;]
+**type** | **String** |  | [default to &#39;LabeledActionResult&#39;]
 
 
 
-## Enum: ObjtpEnum
+## Enum: TypeEnum
 
 
 * `LabeledActionResult` (value: `"LabeledActionResult"`)

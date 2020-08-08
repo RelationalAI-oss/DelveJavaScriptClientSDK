@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**startPoint** | [**Point**](Point.md) |  | 
 **endPoint** | [**Point**](Point.md) |  | 
-**objtp** | **String** |  | [default to &#39;Area&#39;]
+**startPoint** | [**Point**](Point.md) |  | 
+**type** | **String** |  | [default to &#39;Area&#39;]
 
 
 
-## Enum: ObjtpEnum
+## Enum: TypeEnum
 
 
 * `Area` (value: `"Area"`)

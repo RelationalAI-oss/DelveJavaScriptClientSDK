@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ActionResult from './ActionResult';
-import RelDict from './RelDict';
+import Relation from './Relation';
 
 /**
  * The CardinalityActionResult model module.
@@ -26,11 +26,11 @@ class CardinalityActionResult {
      * @alias module:model/CardinalityActionResult
      * @extends module:model/ActionResult
      * @implements module:model/ActionResult
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        ActionResult.initialize(this, objtp);
-        CardinalityActionResult.initialize(this, objtp);
+    constructor(type) { 
+        ActionResult.initialize(this, type);
+        CardinalityActionResult.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class CardinalityActionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -55,7 +55,7 @@ class CardinalityActionResult {
             ActionResult.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('result')) {
-                obj['result'] = RelDict.constructFromObject(data['result']);
+                obj['result'] = ApiClient.convertToType(data['result'], [Relation]);
             }
         }
         return obj;
@@ -65,17 +65,17 @@ class CardinalityActionResult {
 }
 
 /**
- * @member {module:model/RelDict} result
+ * @member {Array.<module:model/Relation>} result
  */
 CardinalityActionResult.prototype['result'] = undefined;
 
 
 // Implement ActionResult interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-ActionResult.prototype['objtp'] = '';
+ActionResult.prototype['type'] = '';
 
 
 

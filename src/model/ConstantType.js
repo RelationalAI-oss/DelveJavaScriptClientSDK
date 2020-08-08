@@ -26,11 +26,11 @@ class ConstantType {
      * @alias module:model/ConstantType
      * @extends module:model/DBType
      * @implements module:model/DBType
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        DBType.initialize(this, objtp);
-        ConstantType.initialize(this, objtp);
+    constructor(type) { 
+        DBType.initialize(this, type);
+        ConstantType.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class ConstantType {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -72,10 +72,10 @@ ConstantType.prototype['_constant'] = undefined;
 
 // Implement DBType interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-DBType.prototype['objtp'] = '';
+DBType.prototype['type'] = '';
 
 
 

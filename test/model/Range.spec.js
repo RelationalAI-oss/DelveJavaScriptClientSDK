@@ -54,20 +54,8 @@
       //expect(instance).to.be.a(DelveClientSdk.Range);
     });
 
-    it('should have the property input (base name: "input")', function() {
-      // uncomment below and update the code to test the property input
-      //var instane = new DelveClientSdk.Range();
-      //expect(instance).to.be();
-    });
-
     it('should have the property area (base name: "area")', function() {
       // uncomment below and update the code to test the property area
-      //var instane = new DelveClientSdk.Range();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property startByte (base name: "start_byte")', function() {
-      // uncomment below and update the code to test the property startByte
       //var instane = new DelveClientSdk.Range();
       //expect(instance).to.be();
     });
@@ -78,8 +66,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property objtp (base name: "objtp")', function() {
-      // uncomment below and update the code to test the property objtp
+    it('should have the property input (base name: "input")', function() {
+      // uncomment below and update the code to test the property input
+      //var instane = new DelveClientSdk.Range();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property startByte (base name: "start_byte")', function() {
+      // uncomment below and update the code to test the property startByte
+      //var instane = new DelveClientSdk.Range();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new DelveClientSdk.Range();
       //expect(instance).to.be();
     });

@@ -25,11 +25,11 @@ class Range {
      * Constructs a new <code>Range</code>.
      * @alias module:model/Range
      * @param area {module:model/Area} 
-     * @param objtp {module:model/Range.ObjtpEnum} 
+     * @param type {module:model/Range.TypeEnum} 
      */
-    constructor(area, objtp) { 
+    constructor(area, type) { 
         
-        Range.initialize(this, area, objtp);
+        Range.initialize(this, area, type);
     }
 
     /**
@@ -37,9 +37,9 @@ class Range {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, area, objtp) { 
+    static initialize(obj, area, type) { 
         obj['area'] = area;
-        obj['objtp'] = objtp;
+        obj['type'] = type;
     }
 
     /**
@@ -53,20 +53,20 @@ class Range {
         if (data) {
             obj = obj || new Range();
 
-            if (data.hasOwnProperty('input')) {
-                obj['input'] = AnyValue.constructFromObject(data['input']);
-            }
             if (data.hasOwnProperty('area')) {
                 obj['area'] = Area.constructFromObject(data['area']);
-            }
-            if (data.hasOwnProperty('start_byte')) {
-                obj['start_byte'] = ApiClient.convertToType(data['start_byte'], 'Number');
             }
             if (data.hasOwnProperty('end_byte')) {
                 obj['end_byte'] = ApiClient.convertToType(data['end_byte'], 'Number');
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('input')) {
+                obj['input'] = AnyValue.constructFromObject(data['input']);
+            }
+            if (data.hasOwnProperty('start_byte')) {
+                obj['start_byte'] = ApiClient.convertToType(data['start_byte'], 'Number');
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -76,19 +76,9 @@ class Range {
 }
 
 /**
- * @member {module:model/AnyValue} input
- */
-Range.prototype['input'] = undefined;
-
-/**
  * @member {module:model/Area} area
  */
 Range.prototype['area'] = undefined;
-
-/**
- * @member {Number} start_byte
- */
-Range.prototype['start_byte'] = undefined;
 
 /**
  * @member {Number} end_byte
@@ -96,21 +86,31 @@ Range.prototype['start_byte'] = undefined;
 Range.prototype['end_byte'] = undefined;
 
 /**
- * @member {module:model/Range.ObjtpEnum} objtp
+ * @member {module:model/AnyValue} input
+ */
+Range.prototype['input'] = undefined;
+
+/**
+ * @member {Number} start_byte
+ */
+Range.prototype['start_byte'] = undefined;
+
+/**
+ * @member {module:model/Range.TypeEnum} type
  * @default 'Range'
  */
-Range.prototype['objtp'] = 'Range';
+Range.prototype['type'] = 'Range';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-Range['ObjtpEnum'] = {
+Range['TypeEnum'] = {
 
     /**
      * value: "Range"

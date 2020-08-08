@@ -23,11 +23,11 @@ class PairAnyValueAnyValue {
     /**
      * Constructs a new <code>PairAnyValueAnyValue</code>.
      * @alias module:model/PairAnyValueAnyValue
-     * @param objtp {module:model/PairAnyValueAnyValue.ObjtpEnum} 
+     * @param type {module:model/PairAnyValueAnyValue.TypeEnum} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        PairAnyValueAnyValue.initialize(this, objtp);
+        PairAnyValueAnyValue.initialize(this, type);
     }
 
     /**
@@ -35,8 +35,8 @@ class PairAnyValueAnyValue {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -56,8 +56,8 @@ class PairAnyValueAnyValue {
             if (data.hasOwnProperty('second')) {
                 obj['second'] = AnyValue.constructFromObject(data['second']);
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -77,27 +77,27 @@ PairAnyValueAnyValue.prototype['first'] = undefined;
 PairAnyValueAnyValue.prototype['second'] = undefined;
 
 /**
- * @member {module:model/PairAnyValueAnyValue.ObjtpEnum} objtp
- * @default 'Pair_AnyValue_AnyValue'
+ * @member {module:model/PairAnyValueAnyValue.TypeEnum} type
+ * @default 'Pair_AnyValue_AnyValue_'
  */
-PairAnyValueAnyValue.prototype['objtp'] = 'Pair_AnyValue_AnyValue';
+PairAnyValueAnyValue.prototype['type'] = 'Pair_AnyValue_AnyValue_';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-PairAnyValueAnyValue['ObjtpEnum'] = {
+PairAnyValueAnyValue['TypeEnum'] = {
 
     /**
-     * value: "Pair_AnyValue_AnyValue"
+     * value: "Pair_AnyValue_AnyValue_"
      * @const
      */
-    "Pair_AnyValue_AnyValue": "Pair_AnyValue_AnyValue"
+    "Pair_AnyValue_AnyValue_": "Pair_AnyValue_AnyValue_"
 };
 
 

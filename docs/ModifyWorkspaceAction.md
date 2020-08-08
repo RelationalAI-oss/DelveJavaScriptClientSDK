@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deleteSource** | **[String]** |  | [optional] 
 **deleteEdb** | **String** |  | [optional] [default to &#39;&#39;]
+**deleteSource** | **[String]** |  | [optional] 
 **enableLibrary** | **String** |  | [optional] [default to &#39;&#39;]
 
 

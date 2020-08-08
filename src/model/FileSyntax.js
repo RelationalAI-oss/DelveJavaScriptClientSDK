@@ -22,11 +22,11 @@ class FileSyntax {
     /**
      * Constructs a new <code>FileSyntax</code>.
      * @alias module:model/FileSyntax
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        FileSyntax.initialize(this, objtp);
+        FileSyntax.initialize(this, type);
     }
 
     /**
@@ -34,8 +34,8 @@ class FileSyntax {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -49,8 +49,8 @@ class FileSyntax {
         if (data) {
             obj = obj || new FileSyntax();
 
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -60,10 +60,10 @@ class FileSyntax {
 }
 
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-FileSyntax.prototype['objtp'] = '';
+FileSyntax.prototype['type'] = '';
 
 
 

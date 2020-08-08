@@ -29,7 +29,6 @@ import CollectProblemsActionResult from './model/CollectProblemsActionResult';
 import Cons from './model/Cons';
 import ConstantType from './model/ConstantType';
 import DBType from './model/DBType';
-import DictElementRelKeyAnyValue from './model/DictElementRelKeyAnyValue';
 import ExceptionProblem from './model/ExceptionProblem';
 import FileSchema from './model/FileSchema';
 import FileSyntax from './model/FileSyntax';
@@ -57,7 +56,6 @@ import ModifyWorkspaceActionResult from './model/ModifyWorkspaceActionResult';
 import Nil from './model/Nil';
 import OutputProblem from './model/OutputProblem';
 import PairAnyValueAnyValue from './model/PairAnyValueAnyValue';
-import PairRelKeyAnyValue from './model/PairRelKeyAnyValue';
 import ParseAction from './model/ParseAction';
 import ParseActionResult from './model/ParseActionResult';
 import PersistProblem from './model/PersistProblem';
@@ -65,8 +63,8 @@ import Point from './model/Point';
 import QueryAction from './model/QueryAction';
 import QueryActionResult from './model/QueryActionResult';
 import Range from './model/Range';
-import RelDict from './model/RelDict';
 import RelKey from './model/RelKey';
+import Relation from './model/Relation';
 import SetOptionsAction from './model/SetOptionsAction';
 import SetOptionsActionResult from './model/SetOptionsActionResult';
 import Source from './model/Source';
@@ -216,12 +214,6 @@ export {
      * @property {module:model/DBType}
      */
     DBType,
-
-    /**
-     * The DictElementRelKeyAnyValue model constructor.
-     * @property {module:model/DictElementRelKeyAnyValue}
-     */
-    DictElementRelKeyAnyValue,
 
     /**
      * The ExceptionProblem model constructor.
@@ -386,12 +378,6 @@ export {
     PairAnyValueAnyValue,
 
     /**
-     * The PairRelKeyAnyValue model constructor.
-     * @property {module:model/PairRelKeyAnyValue}
-     */
-    PairRelKeyAnyValue,
-
-    /**
      * The ParseAction model constructor.
      * @property {module:model/ParseAction}
      */
@@ -434,16 +420,16 @@ export {
     Range,
 
     /**
-     * The RelDict model constructor.
-     * @property {module:model/RelDict}
-     */
-    RelDict,
-
-    /**
      * The RelKey model constructor.
      * @property {module:model/RelKey}
      */
     RelKey,
+
+    /**
+     * The Relation model constructor.
+     * @property {module:model/Relation}
+     */
+    Relation,
 
     /**
      * The SetOptionsAction model constructor.

@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(DelveClientSdk.RelKey);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
+    it('should have the property keys (base name: "keys")', function() {
+      // uncomment below and update the code to test the property keys
       //var instane = new DelveClientSdk.RelKey();
       //expect(instance).to.be();
     });
 
-    it('should have the property keys (base name: "keys")', function() {
-      // uncomment below and update the code to test the property keys
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
       //var instane = new DelveClientSdk.RelKey();
       //expect(instance).to.be();
     });
@@ -72,8 +72,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property objtp (base name: "objtp")', function() {
-      // uncomment below and update the code to test the property objtp
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new DelveClientSdk.RelKey();
       //expect(instance).to.be();
     });

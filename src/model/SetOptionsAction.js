@@ -25,11 +25,11 @@ class SetOptionsAction {
      * @alias module:model/SetOptionsAction
      * @extends module:model/Action
      * @implements module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        Action.initialize(this, objtp);
-        SetOptionsAction.initialize(this, objtp);
+    constructor(type) { 
+        Action.initialize(this, type);
+        SetOptionsAction.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class SetOptionsAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -53,20 +53,20 @@ class SetOptionsAction {
             Action.constructFromObject(data, obj);
             Action.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('abort_on_error')) {
+                obj['abort_on_error'] = ApiClient.convertToType(data['abort_on_error'], 'Boolean');
+            }
+            if (data.hasOwnProperty('broken')) {
+                obj['broken'] = ApiClient.convertToType(data['broken'], 'Boolean');
+            }
             if (data.hasOwnProperty('debug')) {
                 obj['debug'] = ApiClient.convertToType(data['debug'], 'Boolean');
             }
             if (data.hasOwnProperty('debug_trace')) {
                 obj['debug_trace'] = ApiClient.convertToType(data['debug_trace'], 'Boolean');
             }
-            if (data.hasOwnProperty('broken')) {
-                obj['broken'] = ApiClient.convertToType(data['broken'], 'Boolean');
-            }
             if (data.hasOwnProperty('silent')) {
                 obj['silent'] = ApiClient.convertToType(data['silent'], 'Boolean');
-            }
-            if (data.hasOwnProperty('abort_on_error')) {
-                obj['abort_on_error'] = ApiClient.convertToType(data['abort_on_error'], 'Boolean');
             }
         }
         return obj;
@@ -74,6 +74,18 @@ class SetOptionsAction {
 
 
 }
+
+/**
+ * @member {Boolean} abort_on_error
+ * @default false
+ */
+SetOptionsAction.prototype['abort_on_error'] = false;
+
+/**
+ * @member {Boolean} broken
+ * @default false
+ */
+SetOptionsAction.prototype['broken'] = false;
 
 /**
  * @member {Boolean} debug
@@ -88,30 +100,18 @@ SetOptionsAction.prototype['debug'] = false;
 SetOptionsAction.prototype['debug_trace'] = false;
 
 /**
- * @member {Boolean} broken
- * @default false
- */
-SetOptionsAction.prototype['broken'] = false;
-
-/**
  * @member {Boolean} silent
  * @default false
  */
 SetOptionsAction.prototype['silent'] = false;
 
-/**
- * @member {Boolean} abort_on_error
- * @default false
- */
-SetOptionsAction.prototype['abort_on_error'] = false;
-
 
 // Implement Action interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

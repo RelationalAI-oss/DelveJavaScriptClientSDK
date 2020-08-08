@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source** | [**Source**](Source.md) |  | 
-**inputs** | [**RelDict**](RelDict.md) |  | [optional] 
-**persist** | **[String]** |  | [optional] 
+**inputs** | [**[Relation]**](Relation.md) |  | [optional] 
 **outputs** | **[String]** |  | [optional] 
+**persist** | **[String]** |  | [optional] 
+**source** | [**Source**](Source.md) |  | 
 
 

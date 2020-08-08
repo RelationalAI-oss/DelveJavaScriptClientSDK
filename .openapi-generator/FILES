@@ -19,7 +19,6 @@ docs/Cons.md
 docs/ConstantType.md
 docs/DBType.md
 docs/DefaultApi.md
-docs/DictElementRelKeyAnyValue.md
 docs/ExceptionProblem.md
 docs/FileSchema.md
 docs/FileSyntax.md
@@ -47,7 +46,6 @@ docs/ModifyWorkspaceActionResult.md
 docs/Nil.md
 docs/OutputProblem.md
 docs/PairAnyValueAnyValue.md
-docs/PairRelKeyAnyValue.md
 docs/ParseAction.md
 docs/ParseActionResult.md
 docs/PersistProblem.md
@@ -55,8 +53,8 @@ docs/Point.md
 docs/QueryAction.md
 docs/QueryActionResult.md
 docs/Range.md
-docs/RelDict.md
 docs/RelKey.md
+docs/Relation.md
 docs/SetOptionsAction.md
 docs/SetOptionsActionResult.md
 docs/Source.md
@@ -92,7 +90,6 @@ src/model/CollectProblemsActionResult.js
 src/model/Cons.js
 src/model/ConstantType.js
 src/model/DBType.js
-src/model/DictElementRelKeyAnyValue.js
 src/model/ExceptionProblem.js
 src/model/FileSchema.js
 src/model/FileSyntax.js
@@ -120,7 +117,6 @@ src/model/ModifyWorkspaceActionResult.js
 src/model/Nil.js
 src/model/OutputProblem.js
 src/model/PairAnyValueAnyValue.js
-src/model/PairRelKeyAnyValue.js
 src/model/ParseAction.js
 src/model/ParseActionResult.js
 src/model/PersistProblem.js
@@ -128,8 +124,8 @@ src/model/Point.js
 src/model/QueryAction.js
 src/model/QueryActionResult.js
 src/model/Range.js
-src/model/RelDict.js
 src/model/RelKey.js
+src/model/Relation.js
 src/model/SetOptionsAction.js
 src/model/SetOptionsActionResult.js
 src/model/Source.js
@@ -160,7 +156,6 @@ test/model/CollectProblemsActionResult.spec.js
 test/model/Cons.spec.js
 test/model/ConstantType.spec.js
 test/model/DBType.spec.js
-test/model/DictElementRelKeyAnyValue.spec.js
 test/model/ExceptionProblem.spec.js
 test/model/FileSchema.spec.js
 test/model/FileSyntax.spec.js
@@ -188,7 +183,6 @@ test/model/ModifyWorkspaceActionResult.spec.js
 test/model/Nil.spec.js
 test/model/OutputProblem.spec.js
 test/model/PairAnyValueAnyValue.spec.js
-test/model/PairRelKeyAnyValue.spec.js
 test/model/ParseAction.spec.js
 test/model/ParseActionResult.spec.js
 test/model/PersistProblem.spec.js
@@ -196,8 +190,8 @@ test/model/Point.spec.js
 test/model/QueryAction.spec.js
 test/model/QueryActionResult.spec.js
 test/model/Range.spec.js
-test/model/RelDict.spec.js
 test/model/RelKey.spec.js
+test/model/Relation.spec.js
 test/model/SetOptionsAction.spec.js
 test/model/SetOptionsActionResult.spec.js
 test/model/Source.spec.js

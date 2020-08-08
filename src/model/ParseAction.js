@@ -26,11 +26,11 @@ class ParseAction {
      * @alias module:model/ParseAction
      * @extends module:model/Action
      * @implements module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        Action.initialize(this, objtp);
-        ParseAction.initialize(this, objtp);
+    constructor(type) { 
+        Action.initialize(this, type);
+        ParseAction.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class ParseAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
         obj['source'] = source;
     }
 
@@ -82,10 +82,10 @@ ParseAction.prototype['source'] = undefined;
 
 // Implement Action interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

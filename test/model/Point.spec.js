@@ -54,20 +54,20 @@
       //expect(instance).to.be.a(DelveClientSdk.Point);
     });
 
-    it('should have the property row (base name: "row")', function() {
-      // uncomment below and update the code to test the property row
-      //var instane = new DelveClientSdk.Point();
-      //expect(instance).to.be();
-    });
-
     it('should have the property column (base name: "column")', function() {
       // uncomment below and update the code to test the property column
       //var instane = new DelveClientSdk.Point();
       //expect(instance).to.be();
     });
 
-    it('should have the property objtp (base name: "objtp")', function() {
-      // uncomment below and update the code to test the property objtp
+    it('should have the property row (base name: "row")', function() {
+      // uncomment below and update the code to test the property row
+      //var instane = new DelveClientSdk.Point();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new DelveClientSdk.Point();
       //expect(instance).to.be();
     });

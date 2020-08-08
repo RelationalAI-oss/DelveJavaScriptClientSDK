@@ -54,6 +54,18 @@
       //expect(instance).to.be.a(DelveClientSdk.TransactionResult);
     });
 
+    it('should have the property aborted (base name: "aborted")', function() {
+      // uncomment below and update the code to test the property aborted
+      //var instane = new DelveClientSdk.TransactionResult();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property actions (base name: "actions")', function() {
+      // uncomment below and update the code to test the property actions
+      //var instane = new DelveClientSdk.TransactionResult();
+      //expect(instance).to.be();
+    });
+
     it('should have the property output (base name: "output")', function() {
       // uncomment below and update the code to test the property output
       //var instane = new DelveClientSdk.TransactionResult();
@@ -66,20 +78,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property actions (base name: "actions")', function() {
-      // uncomment below and update the code to test the property actions
-      //var instane = new DelveClientSdk.TransactionResult();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property aborted (base name: "aborted")', function() {
-      // uncomment below and update the code to test the property aborted
-      //var instane = new DelveClientSdk.TransactionResult();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property objtp (base name: "objtp")', function() {
-      // uncomment below and update the code to test the property objtp
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new DelveClientSdk.TransactionResult();
       //expect(instance).to.be();
     });

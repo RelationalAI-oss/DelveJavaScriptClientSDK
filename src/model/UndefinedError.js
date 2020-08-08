@@ -26,11 +26,11 @@ class UndefinedError {
      * @alias module:model/UndefinedError
      * @extends module:model/AbstractProblem
      * @implements module:model/AbstractProblem
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        AbstractProblem.initialize(this, objtp);
-        UndefinedError.initialize(this, objtp);
+    constructor(type) { 
+        AbstractProblem.initialize(this, type);
+        UndefinedError.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class UndefinedError {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
         obj['range'] = range;
     }
 
@@ -82,10 +82,10 @@ UndefinedError.prototype['var'] = '';
 
 // Implement AbstractProblem interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-AbstractProblem.prototype['objtp'] = '';
+AbstractProblem.prototype['type'] = '';
 
 
 

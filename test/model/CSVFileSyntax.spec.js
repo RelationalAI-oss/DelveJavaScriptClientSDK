@@ -54,6 +54,24 @@
       //expect(instance).to.be.a(DelveClientSdk.CSVFileSyntax);
     });
 
+    it('should have the property datarow (base name: "datarow")', function() {
+      // uncomment below and update the code to test the property datarow
+      //var instane = new DelveClientSdk.CSVFileSyntax();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property delim (base name: "delim")', function() {
+      // uncomment below and update the code to test the property delim
+      //var instane = new DelveClientSdk.CSVFileSyntax();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property escapechar (base name: "escapechar")', function() {
+      // uncomment below and update the code to test the property escapechar
+      //var instane = new DelveClientSdk.CSVFileSyntax();
+      //expect(instance).to.be();
+    });
+
     it('should have the property header (base name: "header")', function() {
       // uncomment below and update the code to test the property header
       //var instane = new DelveClientSdk.CSVFileSyntax();
@@ -66,14 +84,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property normalizenames (base name: "normalizenames")', function() {
-      // uncomment below and update the code to test the property normalizenames
-      //var instane = new DelveClientSdk.CSVFileSyntax();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property datarow (base name: "datarow")', function() {
-      // uncomment below and update the code to test the property datarow
+    it('should have the property ignorerepeated (base name: "ignorerepeated")', function() {
+      // uncomment below and update the code to test the property ignorerepeated
       //var instane = new DelveClientSdk.CSVFileSyntax();
       //expect(instance).to.be();
     });
@@ -84,26 +96,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property delim (base name: "delim")', function() {
-      // uncomment below and update the code to test the property delim
-      //var instane = new DelveClientSdk.CSVFileSyntax();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ignorerepeated (base name: "ignorerepeated")', function() {
-      // uncomment below and update the code to test the property ignorerepeated
+    it('should have the property normalizenames (base name: "normalizenames")', function() {
+      // uncomment below and update the code to test the property normalizenames
       //var instane = new DelveClientSdk.CSVFileSyntax();
       //expect(instance).to.be();
     });
 
     it('should have the property quotechar (base name: "quotechar")', function() {
       // uncomment below and update the code to test the property quotechar
-      //var instane = new DelveClientSdk.CSVFileSyntax();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property escapechar (base name: "escapechar")', function() {
-      // uncomment below and update the code to test the property escapechar
       //var instane = new DelveClientSdk.CSVFileSyntax();
       //expect(instance).to.be();
     });

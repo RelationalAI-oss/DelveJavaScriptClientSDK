@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **relKey** | [**RelKey**](RelKey.md) |  | 
 **source** | **String** |  | [optional] [default to &#39;&#39;]
-**objtp** | **String** |  | [default to &#39;ICViolation&#39;]
+**type** | **String** |  | [default to &#39;ICViolation&#39;]
 
 
 
-## Enum: ObjtpEnum
+## Enum: TypeEnum
 
 
 * `ICViolation` (value: `"ICViolation"`)

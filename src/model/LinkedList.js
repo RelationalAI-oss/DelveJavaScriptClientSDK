@@ -22,11 +22,11 @@ class LinkedList {
     /**
      * Constructs a new <code>LinkedList</code>.
      * @alias module:model/LinkedList
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        LinkedList.initialize(this, objtp);
+        LinkedList.initialize(this, type);
     }
 
     /**
@@ -34,8 +34,8 @@ class LinkedList {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -49,8 +49,8 @@ class LinkedList {
         if (data) {
             obj = obj || new LinkedList();
 
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -60,10 +60,10 @@ class LinkedList {
 }
 
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-LinkedList.prototype['objtp'] = '';
+LinkedList.prototype['type'] = '';
 
 
 

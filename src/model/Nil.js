@@ -25,11 +25,11 @@ class Nil {
      * @alias module:model/Nil
      * @extends module:model/LinkedList
      * @implements module:model/LinkedList
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        LinkedList.initialize(this, objtp);
-        Nil.initialize(this, objtp);
+    constructor(type) { 
+        LinkedList.initialize(this, type);
+        Nil.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class Nil {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -63,10 +63,10 @@ class Nil {
 
 // Implement LinkedList interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-LinkedList.prototype['objtp'] = '';
+LinkedList.prototype['type'] = '';
 
 
 

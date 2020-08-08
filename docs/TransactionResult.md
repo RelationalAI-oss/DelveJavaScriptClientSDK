@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**output** | [**RelDict**](RelDict.md) |  | [optional] 
-**problems** | [**[AbstractProblem]**](AbstractProblem.md) |  | [optional] 
-**actions** | [**[LabeledActionResult]**](LabeledActionResult.md) |  | [optional] 
 **aborted** | **Boolean** |  | [optional] [default to false]
-**objtp** | **String** |  | [default to &#39;TransactionResult&#39;]
+**actions** | [**[LabeledActionResult]**](LabeledActionResult.md) |  | [optional] 
+**output** | [**[Relation]**](Relation.md) |  | [optional] 
+**problems** | [**[AbstractProblem]**](AbstractProblem.md) |  | [optional] 
+**type** | **String** |  | [default to &#39;TransactionResult&#39;]
 
 
 
-## Enum: ObjtpEnum
+## Enum: TypeEnum
 
 
 * `TransactionResult` (value: `"TransactionResult"`)

@@ -25,11 +25,11 @@ class JSONFileSyntax {
      * @alias module:model/JSONFileSyntax
      * @extends module:model/FileSyntax
      * @implements module:model/FileSyntax
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        FileSyntax.initialize(this, objtp);
-        JSONFileSyntax.initialize(this, objtp);
+    constructor(type) { 
+        FileSyntax.initialize(this, type);
+        JSONFileSyntax.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class JSONFileSyntax {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -63,10 +63,10 @@ class JSONFileSyntax {
 
 // Implement FileSyntax interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-FileSyntax.prototype['objtp'] = '';
+FileSyntax.prototype['type'] = '';
 
 
 

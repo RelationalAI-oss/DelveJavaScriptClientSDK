@@ -26,11 +26,11 @@ class Appl {
      * @alias module:model/Appl
      * @extends module:model/SyntaxNode
      * @implements module:model/SyntaxNode
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        SyntaxNode.initialize(this, objtp);
-        Appl.initialize(this, objtp);
+    constructor(type) { 
+        SyntaxNode.initialize(this, type);
+        Appl.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class Appl {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
         obj['range'] = range;
     }
 
@@ -55,20 +55,20 @@ class Appl {
             SyntaxNode.constructFromObject(data, obj);
             SyntaxNode.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('symbol')) {
-                obj['symbol'] = ApiClient.convertToType(data['symbol'], 'String');
-            }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], [SyntaxNode]);
             }
-            if (data.hasOwnProperty('range')) {
-                obj['range'] = Range.constructFromObject(data['range']);
+            if (data.hasOwnProperty('error')) {
+                obj['error'] = ApiClient.convertToType(data['error'], 'Boolean');
             }
             if (data.hasOwnProperty('missing')) {
                 obj['missing'] = ApiClient.convertToType(data['missing'], 'Boolean');
             }
-            if (data.hasOwnProperty('error')) {
-                obj['error'] = ApiClient.convertToType(data['error'], 'Boolean');
+            if (data.hasOwnProperty('range')) {
+                obj['range'] = Range.constructFromObject(data['range']);
+            }
+            if (data.hasOwnProperty('symbol')) {
+                obj['symbol'] = ApiClient.convertToType(data['symbol'], 'String');
             }
         }
         return obj;
@@ -78,20 +78,15 @@ class Appl {
 }
 
 /**
- * @member {String} symbol
- * @default ''
- */
-Appl.prototype['symbol'] = '';
-
-/**
  * @member {Array.<module:model/SyntaxNode>} arguments
  */
 Appl.prototype['arguments'] = undefined;
 
 /**
- * @member {module:model/Range} range
+ * @member {Boolean} error
+ * @default false
  */
-Appl.prototype['range'] = undefined;
+Appl.prototype['error'] = false;
 
 /**
  * @member {Boolean} missing
@@ -100,18 +95,23 @@ Appl.prototype['range'] = undefined;
 Appl.prototype['missing'] = false;
 
 /**
- * @member {Boolean} error
- * @default false
+ * @member {module:model/Range} range
  */
-Appl.prototype['error'] = false;
+Appl.prototype['range'] = undefined;
+
+/**
+ * @member {String} symbol
+ * @default ''
+ */
+Appl.prototype['symbol'] = '';
 
 
 // Implement SyntaxNode interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-SyntaxNode.prototype['objtp'] = '';
+SyntaxNode.prototype['type'] = '';
 
 
 

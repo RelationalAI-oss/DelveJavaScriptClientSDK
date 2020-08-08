@@ -26,11 +26,11 @@ class ModifyWorkspaceActionResult {
      * @alias module:model/ModifyWorkspaceActionResult
      * @extends module:model/ActionResult
      * @implements module:model/ActionResult
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        ActionResult.initialize(this, objtp);
-        ModifyWorkspaceActionResult.initialize(this, objtp);
+    constructor(type) { 
+        ActionResult.initialize(this, type);
+        ModifyWorkspaceActionResult.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class ModifyWorkspaceActionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -72,10 +72,10 @@ ModifyWorkspaceActionResult.prototype['delete_edb_result'] = undefined;
 
 // Implement ActionResult interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-ActionResult.prototype['objtp'] = '';
+ActionResult.prototype['type'] = '';
 
 
 

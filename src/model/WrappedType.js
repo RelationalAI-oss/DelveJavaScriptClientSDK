@@ -25,11 +25,11 @@ class WrappedType {
      * @alias module:model/WrappedType
      * @extends module:model/DBType
      * @implements module:model/DBType
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        DBType.initialize(this, objtp);
-        WrappedType.initialize(this, objtp);
+    constructor(type) { 
+        DBType.initialize(this, type);
+        WrappedType.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class WrappedType {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -72,10 +72,10 @@ WrappedType.prototype['_value'] = '';
 
 // Implement DBType interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-DBType.prototype['objtp'] = '';
+DBType.prototype['type'] = '';
 
 
 

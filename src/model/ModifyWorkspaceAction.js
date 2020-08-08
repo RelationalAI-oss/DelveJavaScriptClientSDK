@@ -25,11 +25,11 @@ class ModifyWorkspaceAction {
      * @alias module:model/ModifyWorkspaceAction
      * @extends module:model/Action
      * @implements module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        Action.initialize(this, objtp);
-        ModifyWorkspaceAction.initialize(this, objtp);
+    constructor(type) { 
+        Action.initialize(this, type);
+        ModifyWorkspaceAction.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class ModifyWorkspaceAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -53,11 +53,11 @@ class ModifyWorkspaceAction {
             Action.constructFromObject(data, obj);
             Action.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('delete_source')) {
-                obj['delete_source'] = ApiClient.convertToType(data['delete_source'], ['String']);
-            }
             if (data.hasOwnProperty('delete_edb')) {
                 obj['delete_edb'] = ApiClient.convertToType(data['delete_edb'], 'String');
+            }
+            if (data.hasOwnProperty('delete_source')) {
+                obj['delete_source'] = ApiClient.convertToType(data['delete_source'], ['String']);
             }
             if (data.hasOwnProperty('enable_library')) {
                 obj['enable_library'] = ApiClient.convertToType(data['enable_library'], 'String');
@@ -70,15 +70,15 @@ class ModifyWorkspaceAction {
 }
 
 /**
- * @member {Array.<String>} delete_source
- */
-ModifyWorkspaceAction.prototype['delete_source'] = undefined;
-
-/**
  * @member {String} delete_edb
  * @default ''
  */
 ModifyWorkspaceAction.prototype['delete_edb'] = '';
+
+/**
+ * @member {Array.<String>} delete_source
+ */
+ModifyWorkspaceAction.prototype['delete_source'] = undefined;
 
 /**
  * @member {String} enable_library
@@ -89,10 +89,10 @@ ModifyWorkspaceAction.prototype['enable_library'] = '';
 
 // Implement Action interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

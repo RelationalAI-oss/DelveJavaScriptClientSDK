@@ -22,11 +22,11 @@ class AnyValue {
     /**
      * Constructs a new <code>AnyValue</code>.
      * @alias module:model/AnyValue
-     * @param objtp {module:model/AnyValue.ObjtpEnum} 
+     * @param type {module:model/AnyValue.TypeEnum} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        AnyValue.initialize(this, objtp);
+        AnyValue.initialize(this, type);
     }
 
     /**
@@ -34,8 +34,8 @@ class AnyValue {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -49,8 +49,8 @@ class AnyValue {
         if (data) {
             obj = obj || new AnyValue();
 
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -60,21 +60,21 @@ class AnyValue {
 }
 
 /**
- * @member {module:model/AnyValue.ObjtpEnum} objtp
+ * @member {module:model/AnyValue.TypeEnum} type
  * @default 'AnyValue'
  */
-AnyValue.prototype['objtp'] = 'AnyValue';
+AnyValue.prototype['type'] = 'AnyValue';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-AnyValue['ObjtpEnum'] = {
+AnyValue['TypeEnum'] = {
 
     /**
      * value: "AnyValue"

@@ -22,11 +22,11 @@ class Action {
     /**
      * Constructs a new <code>Action</code>.
      * @alias module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        Action.initialize(this, objtp);
+        Action.initialize(this, type);
     }
 
     /**
@@ -34,8 +34,8 @@ class Action {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -49,8 +49,8 @@ class Action {
         if (data) {
             obj = obj || new Action();
 
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -60,10 +60,10 @@ class Action {
 }
 
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

@@ -24,11 +24,11 @@ class LabeledAction {
      * Constructs a new <code>LabeledAction</code>.
      * @alias module:model/LabeledAction
      * @param action {module:model/Action} 
-     * @param objtp {module:model/LabeledAction.ObjtpEnum} 
+     * @param type {module:model/LabeledAction.TypeEnum} 
      */
-    constructor(action, objtp) { 
+    constructor(action, type) { 
         
-        LabeledAction.initialize(this, action, objtp);
+        LabeledAction.initialize(this, action, type);
     }
 
     /**
@@ -36,9 +36,9 @@ class LabeledAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, action, objtp) { 
+    static initialize(obj, action, type) { 
         obj['action'] = action;
-        obj['objtp'] = objtp;
+        obj['type'] = type;
     }
 
     /**
@@ -52,14 +52,14 @@ class LabeledAction {
         if (data) {
             obj = obj || new LabeledAction();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
             if (data.hasOwnProperty('action')) {
                 obj['action'] = Action.constructFromObject(data['action']);
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -69,32 +69,32 @@ class LabeledAction {
 }
 
 /**
+ * @member {module:model/Action} action
+ */
+LabeledAction.prototype['action'] = undefined;
+
+/**
  * @member {String} name
  * @default ''
  */
 LabeledAction.prototype['name'] = '';
 
 /**
- * @member {module:model/Action} action
- */
-LabeledAction.prototype['action'] = undefined;
-
-/**
- * @member {module:model/LabeledAction.ObjtpEnum} objtp
+ * @member {module:model/LabeledAction.TypeEnum} type
  * @default 'LabeledAction'
  */
-LabeledAction.prototype['objtp'] = 'LabeledAction';
+LabeledAction.prototype['type'] = 'LabeledAction';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-LabeledAction['ObjtpEnum'] = {
+LabeledAction['TypeEnum'] = {
 
     /**
      * value: "LabeledAction"

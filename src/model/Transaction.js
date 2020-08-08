@@ -24,11 +24,11 @@ class Transaction {
      * Constructs a new <code>Transaction</code>.
      * @alias module:model/Transaction
      * @param mode {module:model/Transaction.ModeEnum} 
-     * @param objtp {module:model/Transaction.ObjtpEnum} 
+     * @param type {module:model/Transaction.TypeEnum} 
      */
-    constructor(mode, objtp) { 
+    constructor(mode, type) { 
         
-        Transaction.initialize(this, mode, objtp);
+        Transaction.initialize(this, mode, type);
     }
 
     /**
@@ -36,9 +36,9 @@ class Transaction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, mode, objtp) { 
+    static initialize(obj, mode, type) { 
         obj['mode'] = mode;
-        obj['objtp'] = objtp;
+        obj['type'] = type;
     }
 
     /**
@@ -52,6 +52,12 @@ class Transaction {
         if (data) {
             obj = obj || new Transaction();
 
+            if (data.hasOwnProperty('abort')) {
+                obj['abort'] = ApiClient.convertToType(data['abort'], 'Boolean');
+            }
+            if (data.hasOwnProperty('actions')) {
+                obj['actions'] = ApiClient.convertToType(data['actions'], [LabeledAction]);
+            }
             if (data.hasOwnProperty('dbname')) {
                 obj['dbname'] = ApiClient.convertToType(data['dbname'], 'String');
             }
@@ -61,14 +67,8 @@ class Transaction {
             if (data.hasOwnProperty('readonly')) {
                 obj['readonly'] = ApiClient.convertToType(data['readonly'], 'Boolean');
             }
-            if (data.hasOwnProperty('actions')) {
-                obj['actions'] = ApiClient.convertToType(data['actions'], [LabeledAction]);
-            }
-            if (data.hasOwnProperty('abort')) {
-                obj['abort'] = ApiClient.convertToType(data['abort'], 'Boolean');
-            }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -76,6 +76,17 @@ class Transaction {
 
 
 }
+
+/**
+ * @member {Boolean} abort
+ * @default false
+ */
+Transaction.prototype['abort'] = false;
+
+/**
+ * @member {Array.<module:model/LabeledAction>} actions
+ */
+Transaction.prototype['actions'] = undefined;
 
 /**
  * @member {String} dbname
@@ -96,21 +107,10 @@ Transaction.prototype['mode'] = 'OPEN';
 Transaction.prototype['readonly'] = false;
 
 /**
- * @member {Array.<module:model/LabeledAction>} actions
- */
-Transaction.prototype['actions'] = undefined;
-
-/**
- * @member {Boolean} abort
- * @default false
- */
-Transaction.prototype['abort'] = false;
-
-/**
- * @member {module:model/Transaction.ObjtpEnum} objtp
+ * @member {module:model/Transaction.TypeEnum} type
  * @default 'Transaction'
  */
-Transaction.prototype['objtp'] = 'Transaction';
+Transaction.prototype['type'] = 'Transaction';
 
 
 
@@ -150,11 +150,11 @@ Transaction['ModeEnum'] = {
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-Transaction['ObjtpEnum'] = {
+Transaction['TypeEnum'] = {
 
     /**
      * value: "Transaction"

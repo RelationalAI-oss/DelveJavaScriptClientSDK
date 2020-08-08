@@ -6,14 +6,14 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **first** | [**AnyValue**](AnyValue.md) |  | [optional] 
 **second** | [**AnyValue**](AnyValue.md) |  | [optional] 
-**objtp** | **String** |  | [default to &#39;Pair_AnyValue_AnyValue&#39;]
+**type** | **String** |  | [default to &#39;Pair_AnyValue_AnyValue_&#39;]
 
 
 
-## Enum: ObjtpEnum
+## Enum: TypeEnum
 
 
-* `Pair_AnyValue_AnyValue` (value: `"Pair_AnyValue_AnyValue"`)
+* `Pair_AnyValue_AnyValue_` (value: `"Pair_AnyValue_AnyValue_"`)
 
 
 

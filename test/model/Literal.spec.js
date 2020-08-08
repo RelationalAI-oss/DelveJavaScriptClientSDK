@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(DelveClientSdk.Literal);
     });
 
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
+    it('should have the property missing (base name: "missing")', function() {
+      // uncomment below and update the code to test the property missing
       //var instane = new DelveClientSdk.Literal();
       //expect(instance).to.be();
     });
@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property missing (base name: "missing")', function() {
-      // uncomment below and update the code to test the property missing
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
       //var instane = new DelveClientSdk.Literal();
       //expect(instance).to.be();
     });

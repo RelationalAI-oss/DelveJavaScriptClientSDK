@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] [default to &#39;&#39;]
 **action** | [**Action**](Action.md) |  | 
-**objtp** | **String** |  | [default to &#39;LabeledAction&#39;]
+**name** | **String** |  | [optional] [default to &#39;&#39;]
+**type** | **String** |  | [default to &#39;LabeledAction&#39;]
 
 
 
-## Enum: ObjtpEnum
+## Enum: TypeEnum
 
 
 * `LabeledAction` (value: `"LabeledAction"`)

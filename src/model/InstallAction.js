@@ -26,11 +26,11 @@ class InstallAction {
      * @alias module:model/InstallAction
      * @extends module:model/Action
      * @implements module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        Action.initialize(this, objtp);
-        InstallAction.initialize(this, objtp);
+    constructor(type) { 
+        Action.initialize(this, type);
+        InstallAction.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class InstallAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -72,10 +72,10 @@ InstallAction.prototype['sources'] = undefined;
 
 // Implement Action interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

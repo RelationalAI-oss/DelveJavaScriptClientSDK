@@ -25,11 +25,11 @@ class LoadDataActionResult {
      * @alias module:model/LoadDataActionResult
      * @extends module:model/ActionResult
      * @implements module:model/ActionResult
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        ActionResult.initialize(this, objtp);
-        LoadDataActionResult.initialize(this, objtp);
+    constructor(type) { 
+        ActionResult.initialize(this, type);
+        LoadDataActionResult.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class LoadDataActionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -63,10 +63,10 @@ class LoadDataActionResult {
 
 // Implement ActionResult interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-ActionResult.prototype['objtp'] = '';
+ActionResult.prototype['type'] = '';
 
 
 

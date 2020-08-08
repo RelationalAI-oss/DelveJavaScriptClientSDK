@@ -66,14 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property path (base name: "path")', function() {
-      // uncomment below and update the code to test the property path
-      //var instane = new DelveClientSdk.LoadData();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property key (base name: "key")', function() {
-      // uncomment below and update the code to test the property key
+    it('should have the property fileSchema (base name: "file_schema")', function() {
+      // uncomment below and update the code to test the property fileSchema
       //var instane = new DelveClientSdk.LoadData();
       //expect(instance).to.be();
     });
@@ -84,14 +78,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property fileSchema (base name: "file_schema")', function() {
-      // uncomment below and update the code to test the property fileSchema
+    it('should have the property key (base name: "key")', function() {
+      // uncomment below and update the code to test the property key
       //var instane = new DelveClientSdk.LoadData();
       //expect(instance).to.be();
     });
 
-    it('should have the property objtp (base name: "objtp")', function() {
-      // uncomment below and update the code to test the property objtp
+    it('should have the property path (base name: "path")', function() {
+      // uncomment below and update the code to test the property path
+      //var instane = new DelveClientSdk.LoadData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new DelveClientSdk.LoadData();
       //expect(instance).to.be();
     });

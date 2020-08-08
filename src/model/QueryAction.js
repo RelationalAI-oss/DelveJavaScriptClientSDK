@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Action from './Action';
-import RelDict from './RelDict';
+import Relation from './Relation';
 import Source from './Source';
 
 /**
@@ -27,11 +27,11 @@ class QueryAction {
      * @alias module:model/QueryAction
      * @extends module:model/Action
      * @implements module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        Action.initialize(this, objtp);
-        QueryAction.initialize(this, objtp);
+    constructor(type) { 
+        Action.initialize(this, type);
+        QueryAction.initialize(this, type);
     }
 
     /**
@@ -39,7 +39,7 @@ class QueryAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
         obj['source'] = source;
     }
 
@@ -56,17 +56,17 @@ class QueryAction {
             Action.constructFromObject(data, obj);
             Action.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('source')) {
-                obj['source'] = Source.constructFromObject(data['source']);
-            }
             if (data.hasOwnProperty('inputs')) {
-                obj['inputs'] = RelDict.constructFromObject(data['inputs']);
+                obj['inputs'] = ApiClient.convertToType(data['inputs'], [Relation]);
+            }
+            if (data.hasOwnProperty('outputs')) {
+                obj['outputs'] = ApiClient.convertToType(data['outputs'], ['String']);
             }
             if (data.hasOwnProperty('persist')) {
                 obj['persist'] = ApiClient.convertToType(data['persist'], ['String']);
             }
-            if (data.hasOwnProperty('outputs')) {
-                obj['outputs'] = ApiClient.convertToType(data['outputs'], ['String']);
+            if (data.hasOwnProperty('source')) {
+                obj['source'] = Source.constructFromObject(data['source']);
             }
         }
         return obj;
@@ -76,14 +76,14 @@ class QueryAction {
 }
 
 /**
- * @member {module:model/Source} source
- */
-QueryAction.prototype['source'] = undefined;
-
-/**
- * @member {module:model/RelDict} inputs
+ * @member {Array.<module:model/Relation>} inputs
  */
 QueryAction.prototype['inputs'] = undefined;
+
+/**
+ * @member {Array.<String>} outputs
+ */
+QueryAction.prototype['outputs'] = undefined;
 
 /**
  * @member {Array.<String>} persist
@@ -91,17 +91,17 @@ QueryAction.prototype['inputs'] = undefined;
 QueryAction.prototype['persist'] = undefined;
 
 /**
- * @member {Array.<String>} outputs
+ * @member {module:model/Source} source
  */
-QueryAction.prototype['outputs'] = undefined;
+QueryAction.prototype['source'] = undefined;
 
 
 // Implement Action interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

@@ -23,11 +23,11 @@ class RelKey {
     /**
      * Constructs a new <code>RelKey</code>.
      * @alias module:model/RelKey
-     * @param objtp {module:model/RelKey.ObjtpEnum} 
+     * @param type {module:model/RelKey.TypeEnum} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        RelKey.initialize(this, objtp);
+        RelKey.initialize(this, type);
     }
 
     /**
@@ -35,8 +35,8 @@ class RelKey {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -50,17 +50,17 @@ class RelKey {
         if (data) {
             obj = obj || new RelKey();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
             if (data.hasOwnProperty('keys')) {
                 obj['keys'] = ApiClient.convertToType(data['keys'], [DBType]);
+            }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('values')) {
                 obj['values'] = ApiClient.convertToType(data['values'], [DBType]);
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -70,15 +70,15 @@ class RelKey {
 }
 
 /**
+ * @member {Array.<module:model/DBType>} keys
+ */
+RelKey.prototype['keys'] = undefined;
+
+/**
  * @member {String} name
  * @default ''
  */
 RelKey.prototype['name'] = '';
-
-/**
- * @member {Array.<module:model/DBType>} keys
- */
-RelKey.prototype['keys'] = undefined;
 
 /**
  * @member {Array.<module:model/DBType>} values
@@ -86,21 +86,21 @@ RelKey.prototype['keys'] = undefined;
 RelKey.prototype['values'] = undefined;
 
 /**
- * @member {module:model/RelKey.ObjtpEnum} objtp
+ * @member {module:model/RelKey.TypeEnum} type
  * @default 'RelKey'
  */
-RelKey.prototype['objtp'] = 'RelKey';
+RelKey.prototype['type'] = 'RelKey';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-RelKey['ObjtpEnum'] = {
+RelKey['TypeEnum'] = {
 
     /**
      * value: "RelKey"

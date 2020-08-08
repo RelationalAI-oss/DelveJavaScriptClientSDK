@@ -22,11 +22,11 @@ class Source {
     /**
      * Constructs a new <code>Source</code>.
      * @alias module:model/Source
-     * @param objtp {module:model/Source.ObjtpEnum} 
+     * @param type {module:model/Source.TypeEnum} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        Source.initialize(this, objtp);
+        Source.initialize(this, type);
     }
 
     /**
@@ -34,8 +34,8 @@ class Source {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -58,8 +58,8 @@ class Source {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -87,21 +87,21 @@ Source.prototype['path'] = '';
 Source.prototype['value'] = '';
 
 /**
- * @member {module:model/Source.ObjtpEnum} objtp
+ * @member {module:model/Source.TypeEnum} type
  * @default 'Source'
  */
-Source.prototype['objtp'] = 'Source';
+Source.prototype['type'] = 'Source';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-Source['ObjtpEnum'] = {
+Source['TypeEnum'] = {
 
     /**
      * value: "Source"

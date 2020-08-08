@@ -25,11 +25,11 @@ class OutputProblem {
      * @alias module:model/OutputProblem
      * @extends module:model/AbstractProblem
      * @implements module:model/AbstractProblem
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        AbstractProblem.initialize(this, objtp);
-        OutputProblem.initialize(this, objtp);
+    constructor(type) { 
+        AbstractProblem.initialize(this, type);
+        OutputProblem.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class OutputProblem {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -53,14 +53,14 @@ class OutputProblem {
             AbstractProblem.constructFromObject(data, obj);
             AbstractProblem.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
             if (data.hasOwnProperty('exception')) {
                 obj['exception'] = ApiClient.convertToType(data['exception'], 'String');
             }
             if (data.hasOwnProperty('exception_stacktrace')) {
                 obj['exception_stacktrace'] = ApiClient.convertToType(data['exception_stacktrace'], 'String');
+            }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
         }
         return obj;
@@ -68,12 +68,6 @@ class OutputProblem {
 
 
 }
-
-/**
- * @member {String} name
- * @default ''
- */
-OutputProblem.prototype['name'] = '';
 
 /**
  * @member {String} exception
@@ -87,13 +81,19 @@ OutputProblem.prototype['exception'] = '';
  */
 OutputProblem.prototype['exception_stacktrace'] = '';
 
+/**
+ * @member {String} name
+ * @default ''
+ */
+OutputProblem.prototype['name'] = '';
+
 
 // Implement AbstractProblem interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-AbstractProblem.prototype['objtp'] = '';
+AbstractProblem.prototype['type'] = '';
 
 
 

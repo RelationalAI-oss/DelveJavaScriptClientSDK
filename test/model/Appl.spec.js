@@ -54,20 +54,14 @@
       //expect(instance).to.be.a(DelveClientSdk.Appl);
     });
 
-    it('should have the property symbol (base name: "symbol")', function() {
-      // uncomment below and update the code to test the property symbol
-      //var instane = new DelveClientSdk.Appl();
-      //expect(instance).to.be();
-    });
-
     it('should have the property _arguments (base name: "arguments")', function() {
       // uncomment below and update the code to test the property _arguments
       //var instane = new DelveClientSdk.Appl();
       //expect(instance).to.be();
     });
 
-    it('should have the property range (base name: "range")', function() {
-      // uncomment below and update the code to test the property range
+    it('should have the property error (base name: "error")', function() {
+      // uncomment below and update the code to test the property error
       //var instane = new DelveClientSdk.Appl();
       //expect(instance).to.be();
     });
@@ -78,8 +72,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property error (base name: "error")', function() {
-      // uncomment below and update the code to test the property error
+    it('should have the property range (base name: "range")', function() {
+      // uncomment below and update the code to test the property range
+      //var instane = new DelveClientSdk.Appl();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property symbol (base name: "symbol")', function() {
+      // uncomment below and update the code to test the property symbol
       //var instane = new DelveClientSdk.Appl();
       //expect(instance).to.be();
     });

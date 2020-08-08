@@ -25,11 +25,11 @@ class WorkspaceLoadProblem {
      * @alias module:model/WorkspaceLoadProblem
      * @extends module:model/AbstractProblem
      * @implements module:model/AbstractProblem
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        AbstractProblem.initialize(this, objtp);
-        WorkspaceLoadProblem.initialize(this, objtp);
+    constructor(type) { 
+        AbstractProblem.initialize(this, type);
+        WorkspaceLoadProblem.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class WorkspaceLoadProblem {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -72,10 +72,10 @@ WorkspaceLoadProblem.prototype['exception'] = '';
 
 // Implement AbstractProblem interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-AbstractProblem.prototype['objtp'] = '';
+AbstractProblem.prototype['type'] = '';
 
 
 

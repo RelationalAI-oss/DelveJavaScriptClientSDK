@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**input** | [**AnyValue**](AnyValue.md) |  | [optional] 
 **area** | [**Area**](Area.md) |  | 
-**startByte** | **Number** |  | [optional] 
 **endByte** | **Number** |  | [optional] 
-**objtp** | **String** |  | [default to &#39;Range&#39;]
+**input** | [**AnyValue**](AnyValue.md) |  | [optional] 
+**startByte** | **Number** |  | [optional] 
+**type** | **String** |  | [default to &#39;Range&#39;]
 
 
 
-## Enum: ObjtpEnum
+## Enum: TypeEnum
 
 
 * `Range` (value: `"Range"`)

@@ -25,11 +25,11 @@ class IntegrityConstraintProblem {
      * @alias module:model/IntegrityConstraintProblem
      * @extends module:model/AbstractProblem
      * @implements module:model/AbstractProblem
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        AbstractProblem.initialize(this, objtp);
-        IntegrityConstraintProblem.initialize(this, objtp);
+    constructor(type) { 
+        AbstractProblem.initialize(this, type);
+        IntegrityConstraintProblem.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class IntegrityConstraintProblem {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -72,10 +72,10 @@ IntegrityConstraintProblem.prototype['exception'] = '';
 
 // Implement AbstractProblem interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-AbstractProblem.prototype['objtp'] = '';
+AbstractProblem.prototype['type'] = '';
 
 
 

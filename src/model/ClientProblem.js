@@ -25,11 +25,11 @@ class ClientProblem {
      * @alias module:model/ClientProblem
      * @extends module:model/AbstractProblem
      * @implements module:model/AbstractProblem
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        AbstractProblem.initialize(this, objtp);
-        ClientProblem.initialize(this, objtp);
+    constructor(type) { 
+        AbstractProblem.initialize(this, type);
+        ClientProblem.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class ClientProblem {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -62,14 +62,14 @@ class ClientProblem {
             if (data.hasOwnProperty('is_exception')) {
                 obj['is_exception'] = ApiClient.convertToType(data['is_exception'], 'Boolean');
             }
-            if (data.hasOwnProperty('report')) {
-                obj['report'] = ApiClient.convertToType(data['report'], 'String');
-            }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('report')) {
+                obj['report'] = ApiClient.convertToType(data['report'], 'String');
             }
         }
         return obj;
@@ -97,12 +97,6 @@ ClientProblem.prototype['is_error'] = false;
 ClientProblem.prototype['is_exception'] = false;
 
 /**
- * @member {String} report
- * @default ''
- */
-ClientProblem.prototype['report'] = '';
-
-/**
  * @member {String} message
  * @default ''
  */
@@ -114,13 +108,19 @@ ClientProblem.prototype['message'] = '';
  */
 ClientProblem.prototype['path'] = '';
 
+/**
+ * @member {String} report
+ * @default ''
+ */
+ClientProblem.prototype['report'] = '';
+
 
 // Implement AbstractProblem interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-AbstractProblem.prototype['objtp'] = '';
+AbstractProblem.prototype['type'] = '';
 
 
 

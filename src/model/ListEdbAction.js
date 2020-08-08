@@ -25,11 +25,11 @@ class ListEdbAction {
      * @alias module:model/ListEdbAction
      * @extends module:model/Action
      * @implements module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        Action.initialize(this, objtp);
-        ListEdbAction.initialize(this, objtp);
+    constructor(type) { 
+        Action.initialize(this, type);
+        ListEdbAction.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class ListEdbAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -72,10 +72,10 @@ ListEdbAction.prototype['relname'] = '';
 
 // Implement Action interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(DelveClientSdk.Token);
     });
 
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
+    it('should have the property range (base name: "range")', function() {
+      // uncomment below and update the code to test the property range
       //var instane = new DelveClientSdk.Token();
       //expect(instance).to.be();
     });
 
-    it('should have the property range (base name: "range")', function() {
-      // uncomment below and update the code to test the property range
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
       //var instane = new DelveClientSdk.Token();
       //expect(instance).to.be();
     });

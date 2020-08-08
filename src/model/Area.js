@@ -23,13 +23,13 @@ class Area {
     /**
      * Constructs a new <code>Area</code>.
      * @alias module:model/Area
-     * @param startPoint {module:model/Point} 
      * @param endPoint {module:model/Point} 
-     * @param objtp {module:model/Area.ObjtpEnum} 
+     * @param startPoint {module:model/Point} 
+     * @param type {module:model/Area.TypeEnum} 
      */
-    constructor(startPoint, endPoint, objtp) { 
+    constructor(endPoint, startPoint, type) { 
         
-        Area.initialize(this, startPoint, endPoint, objtp);
+        Area.initialize(this, endPoint, startPoint, type);
     }
 
     /**
@@ -37,10 +37,10 @@ class Area {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, startPoint, endPoint, objtp) { 
-        obj['start_point'] = startPoint;
+    static initialize(obj, endPoint, startPoint, type) { 
         obj['end_point'] = endPoint;
-        obj['objtp'] = objtp;
+        obj['start_point'] = startPoint;
+        obj['type'] = type;
     }
 
     /**
@@ -54,14 +54,14 @@ class Area {
         if (data) {
             obj = obj || new Area();
 
-            if (data.hasOwnProperty('start_point')) {
-                obj['start_point'] = Point.constructFromObject(data['start_point']);
-            }
             if (data.hasOwnProperty('end_point')) {
                 obj['end_point'] = Point.constructFromObject(data['end_point']);
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('start_point')) {
+                obj['start_point'] = Point.constructFromObject(data['start_point']);
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -71,31 +71,31 @@ class Area {
 }
 
 /**
- * @member {module:model/Point} start_point
- */
-Area.prototype['start_point'] = undefined;
-
-/**
  * @member {module:model/Point} end_point
  */
 Area.prototype['end_point'] = undefined;
 
 /**
- * @member {module:model/Area.ObjtpEnum} objtp
+ * @member {module:model/Point} start_point
+ */
+Area.prototype['start_point'] = undefined;
+
+/**
+ * @member {module:model/Area.TypeEnum} type
  * @default 'Area'
  */
-Area.prototype['objtp'] = 'Area';
+Area.prototype['type'] = 'Area';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-Area['ObjtpEnum'] = {
+Area['TypeEnum'] = {
 
     /**
      * value: "Area"

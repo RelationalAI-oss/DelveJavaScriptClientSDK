@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**inputs** | [**RelDict**](RelDict.md) |  | [optional] 
+**inputs** | [**[Relation]**](Relation.md) |  | [optional] 
 
 

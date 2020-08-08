@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(DelveClientSdk.ModifyWorkspaceAction);
     });
 
-    it('should have the property deleteSource (base name: "delete_source")', function() {
-      // uncomment below and update the code to test the property deleteSource
+    it('should have the property deleteEdb (base name: "delete_edb")', function() {
+      // uncomment below and update the code to test the property deleteEdb
       //var instane = new DelveClientSdk.ModifyWorkspaceAction();
       //expect(instance).to.be();
     });
 
-    it('should have the property deleteEdb (base name: "delete_edb")', function() {
-      // uncomment below and update the code to test the property deleteEdb
+    it('should have the property deleteSource (base name: "delete_source")', function() {
+      // uncomment below and update the code to test the property deleteSource
       //var instane = new DelveClientSdk.ModifyWorkspaceAction();
       //expect(instance).to.be();
     });

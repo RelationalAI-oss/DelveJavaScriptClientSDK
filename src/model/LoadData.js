@@ -25,13 +25,13 @@ class LoadData {
     /**
      * Constructs a new <code>LoadData</code>.
      * @alias module:model/LoadData
-     * @param fileSyntax {module:model/FileSyntax} 
      * @param fileSchema {module:model/FileSchema} 
-     * @param objtp {module:model/LoadData.ObjtpEnum} 
+     * @param fileSyntax {module:model/FileSyntax} 
+     * @param type {module:model/LoadData.TypeEnum} 
      */
-    constructor(fileSyntax, fileSchema, objtp) { 
+    constructor(fileSchema, fileSyntax, type) { 
         
-        LoadData.initialize(this, fileSyntax, fileSchema, objtp);
+        LoadData.initialize(this, fileSchema, fileSyntax, type);
     }
 
     /**
@@ -39,10 +39,10 @@ class LoadData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, fileSyntax, fileSchema, objtp) { 
-        obj['file_syntax'] = fileSyntax;
+    static initialize(obj, fileSchema, fileSyntax, type) { 
         obj['file_schema'] = fileSchema;
-        obj['objtp'] = objtp;
+        obj['file_syntax'] = fileSyntax;
+        obj['type'] = type;
     }
 
     /**
@@ -62,20 +62,20 @@ class LoadData {
             if (data.hasOwnProperty('data')) {
                 obj['data'] = ApiClient.convertToType(data['data'], 'String');
             }
-            if (data.hasOwnProperty('path')) {
-                obj['path'] = ApiClient.convertToType(data['path'], 'String');
-            }
-            if (data.hasOwnProperty('key')) {
-                obj['key'] = AnyValue.constructFromObject(data['key']);
+            if (data.hasOwnProperty('file_schema')) {
+                obj['file_schema'] = FileSchema.constructFromObject(data['file_schema']);
             }
             if (data.hasOwnProperty('file_syntax')) {
                 obj['file_syntax'] = FileSyntax.constructFromObject(data['file_syntax']);
             }
-            if (data.hasOwnProperty('file_schema')) {
-                obj['file_schema'] = FileSchema.constructFromObject(data['file_schema']);
+            if (data.hasOwnProperty('key')) {
+                obj['key'] = AnyValue.constructFromObject(data['key']);
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('path')) {
+                obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -97,15 +97,9 @@ LoadData.prototype['content_type'] = '';
 LoadData.prototype['data'] = '';
 
 /**
- * @member {String} path
- * @default ''
+ * @member {module:model/FileSchema} file_schema
  */
-LoadData.prototype['path'] = '';
-
-/**
- * @member {module:model/AnyValue} key
- */
-LoadData.prototype['key'] = undefined;
+LoadData.prototype['file_schema'] = undefined;
 
 /**
  * @member {module:model/FileSyntax} file_syntax
@@ -113,26 +107,32 @@ LoadData.prototype['key'] = undefined;
 LoadData.prototype['file_syntax'] = undefined;
 
 /**
- * @member {module:model/FileSchema} file_schema
+ * @member {module:model/AnyValue} key
  */
-LoadData.prototype['file_schema'] = undefined;
+LoadData.prototype['key'] = undefined;
 
 /**
- * @member {module:model/LoadData.ObjtpEnum} objtp
+ * @member {String} path
+ * @default ''
+ */
+LoadData.prototype['path'] = '';
+
+/**
+ * @member {module:model/LoadData.TypeEnum} type
  * @default 'LoadData'
  */
-LoadData.prototype['objtp'] = 'LoadData';
+LoadData.prototype['type'] = 'LoadData';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-LoadData['ObjtpEnum'] = {
+LoadData['TypeEnum'] = {
 
     /**
      * value: "LoadData"

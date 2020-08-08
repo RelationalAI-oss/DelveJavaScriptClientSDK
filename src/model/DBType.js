@@ -22,11 +22,11 @@ class DBType {
     /**
      * Constructs a new <code>DBType</code>.
      * @alias module:model/DBType
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        DBType.initialize(this, objtp);
+        DBType.initialize(this, type);
     }
 
     /**
@@ -34,8 +34,8 @@ class DBType {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -49,8 +49,8 @@ class DBType {
         if (data) {
             obj = obj || new DBType();
 
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -60,10 +60,10 @@ class DBType {
 }
 
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-DBType.prototype['objtp'] = '';
+DBType.prototype['type'] = '';
 
 
 

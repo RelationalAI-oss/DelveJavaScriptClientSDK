@@ -12,23 +12,24 @@
  */
 
 import ApiClient from '../ApiClient';
+import AnyValue from './AnyValue';
 import RelKey from './RelKey';
 
 /**
- * The ICViolation model module.
- * @module model/ICViolation
+ * The Relation model module.
+ * @module model/Relation
  * @version 1.0.0
  */
-class ICViolation {
+class Relation {
     /**
-     * Constructs a new <code>ICViolation</code>.
-     * @alias module:model/ICViolation
+     * Constructs a new <code>Relation</code>.
+     * @alias module:model/Relation
      * @param relKey {module:model/RelKey} 
-     * @param type {module:model/ICViolation.TypeEnum} 
+     * @param type {module:model/Relation.TypeEnum} 
      */
     constructor(relKey, type) { 
         
-        ICViolation.initialize(this, relKey, type);
+        Relation.initialize(this, relKey, type);
     }
 
     /**
@@ -42,21 +43,21 @@ class ICViolation {
     }
 
     /**
-     * Constructs a <code>ICViolation</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>Relation</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ICViolation} obj Optional instance to populate.
-     * @return {module:model/ICViolation} The populated <code>ICViolation</code> instance.
+     * @param {module:model/Relation} obj Optional instance to populate.
+     * @return {module:model/Relation} The populated <code>Relation</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ICViolation();
+            obj = obj || new Relation();
 
+            if (data.hasOwnProperty('columns')) {
+                obj['columns'] = AnyValue.constructFromObject(data['columns']);
+            }
             if (data.hasOwnProperty('rel_key')) {
                 obj['rel_key'] = RelKey.constructFromObject(data['rel_key']);
-            }
-            if (data.hasOwnProperty('source')) {
-                obj['source'] = ApiClient.convertToType(data['source'], 'String');
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -69,21 +70,20 @@ class ICViolation {
 }
 
 /**
+ * @member {module:model/AnyValue} columns
+ */
+Relation.prototype['columns'] = undefined;
+
+/**
  * @member {module:model/RelKey} rel_key
  */
-ICViolation.prototype['rel_key'] = undefined;
+Relation.prototype['rel_key'] = undefined;
 
 /**
- * @member {String} source
- * @default ''
+ * @member {module:model/Relation.TypeEnum} type
+ * @default 'Relation'
  */
-ICViolation.prototype['source'] = '';
-
-/**
- * @member {module:model/ICViolation.TypeEnum} type
- * @default 'ICViolation'
- */
-ICViolation.prototype['type'] = 'ICViolation';
+Relation.prototype['type'] = 'Relation';
 
 
 
@@ -94,16 +94,16 @@ ICViolation.prototype['type'] = 'ICViolation';
  * @enum {String}
  * @readonly
  */
-ICViolation['TypeEnum'] = {
+Relation['TypeEnum'] = {
 
     /**
-     * value: "ICViolation"
+     * value: "Relation"
      * @const
      */
-    "ICViolation": "ICViolation"
+    "Relation": "Relation"
 };
 
 
 
-export default ICViolation;
+export default Relation;
 

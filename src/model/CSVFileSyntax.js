@@ -25,11 +25,11 @@ class CSVFileSyntax {
      * @alias module:model/CSVFileSyntax
      * @extends module:model/FileSyntax
      * @implements module:model/FileSyntax
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        FileSyntax.initialize(this, objtp);
-        CSVFileSyntax.initialize(this, objtp);
+    constructor(type) { 
+        FileSyntax.initialize(this, type);
+        CSVFileSyntax.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class CSVFileSyntax {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -53,32 +53,32 @@ class CSVFileSyntax {
             FileSyntax.constructFromObject(data, obj);
             FileSyntax.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('datarow')) {
+                obj['datarow'] = ApiClient.convertToType(data['datarow'], 'Number');
+            }
+            if (data.hasOwnProperty('delim')) {
+                obj['delim'] = ApiClient.convertToType(data['delim'], 'String');
+            }
+            if (data.hasOwnProperty('escapechar')) {
+                obj['escapechar'] = ApiClient.convertToType(data['escapechar'], 'String');
+            }
             if (data.hasOwnProperty('header')) {
                 obj['header'] = ApiClient.convertToType(data['header'], ['String']);
             }
             if (data.hasOwnProperty('header_row')) {
                 obj['header_row'] = ApiClient.convertToType(data['header_row'], 'Number');
             }
-            if (data.hasOwnProperty('normalizenames')) {
-                obj['normalizenames'] = ApiClient.convertToType(data['normalizenames'], 'Boolean');
-            }
-            if (data.hasOwnProperty('datarow')) {
-                obj['datarow'] = ApiClient.convertToType(data['datarow'], 'Number');
+            if (data.hasOwnProperty('ignorerepeated')) {
+                obj['ignorerepeated'] = ApiClient.convertToType(data['ignorerepeated'], 'Boolean');
             }
             if (data.hasOwnProperty('missingstrings')) {
                 obj['missingstrings'] = ApiClient.convertToType(data['missingstrings'], ['String']);
             }
-            if (data.hasOwnProperty('delim')) {
-                obj['delim'] = ApiClient.convertToType(data['delim'], 'String');
-            }
-            if (data.hasOwnProperty('ignorerepeated')) {
-                obj['ignorerepeated'] = ApiClient.convertToType(data['ignorerepeated'], 'Boolean');
+            if (data.hasOwnProperty('normalizenames')) {
+                obj['normalizenames'] = ApiClient.convertToType(data['normalizenames'], 'Boolean');
             }
             if (data.hasOwnProperty('quotechar')) {
                 obj['quotechar'] = ApiClient.convertToType(data['quotechar'], 'String');
-            }
-            if (data.hasOwnProperty('escapechar')) {
-                obj['escapechar'] = ApiClient.convertToType(data['escapechar'], 'String');
             }
         }
         return obj;
@@ -86,6 +86,23 @@ class CSVFileSyntax {
 
 
 }
+
+/**
+ * @member {Number} datarow
+ */
+CSVFileSyntax.prototype['datarow'] = undefined;
+
+/**
+ * @member {String} delim
+ * @default ''
+ */
+CSVFileSyntax.prototype['delim'] = '';
+
+/**
+ * @member {String} escapechar
+ * @default ''
+ */
+CSVFileSyntax.prototype['escapechar'] = '';
 
 /**
  * @member {Array.<String>} header
@@ -98,15 +115,10 @@ CSVFileSyntax.prototype['header'] = undefined;
 CSVFileSyntax.prototype['header_row'] = undefined;
 
 /**
- * @member {Boolean} normalizenames
+ * @member {Boolean} ignorerepeated
  * @default false
  */
-CSVFileSyntax.prototype['normalizenames'] = false;
-
-/**
- * @member {Number} datarow
- */
-CSVFileSyntax.prototype['datarow'] = undefined;
+CSVFileSyntax.prototype['ignorerepeated'] = false;
 
 /**
  * @member {Array.<String>} missingstrings
@@ -114,16 +126,10 @@ CSVFileSyntax.prototype['datarow'] = undefined;
 CSVFileSyntax.prototype['missingstrings'] = undefined;
 
 /**
- * @member {String} delim
- * @default ''
- */
-CSVFileSyntax.prototype['delim'] = '';
-
-/**
- * @member {Boolean} ignorerepeated
+ * @member {Boolean} normalizenames
  * @default false
  */
-CSVFileSyntax.prototype['ignorerepeated'] = false;
+CSVFileSyntax.prototype['normalizenames'] = false;
 
 /**
  * @member {String} quotechar
@@ -131,19 +137,13 @@ CSVFileSyntax.prototype['ignorerepeated'] = false;
  */
 CSVFileSyntax.prototype['quotechar'] = '';
 
-/**
- * @member {String} escapechar
- * @default ''
- */
-CSVFileSyntax.prototype['escapechar'] = '';
-
 
 // Implement FileSyntax interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-FileSyntax.prototype['objtp'] = '';
+FileSyntax.prototype['type'] = '';
 
 
 

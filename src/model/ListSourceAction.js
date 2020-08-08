@@ -25,11 +25,11 @@ class ListSourceAction {
      * @alias module:model/ListSourceAction
      * @extends module:model/Action
      * @implements module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        Action.initialize(this, objtp);
-        ListSourceAction.initialize(this, objtp);
+    constructor(type) { 
+        Action.initialize(this, type);
+        ListSourceAction.initialize(this, type);
     }
 
     /**
@@ -37,7 +37,7 @@ class ListSourceAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -63,10 +63,10 @@ class ListSourceAction {
 
 // Implement Action interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

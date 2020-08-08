@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(DelveClientSdk.SyntaxError);
     });
 
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
+      //var instane = new DelveClientSdk.SyntaxError();
+      //expect(instance).to.be();
+    });
+
     it('should have the property node (base name: "node")', function() {
       // uncomment below and update the code to test the property node
       //var instane = new DelveClientSdk.SyntaxError();
@@ -62,12 +68,6 @@
 
     it('should have the property trace (base name: "trace")', function() {
       // uncomment below and update the code to test the property trace
-      //var instane = new DelveClientSdk.SyntaxError();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property next (base name: "next")', function() {
-      // uncomment below and update the code to test the property next
       //var instane = new DelveClientSdk.SyntaxError();
       //expect(instance).to.be();
     });

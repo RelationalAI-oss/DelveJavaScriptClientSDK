@@ -22,11 +22,11 @@ class Point {
     /**
      * Constructs a new <code>Point</code>.
      * @alias module:model/Point
-     * @param objtp {module:model/Point.ObjtpEnum} 
+     * @param type {module:model/Point.TypeEnum} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        Point.initialize(this, objtp);
+        Point.initialize(this, type);
     }
 
     /**
@@ -34,8 +34,8 @@ class Point {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -49,14 +49,14 @@ class Point {
         if (data) {
             obj = obj || new Point();
 
-            if (data.hasOwnProperty('row')) {
-                obj['row'] = ApiClient.convertToType(data['row'], 'Number');
-            }
             if (data.hasOwnProperty('column')) {
                 obj['column'] = ApiClient.convertToType(data['column'], 'Number');
             }
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('row')) {
+                obj['row'] = ApiClient.convertToType(data['row'], 'Number');
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -66,31 +66,31 @@ class Point {
 }
 
 /**
- * @member {Number} row
- */
-Point.prototype['row'] = undefined;
-
-/**
  * @member {Number} column
  */
 Point.prototype['column'] = undefined;
 
 /**
- * @member {module:model/Point.ObjtpEnum} objtp
+ * @member {Number} row
+ */
+Point.prototype['row'] = undefined;
+
+/**
+ * @member {module:model/Point.TypeEnum} type
  * @default 'Point'
  */
-Point.prototype['objtp'] = 'Point';
+Point.prototype['type'] = 'Point';
 
 
 
 
 
 /**
- * Allowed values for the <code>objtp</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-Point['ObjtpEnum'] = {
+Point['TypeEnum'] = {
 
     /**
      * value: "Point"

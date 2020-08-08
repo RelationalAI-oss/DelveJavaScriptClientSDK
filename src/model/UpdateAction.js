@@ -27,11 +27,11 @@ class UpdateAction {
      * @alias module:model/UpdateAction
      * @extends module:model/Action
      * @implements module:model/Action
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        Action.initialize(this, objtp);
-        UpdateAction.initialize(this, objtp);
+    constructor(type) { 
+        Action.initialize(this, type);
+        UpdateAction.initialize(this, type);
     }
 
     /**
@@ -39,7 +39,7 @@ class UpdateAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
         obj['rel'] = rel;
     }
 
@@ -56,14 +56,14 @@ class UpdateAction {
             Action.constructFromObject(data, obj);
             Action.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('delta')) {
+                obj['delta'] = ApiClient.convertToType(data['delta'], [PairAnyValueAnyValue]);
+            }
             if (data.hasOwnProperty('rel')) {
                 obj['rel'] = RelKey.constructFromObject(data['rel']);
             }
             if (data.hasOwnProperty('updates')) {
                 obj['updates'] = ApiClient.convertToType(data['updates'], [PairAnyValueAnyValue]);
-            }
-            if (data.hasOwnProperty('delta')) {
-                obj['delta'] = ApiClient.convertToType(data['delta'], [PairAnyValueAnyValue]);
             }
         }
         return obj;
@@ -71,6 +71,11 @@ class UpdateAction {
 
 
 }
+
+/**
+ * @member {Array.<module:model/PairAnyValueAnyValue>} delta
+ */
+UpdateAction.prototype['delta'] = undefined;
 
 /**
  * @member {module:model/RelKey} rel
@@ -82,18 +87,13 @@ UpdateAction.prototype['rel'] = undefined;
  */
 UpdateAction.prototype['updates'] = undefined;
 
-/**
- * @member {Array.<module:model/PairAnyValueAnyValue>} delta
- */
-UpdateAction.prototype['delta'] = undefined;
-
 
 // Implement Action interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-Action.prototype['objtp'] = '';
+Action.prototype['type'] = '';
 
 
 

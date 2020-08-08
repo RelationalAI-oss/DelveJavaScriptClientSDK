@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**row** | **Number** |  | [optional] 
 **column** | **Number** |  | [optional] 
-**objtp** | **String** |  | [default to &#39;Point&#39;]
+**row** | **Number** |  | [optional] 
+**type** | **String** |  | [default to &#39;Point&#39;]
 
 
 
-## Enum: ObjtpEnum
+## Enum: TypeEnum
 
 
 * `Point` (value: `"Point"`)

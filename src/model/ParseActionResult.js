@@ -26,11 +26,11 @@ class ParseActionResult {
      * @alias module:model/ParseActionResult
      * @extends module:model/ActionResult
      * @implements module:model/ActionResult
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        ActionResult.initialize(this, objtp);
-        ParseActionResult.initialize(this, objtp);
+    constructor(type) { 
+        ActionResult.initialize(this, type);
+        ParseActionResult.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class ParseActionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -72,10 +72,10 @@ ParseActionResult.prototype['problems'] = undefined;
 
 // Implement ActionResult interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-ActionResult.prototype['objtp'] = '';
+ActionResult.prototype['type'] = '';
 
 
 

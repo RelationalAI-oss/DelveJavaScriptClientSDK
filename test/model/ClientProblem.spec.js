@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property report (base name: "report")', function() {
-      // uncomment below and update the code to test the property report
-      //var instane = new DelveClientSdk.ClientProblem();
-      //expect(instance).to.be();
-    });
-
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
       //var instane = new DelveClientSdk.ClientProblem();
@@ -86,6 +80,12 @@
 
     it('should have the property path (base name: "path")', function() {
       // uncomment below and update the code to test the property path
+      //var instane = new DelveClientSdk.ClientProblem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property report (base name: "report")', function() {
+      // uncomment below and update the code to test the property report
       //var instane = new DelveClientSdk.ClientProblem();
       //expect(instance).to.be();
     });

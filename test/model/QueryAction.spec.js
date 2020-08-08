@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(DelveClientSdk.QueryAction);
     });
 
-    it('should have the property source (base name: "source")', function() {
-      // uncomment below and update the code to test the property source
+    it('should have the property inputs (base name: "inputs")', function() {
+      // uncomment below and update the code to test the property inputs
       //var instane = new DelveClientSdk.QueryAction();
       //expect(instance).to.be();
     });
 
-    it('should have the property inputs (base name: "inputs")', function() {
-      // uncomment below and update the code to test the property inputs
+    it('should have the property outputs (base name: "outputs")', function() {
+      // uncomment below and update the code to test the property outputs
       //var instane = new DelveClientSdk.QueryAction();
       //expect(instance).to.be();
     });
@@ -72,8 +72,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property outputs (base name: "outputs")', function() {
-      // uncomment below and update the code to test the property outputs
+    it('should have the property source (base name: "source")', function() {
+      // uncomment below and update the code to test the property source
       //var instane = new DelveClientSdk.QueryAction();
       //expect(instance).to.be();
     });

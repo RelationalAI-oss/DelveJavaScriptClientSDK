@@ -54,6 +54,18 @@
       //expect(instance).to.be.a(DelveClientSdk.SetOptionsAction);
     });
 
+    it('should have the property abortOnError (base name: "abort_on_error")', function() {
+      // uncomment below and update the code to test the property abortOnError
+      //var instane = new DelveClientSdk.SetOptionsAction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property broken (base name: "broken")', function() {
+      // uncomment below and update the code to test the property broken
+      //var instane = new DelveClientSdk.SetOptionsAction();
+      //expect(instance).to.be();
+    });
+
     it('should have the property debug (base name: "debug")', function() {
       // uncomment below and update the code to test the property debug
       //var instane = new DelveClientSdk.SetOptionsAction();
@@ -66,20 +78,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property broken (base name: "broken")', function() {
-      // uncomment below and update the code to test the property broken
-      //var instane = new DelveClientSdk.SetOptionsAction();
-      //expect(instance).to.be();
-    });
-
     it('should have the property silent (base name: "silent")', function() {
       // uncomment below and update the code to test the property silent
-      //var instane = new DelveClientSdk.SetOptionsAction();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property abortOnError (base name: "abort_on_error")', function() {
-      // uncomment below and update the code to test the property abortOnError
       //var instane = new DelveClientSdk.SetOptionsAction();
       //expect(instance).to.be();
     });

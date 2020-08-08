@@ -22,11 +22,11 @@ class ActionResult {
     /**
      * Constructs a new <code>ActionResult</code>.
      * @alias module:model/ActionResult
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
+    constructor(type) { 
         
-        ActionResult.initialize(this, objtp);
+        ActionResult.initialize(this, type);
     }
 
     /**
@@ -34,8 +34,8 @@ class ActionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
-        obj['objtp'] = objtp;
+    static initialize(obj, type) { 
+        obj['type'] = type;
     }
 
     /**
@@ -49,8 +49,8 @@ class ActionResult {
         if (data) {
             obj = obj || new ActionResult();
 
-            if (data.hasOwnProperty('objtp')) {
-                obj['objtp'] = ApiClient.convertToType(data['objtp'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -60,10 +60,10 @@ class ActionResult {
 }
 
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-ActionResult.prototype['objtp'] = '';
+ActionResult.prototype['type'] = '';
 
 
 

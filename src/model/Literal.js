@@ -26,11 +26,11 @@ class Literal {
      * @alias module:model/Literal
      * @extends module:model/SyntaxNode
      * @implements module:model/SyntaxNode
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        SyntaxNode.initialize(this, objtp);
-        Literal.initialize(this, objtp);
+    constructor(type) { 
+        SyntaxNode.initialize(this, type);
+        Literal.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class Literal {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
         obj['range'] = range;
     }
 
@@ -55,14 +55,14 @@ class Literal {
             SyntaxNode.constructFromObject(data, obj);
             SyntaxNode.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'String');
+            if (data.hasOwnProperty('missing')) {
+                obj['missing'] = ApiClient.convertToType(data['missing'], 'Boolean');
             }
             if (data.hasOwnProperty('range')) {
                 obj['range'] = Range.constructFromObject(data['range']);
             }
-            if (data.hasOwnProperty('missing')) {
-                obj['missing'] = ApiClient.convertToType(data['missing'], 'Boolean');
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
         }
         return obj;
@@ -72,10 +72,10 @@ class Literal {
 }
 
 /**
- * @member {String} value
- * @default ''
+ * @member {Boolean} missing
+ * @default false
  */
-Literal.prototype['value'] = '';
+Literal.prototype['missing'] = false;
 
 /**
  * @member {module:model/Range} range
@@ -83,18 +83,18 @@ Literal.prototype['value'] = '';
 Literal.prototype['range'] = undefined;
 
 /**
- * @member {Boolean} missing
- * @default false
+ * @member {String} value
+ * @default ''
  */
-Literal.prototype['missing'] = false;
+Literal.prototype['value'] = '';
 
 
 // Implement SyntaxNode interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-SyntaxNode.prototype['objtp'] = '';
+SyntaxNode.prototype['type'] = '';
 
 
 

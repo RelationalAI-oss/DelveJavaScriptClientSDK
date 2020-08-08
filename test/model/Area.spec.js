@@ -54,20 +54,20 @@
       //expect(instance).to.be.a(DelveClientSdk.Area);
     });
 
-    it('should have the property startPoint (base name: "start_point")', function() {
-      // uncomment below and update the code to test the property startPoint
-      //var instane = new DelveClientSdk.Area();
-      //expect(instance).to.be();
-    });
-
     it('should have the property endPoint (base name: "end_point")', function() {
       // uncomment below and update the code to test the property endPoint
       //var instane = new DelveClientSdk.Area();
       //expect(instance).to.be();
     });
 
-    it('should have the property objtp (base name: "objtp")', function() {
-      // uncomment below and update the code to test the property objtp
+    it('should have the property startPoint (base name: "start_point")', function() {
+      // uncomment below and update the code to test the property startPoint
+      //var instane = new DelveClientSdk.Area();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instane = new DelveClientSdk.Area();
       //expect(instance).to.be();
     });

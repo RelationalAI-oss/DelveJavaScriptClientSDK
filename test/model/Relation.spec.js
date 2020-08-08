@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new DelveClientSdk.PairRelKeyAnyValue();
+    instance = new DelveClientSdk.Relation();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,28 @@
       object[property] = value;
   }
 
-  describe('PairRelKeyAnyValue', function() {
-    it('should create an instance of PairRelKeyAnyValue', function() {
-      // uncomment below and update the code to test PairRelKeyAnyValue
-      //var instane = new DelveClientSdk.PairRelKeyAnyValue();
-      //expect(instance).to.be.a(DelveClientSdk.PairRelKeyAnyValue);
+  describe('Relation', function() {
+    it('should create an instance of Relation', function() {
+      // uncomment below and update the code to test Relation
+      //var instane = new DelveClientSdk.Relation();
+      //expect(instance).to.be.a(DelveClientSdk.Relation);
     });
 
-    it('should have the property first (base name: "first")', function() {
-      // uncomment below and update the code to test the property first
-      //var instane = new DelveClientSdk.PairRelKeyAnyValue();
+    it('should have the property columns (base name: "columns")', function() {
+      // uncomment below and update the code to test the property columns
+      //var instane = new DelveClientSdk.Relation();
       //expect(instance).to.be();
     });
 
-    it('should have the property second (base name: "second")', function() {
-      // uncomment below and update the code to test the property second
-      //var instane = new DelveClientSdk.PairRelKeyAnyValue();
+    it('should have the property relKey (base name: "rel_key")', function() {
+      // uncomment below and update the code to test the property relKey
+      //var instane = new DelveClientSdk.Relation();
       //expect(instance).to.be();
     });
 
-    it('should have the property objtp (base name: "objtp")', function() {
-      // uncomment below and update the code to test the property objtp
-      //var instane = new DelveClientSdk.PairRelKeyAnyValue();
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instane = new DelveClientSdk.Relation();
       //expect(instance).to.be();
     });
 

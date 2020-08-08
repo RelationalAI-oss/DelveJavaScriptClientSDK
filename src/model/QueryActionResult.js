@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ActionResult from './ActionResult';
-import RelDict from './RelDict';
+import Relation from './Relation';
 
 /**
  * The QueryActionResult model module.
@@ -26,11 +26,11 @@ class QueryActionResult {
      * @alias module:model/QueryActionResult
      * @extends module:model/ActionResult
      * @implements module:model/ActionResult
-     * @param objtp {String} 
+     * @param type {String} 
      */
-    constructor(objtp) { 
-        ActionResult.initialize(this, objtp);
-        QueryActionResult.initialize(this, objtp);
+    constructor(type) { 
+        ActionResult.initialize(this, type);
+        QueryActionResult.initialize(this, type);
     }
 
     /**
@@ -38,7 +38,7 @@ class QueryActionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, objtp) { 
+    static initialize(obj, type) { 
     }
 
     /**
@@ -55,7 +55,7 @@ class QueryActionResult {
             ActionResult.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('output')) {
-                obj['output'] = RelDict.constructFromObject(data['output']);
+                obj['output'] = ApiClient.convertToType(data['output'], [Relation]);
             }
         }
         return obj;
@@ -65,17 +65,17 @@ class QueryActionResult {
 }
 
 /**
- * @member {module:model/RelDict} output
+ * @member {Array.<module:model/Relation>} output
  */
 QueryActionResult.prototype['output'] = undefined;
 
 
 // Implement ActionResult interface:
 /**
- * @member {String} objtp
+ * @member {String} type
  * @default ''
  */
-ActionResult.prototype['objtp'] = '';
+ActionResult.prototype['type'] = '';
 
 
 
