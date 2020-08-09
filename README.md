@@ -129,7 +129,6 @@ Class | Method | HTTP request | Description
  - [DelveClientSdk.AbstractProblem](docs/AbstractProblem.md)
  - [DelveClientSdk.Action](docs/Action.md)
  - [DelveClientSdk.ActionResult](docs/ActionResult.md)
- - [DelveClientSdk.AnyValue](docs/AnyValue.md)
  - [DelveClientSdk.Appl](docs/Appl.md)
  - [DelveClientSdk.Area](docs/Area.md)
  - [DelveClientSdk.CSVFileSchema](docs/CSVFileSchema.md)
@@ -140,8 +139,6 @@ Class | Method | HTTP request | Description
  - [DelveClientSdk.CollectProblemsAction](docs/CollectProblemsAction.md)
  - [DelveClientSdk.CollectProblemsActionResult](docs/CollectProblemsActionResult.md)
  - [DelveClientSdk.Cons](docs/Cons.md)
- - [DelveClientSdk.ConstantType](docs/ConstantType.md)
- - [DelveClientSdk.DBType](docs/DBType.md)
  - [DelveClientSdk.ExceptionProblem](docs/ExceptionProblem.md)
  - [DelveClientSdk.FileSchema](docs/FileSchema.md)
  - [DelveClientSdk.FileSyntax](docs/FileSyntax.md)
@@ -190,7 +187,6 @@ Class | Method | HTTP request | Description
  - [DelveClientSdk.UpdateAction](docs/UpdateAction.md)
  - [DelveClientSdk.UpdateActionResult](docs/UpdateActionResult.md)
  - [DelveClientSdk.WorkspaceLoadProblem](docs/WorkspaceLoadProblem.md)
- - [DelveClientSdk.WrappedType](docs/WrappedType.md)
 
 
 ## Documentation for Authorization

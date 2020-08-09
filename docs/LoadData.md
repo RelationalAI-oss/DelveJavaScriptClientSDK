@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **data** | **String** |  | [optional] [default to &#39;&#39;]
 **fileSchema** | [**FileSchema**](FileSchema.md) |  | 
 **fileSyntax** | [**FileSyntax**](FileSyntax.md) |  | 
-**key** | [**AnyValue**](AnyValue.md) |  | [optional] 
+**key** | [**AnyType**](.md) |  | [optional] 
 **path** | **String** |  | [optional] [default to &#39;&#39;]
 **type** | **String** |  | [default to &#39;LoadData&#39;]
 

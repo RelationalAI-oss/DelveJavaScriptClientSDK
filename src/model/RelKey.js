@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import DBType from './DBType';
 
 /**
  * The RelKey model module.
@@ -51,13 +50,13 @@ class RelKey {
             obj = obj || new RelKey();
 
             if (data.hasOwnProperty('keys')) {
-                obj['keys'] = ApiClient.convertToType(data['keys'], [DBType]);
+                obj['keys'] = ApiClient.convertToType(data['keys'], ['String']);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('values')) {
-                obj['values'] = ApiClient.convertToType(data['values'], [DBType]);
+                obj['values'] = ApiClient.convertToType(data['values'], ['String']);
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -70,7 +69,7 @@ class RelKey {
 }
 
 /**
- * @member {Array.<module:model/DBType>} keys
+ * @member {Array.<String>} keys
  */
 RelKey.prototype['keys'] = undefined;
 
@@ -81,7 +80,7 @@ RelKey.prototype['keys'] = undefined;
 RelKey.prototype['name'] = '';
 
 /**
- * @member {Array.<module:model/DBType>} values
+ * @member {Array.<String>} values
  */
 RelKey.prototype['values'] = undefined;
 
