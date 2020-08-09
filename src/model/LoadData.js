@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyValue from './AnyValue';
+import AnyType from './AnyType';
 import FileSchema from './FileSchema';
 import FileSyntax from './FileSyntax';
 
@@ -69,7 +69,7 @@ class LoadData {
                 obj['file_syntax'] = FileSyntax.constructFromObject(data['file_syntax']);
             }
             if (data.hasOwnProperty('key')) {
-                obj['key'] = AnyValue.constructFromObject(data['key']);
+                obj['key'] = ApiClient.convertToType(data['key'], AnyType);
             }
             if (data.hasOwnProperty('path')) {
                 obj['path'] = ApiClient.convertToType(data['path'], 'String');
@@ -107,7 +107,7 @@ LoadData.prototype['file_schema'] = undefined;
 LoadData.prototype['file_syntax'] = undefined;
 
 /**
- * @member {module:model/AnyValue} key
+ * @member {module:model/AnyType} key
  */
 LoadData.prototype['key'] = undefined;
 

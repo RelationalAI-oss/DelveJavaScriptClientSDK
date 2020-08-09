@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyValue from './AnyValue';
+import AnyType from './AnyType';
 import RelKey from './RelKey';
 
 /**
@@ -54,7 +54,7 @@ class Relation {
             obj = obj || new Relation();
 
             if (data.hasOwnProperty('columns')) {
-                obj['columns'] = AnyValue.constructFromObject(data['columns']);
+                obj['columns'] = ApiClient.convertToType(data['columns'], AnyType);
             }
             if (data.hasOwnProperty('rel_key')) {
                 obj['rel_key'] = RelKey.constructFromObject(data['rel_key']);
@@ -70,7 +70,7 @@ class Relation {
 }
 
 /**
- * @member {module:model/AnyValue} columns
+ * @member {module:model/AnyType} columns
  */
 Relation.prototype['columns'] = undefined;
 

@@ -53,21 +53,12 @@ class WrappedType {
             DBType.constructFromObject(data, obj);
             DBType.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('_value')) {
-                obj['_value'] = ApiClient.convertToType(data['_value'], 'String');
-            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {String} _value
- * @default ''
- */
-WrappedType.prototype['_value'] = '';
 
 
 // Implement DBType interface:

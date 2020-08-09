@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyValue from './AnyValue';
+import AnyType from './AnyType';
 
 /**
  * The PairAnyValueAnyValue model module.
@@ -51,10 +51,10 @@ class PairAnyValueAnyValue {
             obj = obj || new PairAnyValueAnyValue();
 
             if (data.hasOwnProperty('first')) {
-                obj['first'] = AnyValue.constructFromObject(data['first']);
+                obj['first'] = ApiClient.convertToType(data['first'], AnyType);
             }
             if (data.hasOwnProperty('second')) {
-                obj['second'] = AnyValue.constructFromObject(data['second']);
+                obj['second'] = ApiClient.convertToType(data['second'], AnyType);
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -67,12 +67,12 @@ class PairAnyValueAnyValue {
 }
 
 /**
- * @member {module:model/AnyValue} first
+ * @member {module:model/AnyType} first
  */
 PairAnyValueAnyValue.prototype['first'] = undefined;
 
 /**
- * @member {module:model/AnyValue} second
+ * @member {module:model/AnyType} second
  */
 PairAnyValueAnyValue.prototype['second'] = undefined;
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**keys** | [**[DBType]**](DBType.md) |  | [optional] 
+**keys** | **[String]** |  | [optional] 
 **name** | **String** |  | [optional] [default to &#39;&#39;]
-**values** | [**[DBType]**](DBType.md) |  | [optional] 
+**values** | **[String]** |  | [optional] 
 **type** | **String** |  | [default to &#39;RelKey&#39;]
 
 

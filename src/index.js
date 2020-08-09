@@ -16,7 +16,6 @@ import ApiClient from './ApiClient';
 import AbstractProblem from './model/AbstractProblem';
 import Action from './model/Action';
 import ActionResult from './model/ActionResult';
-import AnyValue from './model/AnyValue';
 import Appl from './model/Appl';
 import Area from './model/Area';
 import CSVFileSchema from './model/CSVFileSchema';
@@ -27,8 +26,6 @@ import ClientProblem from './model/ClientProblem';
 import CollectProblemsAction from './model/CollectProblemsAction';
 import CollectProblemsActionResult from './model/CollectProblemsActionResult';
 import Cons from './model/Cons';
-import ConstantType from './model/ConstantType';
-import DBType from './model/DBType';
 import ExceptionProblem from './model/ExceptionProblem';
 import FileSchema from './model/FileSchema';
 import FileSyntax from './model/FileSyntax';
@@ -77,7 +74,6 @@ import UndefinedError from './model/UndefinedError';
 import UpdateAction from './model/UpdateAction';
 import UpdateActionResult from './model/UpdateActionResult';
 import WorkspaceLoadProblem from './model/WorkspaceLoadProblem';
-import WrappedType from './model/WrappedType';
 import DefaultApi from './api/DefaultApi';
 
 
@@ -138,12 +134,6 @@ export {
     ActionResult,
 
     /**
-     * The AnyValue model constructor.
-     * @property {module:model/AnyValue}
-     */
-    AnyValue,
-
-    /**
      * The Appl model constructor.
      * @property {module:model/Appl}
      */
@@ -202,18 +192,6 @@ export {
      * @property {module:model/Cons}
      */
     Cons,
-
-    /**
-     * The ConstantType model constructor.
-     * @property {module:model/ConstantType}
-     */
-    ConstantType,
-
-    /**
-     * The DBType model constructor.
-     * @property {module:model/DBType}
-     */
-    DBType,
 
     /**
      * The ExceptionProblem model constructor.
@@ -502,12 +480,6 @@ export {
      * @property {module:model/WorkspaceLoadProblem}
      */
     WorkspaceLoadProblem,
-
-    /**
-     * The WrappedType model constructor.
-     * @property {module:model/WrappedType}
-     */
-    WrappedType,
 
     /**
     * The DefaultApi service constructor.
