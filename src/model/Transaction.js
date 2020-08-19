@@ -67,6 +67,9 @@ class Transaction {
             if (data.hasOwnProperty('readonly')) {
                 obj['readonly'] = ApiClient.convertToType(data['readonly'], 'Boolean');
             }
+            if (data.hasOwnProperty('source_dbname')) {
+                obj['source_dbname'] = ApiClient.convertToType(data['source_dbname'], 'String');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -107,6 +110,12 @@ Transaction.prototype['mode'] = 'OPEN';
 Transaction.prototype['readonly'] = false;
 
 /**
+ * @member {String} source_dbname
+ * @default ''
+ */
+Transaction.prototype['source_dbname'] = '';
+
+/**
  * @member {module:model/Transaction.TypeEnum} type
  * @default 'Transaction'
  */
@@ -145,7 +154,13 @@ Transaction['ModeEnum'] = {
      * value: "OPEN_OR_CREATE"
      * @const
      */
-    "OPEN_OR_CREATE": "OPEN_OR_CREATE"
+    "OPEN_OR_CREATE": "OPEN_OR_CREATE",
+
+    /**
+     * value: "BRANCH"
+     * @const
+     */
+    "BRANCH": "BRANCH"
 };
 
 

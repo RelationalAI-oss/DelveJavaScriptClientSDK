@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **dbname** | **String** |  | [optional] [default to &#39;&#39;]
 **mode** | **String** |  | [default to &#39;OPEN&#39;]
 **readonly** | **Boolean** |  | [optional] [default to false]
+**sourceDbname** | **String** |  | [optional] [default to &#39;&#39;]
 **type** | **String** |  | [default to &#39;Transaction&#39;]
 
 
@@ -23,6 +24,8 @@ Name | Type | Description | Notes
 * `CREATE_OVERWRITE` (value: `"CREATE_OVERWRITE"`)
 
 * `OPEN_OR_CREATE` (value: `"OPEN_OR_CREATE"`)
+
+* `BRANCH` (value: `"BRANCH"`)
 
 
 
