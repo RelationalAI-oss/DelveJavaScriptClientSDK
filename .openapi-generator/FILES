@@ -25,6 +25,7 @@ docs/InstallAction.md
 docs/InstallActionResult.md
 docs/IntegrityConstraintProblem.md
 docs/IntegrityConstraintViolation.md
+docs/JSONFileSchema.md
 docs/JSONFileSyntax.md
 docs/LabeledAction.md
 docs/LabeledActionResult.md
@@ -92,6 +93,7 @@ src/model/InstallAction.js
 src/model/InstallActionResult.js
 src/model/IntegrityConstraintProblem.js
 src/model/IntegrityConstraintViolation.js
+src/model/JSONFileSchema.js
 src/model/JSONFileSyntax.js
 src/model/LabeledAction.js
 src/model/LabeledActionResult.js
@@ -130,3 +132,4 @@ src/model/UndefinedError.js
 src/model/UpdateAction.js
 src/model/UpdateActionResult.js
 src/model/WorkspaceLoadProblem.js
+test/model/JSONFileSchema.spec.js

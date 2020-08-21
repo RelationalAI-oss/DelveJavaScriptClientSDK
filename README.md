@@ -149,6 +149,7 @@ Class | Method | HTTP request | Description
  - [DelveClientSdk.InstallActionResult](docs/InstallActionResult.md)
  - [DelveClientSdk.IntegrityConstraintProblem](docs/IntegrityConstraintProblem.md)
  - [DelveClientSdk.IntegrityConstraintViolation](docs/IntegrityConstraintViolation.md)
+ - [DelveClientSdk.JSONFileSchema](docs/JSONFileSchema.md)
  - [DelveClientSdk.JSONFileSyntax](docs/JSONFileSyntax.md)
  - [DelveClientSdk.LabeledAction](docs/LabeledAction.md)
  - [DelveClientSdk.LabeledActionResult](docs/LabeledActionResult.md)

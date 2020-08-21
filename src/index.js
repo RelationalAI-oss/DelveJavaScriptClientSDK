@@ -36,6 +36,7 @@ import InstallAction from './model/InstallAction';
 import InstallActionResult from './model/InstallActionResult';
 import IntegrityConstraintProblem from './model/IntegrityConstraintProblem';
 import IntegrityConstraintViolation from './model/IntegrityConstraintViolation';
+import JSONFileSchema from './model/JSONFileSchema';
 import JSONFileSyntax from './model/JSONFileSyntax';
 import LabeledAction from './model/LabeledAction';
 import LabeledActionResult from './model/LabeledActionResult';
@@ -252,6 +253,12 @@ export {
      * @property {module:model/IntegrityConstraintViolation}
      */
     IntegrityConstraintViolation,
+
+    /**
+     * The JSONFileSchema model constructor.
+     * @property {module:model/JSONFileSchema}
+     */
+    JSONFileSchema,
 
     /**
      * The JSONFileSyntax model constructor.
