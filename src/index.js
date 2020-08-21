@@ -32,6 +32,7 @@ import FileSyntax from './model/FileSyntax';
 import ICViolation from './model/ICViolation';
 import ImportAction from './model/ImportAction';
 import ImportActionResult from './model/ImportActionResult';
+import InfraError from './model/InfraError';
 import InstallAction from './model/InstallAction';
 import InstallActionResult from './model/InstallActionResult';
 import IntegrityConstraintProblem from './model/IntegrityConstraintProblem';
@@ -229,6 +230,12 @@ export {
      * @property {module:model/ImportActionResult}
      */
     ImportActionResult,
+
+    /**
+     * The InfraError model constructor.
+     * @property {module:model/InfraError}
+     */
+    InfraError,
 
     /**
      * The InstallAction model constructor.

@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import InfraError from '../model/InfraError';
 import Transaction from '../model/Transaction';
 import TransactionResult from '../model/TransactionResult';
 

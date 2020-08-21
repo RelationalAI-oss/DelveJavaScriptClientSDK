@@ -21,6 +21,7 @@ docs/FileSyntax.md
 docs/ICViolation.md
 docs/ImportAction.md
 docs/ImportActionResult.md
+docs/InfraError.md
 docs/InstallAction.md
 docs/InstallActionResult.md
 docs/IntegrityConstraintProblem.md
@@ -89,6 +90,7 @@ src/model/FileSyntax.js
 src/model/ICViolation.js
 src/model/ImportAction.js
 src/model/ImportActionResult.js
+src/model/InfraError.js
 src/model/InstallAction.js
 src/model/InstallActionResult.js
 src/model/IntegrityConstraintProblem.js
@@ -132,4 +134,3 @@ src/model/UndefinedError.js
 src/model/UpdateAction.js
 src/model/UpdateActionResult.js
 src/model/WorkspaceLoadProblem.js
-test/model/JSONFileSchema.spec.js

@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
  - [DelveClientSdk.ICViolation](docs/ICViolation.md)
  - [DelveClientSdk.ImportAction](docs/ImportAction.md)
  - [DelveClientSdk.ImportActionResult](docs/ImportActionResult.md)
+ - [DelveClientSdk.InfraError](docs/InfraError.md)
  - [DelveClientSdk.InstallAction](docs/InstallAction.md)
  - [DelveClientSdk.InstallActionResult](docs/InstallActionResult.md)
  - [DelveClientSdk.IntegrityConstraintProblem](docs/IntegrityConstraintProblem.md)
