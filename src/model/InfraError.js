@@ -22,12 +22,12 @@ class InfraError {
     /**
      * Constructs a new <code>InfraError</code>.
      * @alias module:model/InfraError
-     * @param name {String} 
+     * @param status {String} 
      * @param message {String} 
      */
-    constructor(name, message) { 
+    constructor(status, message) { 
         
-        InfraError.initialize(this, name, message);
+        InfraError.initialize(this, status, message);
     }
 
     /**
@@ -35,8 +35,8 @@ class InfraError {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, message) { 
-        obj['name'] = name;
+    static initialize(obj, status, message) { 
+        obj['status'] = status;
         obj['message'] = message;
     }
 
@@ -51,8 +51,8 @@ class InfraError {
         if (data) {
             obj = obj || new InfraError();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
@@ -65,9 +65,9 @@ class InfraError {
 }
 
 /**
- * @member {String} name
+ * @member {String} status
  */
-InfraError.prototype['name'] = undefined;
+InfraError.prototype['status'] = undefined;
 
 /**
  * @member {String} message
