@@ -82,8 +82,9 @@ Range.prototype['area'] = undefined;
 
 /**
  * @member {Number} end_byte
+ * @default 0
  */
-Range.prototype['end_byte'] = undefined;
+Range.prototype['end_byte'] = 0;
 
 /**
  * @member {module:model/AnyType} input
@@ -92,8 +93,9 @@ Range.prototype['input'] = undefined;
 
 /**
  * @member {Number} start_byte
+ * @default 0
  */
-Range.prototype['start_byte'] = undefined;
+Range.prototype['start_byte'] = 0;
 
 /**
  * @member {module:model/Range.TypeEnum} type

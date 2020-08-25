@@ -89,8 +89,9 @@ class CSVFileSyntax {
 
 /**
  * @member {Number} datarow
+ * @default 0
  */
-CSVFileSyntax.prototype['datarow'] = undefined;
+CSVFileSyntax.prototype['datarow'] = 0;
 
 /**
  * @member {String} delim
@@ -111,8 +112,9 @@ CSVFileSyntax.prototype['header'] = undefined;
 
 /**
  * @member {Number} header_row
+ * @default 0
  */
-CSVFileSyntax.prototype['header_row'] = undefined;
+CSVFileSyntax.prototype['header_row'] = 0;
 
 /**
  * @member {Boolean} ignorerepeated

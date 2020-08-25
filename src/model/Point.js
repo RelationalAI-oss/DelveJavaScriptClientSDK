@@ -67,13 +67,15 @@ class Point {
 
 /**
  * @member {Number} column
+ * @default 0
  */
-Point.prototype['column'] = undefined;
+Point.prototype['column'] = 0;
 
 /**
  * @member {Number} row
+ * @default 0
  */
-Point.prototype['row'] = undefined;
+Point.prototype['row'] = 0;
 
 /**
  * @member {module:model/Point.TypeEnum} type
