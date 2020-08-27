@@ -92,9 +92,8 @@ LoadData.prototype['content_type'] = '';
 
 /**
  * @member {String} data
- * @default 'null'
  */
-LoadData.prototype['data'] = 'null';
+LoadData.prototype['data'] = undefined;
 
 /**
  * @member {module:model/FileSchema} file_schema
@@ -113,9 +112,8 @@ LoadData.prototype['key'] = undefined;
 
 /**
  * @member {String} path
- * @default 'null'
  */
-LoadData.prototype['path'] = 'null';
+LoadData.prototype['path'] = undefined;
 
 /**
  * @member {module:model/LoadData.TypeEnum} type

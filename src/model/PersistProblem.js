@@ -75,9 +75,8 @@ PersistProblem.prototype['exception'] = '';
 
 /**
  * @member {String} exception_stacktrace
- * @default 'null'
  */
-PersistProblem.prototype['exception_stacktrace'] = 'null';
+PersistProblem.prototype['exception_stacktrace'] = undefined;
 
 
 // Implement AbstractProblem interface:

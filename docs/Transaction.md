@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **dbname** | **String** |  | [default to &#39;&#39;]
 **mode** | **String** |  | [default to &#39;OPEN&#39;]
 **readonly** | **Boolean** |  | [default to false]
-**sourceDbname** | **String** |  | [optional] [default to &#39;null&#39;]
+**sourceDbname** | **String** |  | [optional] 
 **type** | **String** |  | [default to &#39;Transaction&#39;]
 
 

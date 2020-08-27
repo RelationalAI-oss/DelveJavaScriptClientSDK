@@ -79,9 +79,8 @@ OutputProblem.prototype['exception'] = '';
 
 /**
  * @member {String} exception_stacktrace
- * @default 'null'
  */
-OutputProblem.prototype['exception_stacktrace'] = 'null';
+OutputProblem.prototype['exception_stacktrace'] = undefined;
 
 /**
  * @member {String} name

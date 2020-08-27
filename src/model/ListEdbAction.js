@@ -65,9 +65,8 @@ class ListEdbAction {
 
 /**
  * @member {String} relname
- * @default 'null'
  */
-ListEdbAction.prototype['relname'] = 'null';
+ListEdbAction.prototype['relname'] = undefined;
 
 
 // Implement Action interface:

@@ -117,9 +117,8 @@ Transaction.prototype['readonly'] = false;
 
 /**
  * @member {String} source_dbname
- * @default 'null'
  */
-Transaction.prototype['source_dbname'] = 'null';
+Transaction.prototype['source_dbname'] = undefined;
 
 /**
  * @member {module:model/Transaction.TypeEnum} type

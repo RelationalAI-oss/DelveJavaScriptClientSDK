@@ -5,11 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **contentType** | **String** |  | [default to &#39;&#39;]
-**data** | **String** |  | [optional] [default to &#39;null&#39;]
+**data** | **String** |  | [optional] 
 **fileSchema** | [**FileSchema**](FileSchema.md) |  | [optional] 
 **fileSyntax** | [**FileSyntax**](FileSyntax.md) |  | [optional] 
 **key** | [**AnyType**](.md) |  | 
-**path** | **String** |  | [optional] [default to &#39;null&#39;]
+**path** | **String** |  | [optional] 
 **type** | **String** |  | [default to &#39;LoadData&#39;]
 
 

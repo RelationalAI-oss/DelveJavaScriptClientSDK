@@ -75,9 +75,8 @@ ExceptionProblem.prototype['exception'] = '';
 
 /**
  * @member {String} exception_stacktrace
- * @default 'null'
  */
-ExceptionProblem.prototype['exception_stacktrace'] = 'null';
+ExceptionProblem.prototype['exception_stacktrace'] = undefined;
 
 
 // Implement AbstractProblem interface:
