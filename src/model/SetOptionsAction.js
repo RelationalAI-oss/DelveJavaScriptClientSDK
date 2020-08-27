@@ -77,33 +77,28 @@ class SetOptionsAction {
 
 /**
  * @member {Boolean} abort_on_error
- * @default false
  */
-SetOptionsAction.prototype['abort_on_error'] = false;
+SetOptionsAction.prototype['abort_on_error'] = undefined;
 
 /**
  * @member {Boolean} broken
- * @default false
  */
-SetOptionsAction.prototype['broken'] = false;
+SetOptionsAction.prototype['broken'] = undefined;
 
 /**
  * @member {Boolean} debug
- * @default false
  */
-SetOptionsAction.prototype['debug'] = false;
+SetOptionsAction.prototype['debug'] = undefined;
 
 /**
  * @member {Boolean} debug_trace
- * @default false
  */
-SetOptionsAction.prototype['debug_trace'] = false;
+SetOptionsAction.prototype['debug_trace'] = undefined;
 
 /**
  * @member {Boolean} silent
- * @default false
  */
-SetOptionsAction.prototype['silent'] = false;
+SetOptionsAction.prototype['silent'] = undefined;
 
 
 // Implement Action interface:

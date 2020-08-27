@@ -23,12 +23,15 @@ class Transaction {
     /**
      * Constructs a new <code>Transaction</code>.
      * @alias module:model/Transaction
+     * @param abort {Boolean} 
+     * @param dbname {String} 
      * @param mode {module:model/Transaction.ModeEnum} 
+     * @param readonly {Boolean} 
      * @param type {module:model/Transaction.TypeEnum} 
      */
-    constructor(mode, type) { 
+    constructor(abort, dbname, mode, readonly, type) { 
         
-        Transaction.initialize(this, mode, type);
+        Transaction.initialize(this, abort, dbname, mode, readonly, type);
     }
 
     /**
@@ -36,8 +39,11 @@ class Transaction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, mode, type) { 
+    static initialize(obj, abort, dbname, mode, readonly, type) { 
+        obj['abort'] = abort;
+        obj['dbname'] = dbname;
         obj['mode'] = mode;
+        obj['readonly'] = readonly;
         obj['type'] = type;
     }
 
@@ -111,9 +117,9 @@ Transaction.prototype['readonly'] = false;
 
 /**
  * @member {String} source_dbname
- * @default ''
+ * @default 'null'
  */
-Transaction.prototype['source_dbname'] = '';
+Transaction.prototype['source_dbname'] = 'null';
 
 /**
  * @member {module:model/Transaction.TypeEnum} type

@@ -24,11 +24,12 @@ class ICViolation {
      * Constructs a new <code>ICViolation</code>.
      * @alias module:model/ICViolation
      * @param relKey {module:model/RelKey} 
+     * @param source {String} 
      * @param type {module:model/ICViolation.TypeEnum} 
      */
-    constructor(relKey, type) { 
+    constructor(relKey, source, type) { 
         
-        ICViolation.initialize(this, relKey, type);
+        ICViolation.initialize(this, relKey, source, type);
     }
 
     /**
@@ -36,8 +37,9 @@ class ICViolation {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, relKey, type) { 
+    static initialize(obj, relKey, source, type) { 
         obj['rel_key'] = relKey;
+        obj['source'] = source;
         obj['type'] = type;
     }
 

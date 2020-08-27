@@ -24,11 +24,12 @@ class LabeledAction {
      * Constructs a new <code>LabeledAction</code>.
      * @alias module:model/LabeledAction
      * @param action {module:model/Action} 
+     * @param name {String} 
      * @param type {module:model/LabeledAction.TypeEnum} 
      */
-    constructor(action, type) { 
+    constructor(action, name, type) { 
         
-        LabeledAction.initialize(this, action, type);
+        LabeledAction.initialize(this, action, name, type);
     }
 
     /**
@@ -36,8 +37,9 @@ class LabeledAction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, action, type) { 
+    static initialize(obj, action, name, type) { 
         obj['action'] = action;
+        obj['name'] = name;
         obj['type'] = type;
     }
 

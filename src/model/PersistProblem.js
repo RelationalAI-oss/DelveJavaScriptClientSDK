@@ -38,6 +38,7 @@ class PersistProblem {
      * Only for internal use.
      */
     static initialize(obj, type) { 
+        obj['exception'] = exception;
     }
 
     /**
@@ -74,9 +75,9 @@ PersistProblem.prototype['exception'] = '';
 
 /**
  * @member {String} exception_stacktrace
- * @default ''
+ * @default 'null'
  */
-PersistProblem.prototype['exception_stacktrace'] = '';
+PersistProblem.prototype['exception_stacktrace'] = 'null';
 
 
 // Implement AbstractProblem interface:

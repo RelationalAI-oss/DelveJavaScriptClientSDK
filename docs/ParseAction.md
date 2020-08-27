@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nonterm** | **String** |  | [optional] [default to &#39;&#39;]
+**nonterm** | **String** |  | [default to &#39;&#39;]
 **source** | [**Source**](Source.md) |  | 
 
 

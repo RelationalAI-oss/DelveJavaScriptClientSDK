@@ -40,6 +40,7 @@ class Token {
      */
     static initialize(obj, type) { 
         obj['range'] = range;
+        obj['value'] = value;
     }
 
     /**

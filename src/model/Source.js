@@ -22,11 +22,14 @@ class Source {
     /**
      * Constructs a new <code>Source</code>.
      * @alias module:model/Source
+     * @param name {String} 
+     * @param path {String} 
+     * @param value {String} 
      * @param type {module:model/Source.TypeEnum} 
      */
-    constructor(type) { 
+    constructor(name, path, value, type) { 
         
-        Source.initialize(this, type);
+        Source.initialize(this, name, path, value, type);
     }
 
     /**
@@ -34,7 +37,10 @@ class Source {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type) { 
+    static initialize(obj, name, path, value, type) { 
+        obj['name'] = name;
+        obj['path'] = path;
+        obj['value'] = value;
         obj['type'] = type;
     }
 

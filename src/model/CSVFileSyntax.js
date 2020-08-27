@@ -38,6 +38,13 @@ class CSVFileSyntax {
      * Only for internal use.
      */
     static initialize(obj, type) { 
+        obj['datarow'] = datarow;
+        obj['delim'] = delim;
+        obj['escapechar'] = escapechar;
+        obj['header_row'] = headerRow;
+        obj['ignorerepeated'] = ignorerepeated;
+        obj['normalizenames'] = normalizenames;
+        obj['quotechar'] = quotechar;
     }
 
     /**

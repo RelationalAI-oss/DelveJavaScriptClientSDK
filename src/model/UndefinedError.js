@@ -40,6 +40,7 @@ class UndefinedError {
      */
     static initialize(obj, type) { 
         obj['range'] = range;
+        obj['var'] = _var;
     }
 
     /**

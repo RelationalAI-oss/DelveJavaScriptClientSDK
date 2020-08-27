@@ -22,11 +22,13 @@ class Point {
     /**
      * Constructs a new <code>Point</code>.
      * @alias module:model/Point
+     * @param column {Number} 
+     * @param row {Number} 
      * @param type {module:model/Point.TypeEnum} 
      */
-    constructor(type) { 
+    constructor(column, row, type) { 
         
-        Point.initialize(this, type);
+        Point.initialize(this, column, row, type);
     }
 
     /**
@@ -34,7 +36,9 @@ class Point {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type) { 
+    static initialize(obj, column, row, type) { 
+        obj['column'] = column;
+        obj['row'] = row;
         obj['type'] = type;
     }
 

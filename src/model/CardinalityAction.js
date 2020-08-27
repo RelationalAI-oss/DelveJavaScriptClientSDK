@@ -65,9 +65,9 @@ class CardinalityAction {
 
 /**
  * @member {String} relname
- * @default ''
+ * @default 'null'
  */
-CardinalityAction.prototype['relname'] = '';
+CardinalityAction.prototype['relname'] = 'null';
 
 
 // Implement Action interface:

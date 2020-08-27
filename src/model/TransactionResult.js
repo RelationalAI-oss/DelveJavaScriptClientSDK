@@ -25,11 +25,12 @@ class TransactionResult {
     /**
      * Constructs a new <code>TransactionResult</code>.
      * @alias module:model/TransactionResult
+     * @param aborted {Boolean} 
      * @param type {module:model/TransactionResult.TypeEnum} 
      */
-    constructor(type) { 
+    constructor(aborted, type) { 
         
-        TransactionResult.initialize(this, type);
+        TransactionResult.initialize(this, aborted, type);
     }
 
     /**
@@ -37,7 +38,8 @@ class TransactionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type) { 
+    static initialize(obj, aborted, type) { 
+        obj['aborted'] = aborted;
         obj['type'] = type;
     }
 

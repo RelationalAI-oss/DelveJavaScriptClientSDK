@@ -38,6 +38,7 @@ class ExceptionProblem {
      * Only for internal use.
      */
     static initialize(obj, type) { 
+        obj['exception'] = exception;
     }
 
     /**
@@ -74,9 +75,9 @@ ExceptionProblem.prototype['exception'] = '';
 
 /**
  * @member {String} exception_stacktrace
- * @default ''
+ * @default 'null'
  */
-ExceptionProblem.prototype['exception_stacktrace'] = '';
+ExceptionProblem.prototype['exception_stacktrace'] = 'null';
 
 
 // Implement AbstractProblem interface:

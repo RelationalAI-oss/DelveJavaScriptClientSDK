@@ -25,11 +25,13 @@ class Range {
      * Constructs a new <code>Range</code>.
      * @alias module:model/Range
      * @param area {module:model/Area} 
+     * @param endByte {Number} 
+     * @param startByte {Number} 
      * @param type {module:model/Range.TypeEnum} 
      */
-    constructor(area, type) { 
+    constructor(area, endByte, startByte, type) { 
         
-        Range.initialize(this, area, type);
+        Range.initialize(this, area, endByte, startByte, type);
     }
 
     /**
@@ -37,8 +39,10 @@ class Range {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, area, type) { 
+    static initialize(obj, area, endByte, startByte, type) { 
         obj['area'] = area;
+        obj['end_byte'] = endByte;
+        obj['start_byte'] = startByte;
         obj['type'] = type;
     }
 

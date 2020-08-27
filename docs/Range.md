@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **area** | [**Area**](Area.md) |  | 
-**endByte** | **Number** |  | [optional] [default to 0]
+**endByte** | **Number** |  | [default to 0]
 **input** | [**AnyType**](.md) |  | [optional] 
-**startByte** | **Number** |  | [optional] [default to 0]
+**startByte** | **Number** |  | [default to 0]
 **type** | **String** |  | [default to &#39;Range&#39;]
 
 

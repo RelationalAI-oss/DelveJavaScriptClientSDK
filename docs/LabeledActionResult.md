@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] [default to &#39;&#39;]
+**name** | **String** |  | [default to &#39;&#39;]
 **result** | [**ActionResult**](ActionResult.md) |  | 
 **type** | **String** |  | [default to &#39;LabeledActionResult&#39;]
 

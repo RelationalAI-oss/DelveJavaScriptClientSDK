@@ -38,6 +38,8 @@ class OutputProblem {
      * Only for internal use.
      */
     static initialize(obj, type) { 
+        obj['exception'] = exception;
+        obj['name'] = name;
     }
 
     /**
@@ -77,9 +79,9 @@ OutputProblem.prototype['exception'] = '';
 
 /**
  * @member {String} exception_stacktrace
- * @default ''
+ * @default 'null'
  */
-OutputProblem.prototype['exception_stacktrace'] = '';
+OutputProblem.prototype['exception_stacktrace'] = 'null';
 
 /**
  * @member {String} name

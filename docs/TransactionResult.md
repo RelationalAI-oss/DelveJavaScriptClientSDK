@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aborted** | **Boolean** |  | [optional] [default to false]
+**aborted** | **Boolean** |  | [default to false]
 **actions** | [**[LabeledActionResult]**](LabeledActionResult.md) |  | [optional] 
 **output** | [**[Relation]**](Relation.md) |  | [optional] 
 **problems** | [**[AbstractProblem]**](AbstractProblem.md) |  | [optional] 

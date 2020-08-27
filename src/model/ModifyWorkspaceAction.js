@@ -71,9 +71,9 @@ class ModifyWorkspaceAction {
 
 /**
  * @member {String} delete_edb
- * @default ''
+ * @default 'null'
  */
-ModifyWorkspaceAction.prototype['delete_edb'] = '';
+ModifyWorkspaceAction.prototype['delete_edb'] = 'null';
 
 /**
  * @member {Array.<String>} delete_source
@@ -82,9 +82,9 @@ ModifyWorkspaceAction.prototype['delete_source'] = undefined;
 
 /**
  * @member {String} enable_library
- * @default ''
+ * @default 'null'
  */
-ModifyWorkspaceAction.prototype['enable_library'] = '';
+ModifyWorkspaceAction.prototype['enable_library'] = 'null';
 
 
 // Implement Action interface:

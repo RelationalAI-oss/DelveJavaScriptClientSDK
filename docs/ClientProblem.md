@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errorCode** | **String** |  | [optional] [default to &#39;&#39;]
-**isError** | **Boolean** |  | [optional] [default to false]
-**isException** | **Boolean** |  | [optional] [default to false]
-**message** | **String** |  | [optional] [default to &#39;&#39;]
-**path** | **String** |  | [optional] [default to &#39;&#39;]
-**report** | **String** |  | [optional] [default to &#39;&#39;]
+**errorCode** | **String** |  | [default to &#39;&#39;]
+**isError** | **Boolean** |  | [default to false]
+**isException** | **Boolean** |  | [default to false]
+**message** | **String** |  | [default to &#39;&#39;]
+**path** | **String** |  | [default to &#39;&#39;]
+**report** | **String** |  | [default to &#39;&#39;]
 
 

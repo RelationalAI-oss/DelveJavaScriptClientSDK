@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**column** | **Number** |  | [optional] [default to 0]
-**row** | **Number** |  | [optional] [default to 0]
+**column** | **Number** |  | [default to 0]
+**row** | **Number** |  | [default to 0]
 **type** | **String** |  | [default to &#39;Point&#39;]
 
 

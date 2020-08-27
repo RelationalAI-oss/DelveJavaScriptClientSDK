@@ -38,6 +38,12 @@ class ClientProblem {
      * Only for internal use.
      */
     static initialize(obj, type) { 
+        obj['error_code'] = errorCode;
+        obj['is_error'] = isError;
+        obj['is_exception'] = isException;
+        obj['message'] = message;
+        obj['path'] = path;
+        obj['report'] = report;
     }
 
     /**

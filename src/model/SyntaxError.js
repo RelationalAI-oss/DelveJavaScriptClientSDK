@@ -40,7 +40,6 @@ class SyntaxError {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['next'] = next;
         obj['node'] = node;
         obj['trace'] = trace;
     }

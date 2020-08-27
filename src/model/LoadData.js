@@ -25,13 +25,13 @@ class LoadData {
     /**
      * Constructs a new <code>LoadData</code>.
      * @alias module:model/LoadData
-     * @param fileSchema {module:model/FileSchema} 
-     * @param fileSyntax {module:model/FileSyntax} 
+     * @param contentType {String} 
+     * @param key {module:model/AnyType} 
      * @param type {module:model/LoadData.TypeEnum} 
      */
-    constructor(fileSchema, fileSyntax, type) { 
+    constructor(contentType, key, type) { 
         
-        LoadData.initialize(this, fileSchema, fileSyntax, type);
+        LoadData.initialize(this, contentType, key, type);
     }
 
     /**
@@ -39,9 +39,9 @@ class LoadData {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, fileSchema, fileSyntax, type) { 
-        obj['file_schema'] = fileSchema;
-        obj['file_syntax'] = fileSyntax;
+    static initialize(obj, contentType, key, type) { 
+        obj['content_type'] = contentType;
+        obj['key'] = key;
         obj['type'] = type;
     }
 
@@ -92,9 +92,9 @@ LoadData.prototype['content_type'] = '';
 
 /**
  * @member {String} data
- * @default ''
+ * @default 'null'
  */
-LoadData.prototype['data'] = '';
+LoadData.prototype['data'] = 'null';
 
 /**
  * @member {module:model/FileSchema} file_schema
@@ -113,9 +113,9 @@ LoadData.prototype['key'] = undefined;
 
 /**
  * @member {String} path
- * @default ''
+ * @default 'null'
  */
-LoadData.prototype['path'] = '';
+LoadData.prototype['path'] = 'null';
 
 /**
  * @member {module:model/LoadData.TypeEnum} type

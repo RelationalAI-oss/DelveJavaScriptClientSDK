@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] [default to &#39;&#39;]
-**path** | **String** |  | [optional] [default to &#39;&#39;]
-**value** | **String** |  | [optional] [default to &#39;&#39;]
+**name** | **String** |  | [default to &#39;&#39;]
+**path** | **String** |  | [default to &#39;&#39;]
+**value** | **String** |  | [default to &#39;&#39;]
 **type** | **String** |  | [default to &#39;Source&#39;]
 
 

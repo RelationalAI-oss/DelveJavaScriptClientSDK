@@ -22,11 +22,12 @@ class RelKey {
     /**
      * Constructs a new <code>RelKey</code>.
      * @alias module:model/RelKey
+     * @param name {String} 
      * @param type {module:model/RelKey.TypeEnum} 
      */
-    constructor(type) { 
+    constructor(name, type) { 
         
-        RelKey.initialize(this, type);
+        RelKey.initialize(this, name, type);
     }
 
     /**
@@ -34,7 +35,8 @@ class RelKey {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type) { 
+    static initialize(obj, name, type) { 
+        obj['name'] = name;
         obj['type'] = type;
     }
 

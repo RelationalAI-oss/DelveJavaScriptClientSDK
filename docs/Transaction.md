@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**abort** | **Boolean** |  | [optional] [default to false]
+**abort** | **Boolean** |  | [default to false]
 **actions** | [**[LabeledAction]**](LabeledAction.md) |  | [optional] 
-**dbname** | **String** |  | [optional] [default to &#39;&#39;]
+**dbname** | **String** |  | [default to &#39;&#39;]
 **mode** | **String** |  | [default to &#39;OPEN&#39;]
-**readonly** | **Boolean** |  | [optional] [default to false]
-**sourceDbname** | **String** |  | [optional] [default to &#39;&#39;]
+**readonly** | **Boolean** |  | [default to false]
+**sourceDbname** | **String** |  | [optional] [default to &#39;null&#39;]
 **type** | **String** |  | [default to &#39;Transaction&#39;]
 
 
