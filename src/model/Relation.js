@@ -54,7 +54,7 @@ class Relation {
             obj = obj || new Relation();
 
             if (data.hasOwnProperty('columns')) {
-                obj['columns'] = ApiClient.convertToType(data['columns'], AnyType);
+                obj['columns'] = ApiClient.convertToType(data['columns'], [[AnyType]]);
             }
             if (data.hasOwnProperty('rel_key')) {
                 obj['rel_key'] = RelKey.constructFromObject(data['rel_key']);
@@ -70,7 +70,7 @@ class Relation {
 }
 
 /**
- * @member {module:model/AnyType} columns
+ * @member {Array.<Array.<module:model/AnyType>>} columns
  */
 Relation.prototype['columns'] = undefined;
 
