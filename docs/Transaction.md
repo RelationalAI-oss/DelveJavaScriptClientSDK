@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **abort** | **Boolean** |  | [default to false]
 **actions** | [**[LabeledAction]**](LabeledAction.md) |  | [optional] 
 **dbname** | **String** |  | [default to &#39;&#39;]
+**debugLevel** | **Number** |  | [default to 0]
 **mode** | **String** |  | [default to &#39;OPEN&#39;]
 **readonly** | **Boolean** |  | [default to false]
 **sourceDbname** | **String** |  | [optional] 

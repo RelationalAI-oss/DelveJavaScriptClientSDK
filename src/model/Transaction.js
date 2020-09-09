@@ -25,13 +25,14 @@ class Transaction {
      * @alias module:model/Transaction
      * @param abort {Boolean} 
      * @param dbname {String} 
+     * @param debugLevel {Number} 
      * @param mode {module:model/Transaction.ModeEnum} 
      * @param readonly {Boolean} 
      * @param type {module:model/Transaction.TypeEnum} 
      */
-    constructor(abort, dbname, mode, readonly, type) { 
+    constructor(abort, dbname, debugLevel, mode, readonly, type) { 
         
-        Transaction.initialize(this, abort, dbname, mode, readonly, type);
+        Transaction.initialize(this, abort, dbname, debugLevel, mode, readonly, type);
     }
 
     /**
@@ -39,9 +40,10 @@ class Transaction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, abort, dbname, mode, readonly, type) { 
+    static initialize(obj, abort, dbname, debugLevel, mode, readonly, type) { 
         obj['abort'] = abort;
         obj['dbname'] = dbname;
+        obj['debug_level'] = debugLevel;
         obj['mode'] = mode;
         obj['readonly'] = readonly;
         obj['type'] = type;
@@ -66,6 +68,9 @@ class Transaction {
             }
             if (data.hasOwnProperty('dbname')) {
                 obj['dbname'] = ApiClient.convertToType(data['dbname'], 'String');
+            }
+            if (data.hasOwnProperty('debug_level')) {
+                obj['debug_level'] = ApiClient.convertToType(data['debug_level'], 'Number');
             }
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
@@ -102,6 +107,12 @@ Transaction.prototype['actions'] = undefined;
  * @default ''
  */
 Transaction.prototype['dbname'] = '';
+
+/**
+ * @member {Number} debug_level
+ * @default 0
+ */
+Transaction.prototype['debug_level'] = 0;
 
 /**
  * @member {module:model/Transaction.ModeEnum} mode
