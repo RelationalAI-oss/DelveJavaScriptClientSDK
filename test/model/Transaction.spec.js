@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property debugLevel (base name: "debug_level")', function() {
+      // uncomment below and update the code to test the property debugLevel
+      //var instane = new DelveClientSdk.Transaction();
+      //expect(instance).to.be();
+    });
+
     it('should have the property mode (base name: "mode")', function() {
       // uncomment below and update the code to test the property mode
       //var instane = new DelveClientSdk.Transaction();
@@ -80,6 +86,12 @@
 
     it('should have the property readonly (base name: "readonly")', function() {
       // uncomment below and update the code to test the property readonly
+      //var instane = new DelveClientSdk.Transaction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sourceDbname (base name: "source_dbname")', function() {
+      // uncomment below and update the code to test the property sourceDbname
       //var instane = new DelveClientSdk.Transaction();
       //expect(instance).to.be();
     });

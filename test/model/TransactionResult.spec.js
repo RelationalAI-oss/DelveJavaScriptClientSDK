@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property debugLevel (base name: "debug_level")', function() {
+      // uncomment below and update the code to test the property debugLevel
+      //var instane = new DelveClientSdk.TransactionResult();
+      //expect(instance).to.be();
+    });
+
     it('should have the property output (base name: "output")', function() {
       // uncomment below and update the code to test the property output
       //var instane = new DelveClientSdk.TransactionResult();
