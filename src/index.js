@@ -18,6 +18,7 @@ import Action from './model/Action';
 import ActionResult from './model/ActionResult';
 import Appl from './model/Appl';
 import Area from './model/Area';
+import ArityMismatchError from './model/ArityMismatchError';
 import CSVFileSchema from './model/CSVFileSchema';
 import CSVFileSyntax from './model/CSVFileSyntax';
 import CardinalityAction from './model/CardinalityAction';
@@ -25,10 +26,12 @@ import CardinalityActionResult from './model/CardinalityActionResult';
 import ClientProblem from './model/ClientProblem';
 import CollectProblemsAction from './model/CollectProblemsAction';
 import CollectProblemsActionResult from './model/CollectProblemsActionResult';
+import ComparisonChainError from './model/ComparisonChainError';
 import Cons from './model/Cons';
 import ExceptionProblem from './model/ExceptionProblem';
 import FileSchema from './model/FileSchema';
 import FileSyntax from './model/FileSyntax';
+import FrontProblem from './model/FrontProblem';
 import ICViolation from './model/ICViolation';
 import ImportAction from './model/ImportAction';
 import ImportActionResult from './model/ImportActionResult';
@@ -148,6 +151,12 @@ export {
     Area,
 
     /**
+     * The ArityMismatchError model constructor.
+     * @property {module:model/ArityMismatchError}
+     */
+    ArityMismatchError,
+
+    /**
      * The CSVFileSchema model constructor.
      * @property {module:model/CSVFileSchema}
      */
@@ -190,6 +199,12 @@ export {
     CollectProblemsActionResult,
 
     /**
+     * The ComparisonChainError model constructor.
+     * @property {module:model/ComparisonChainError}
+     */
+    ComparisonChainError,
+
+    /**
      * The Cons model constructor.
      * @property {module:model/Cons}
      */
@@ -212,6 +227,12 @@ export {
      * @property {module:model/FileSyntax}
      */
     FileSyntax,
+
+    /**
+     * The FrontProblem model constructor.
+     * @property {module:model/FrontProblem}
+     */
+    FrontProblem,
 
     /**
      * The ICViolation model constructor.

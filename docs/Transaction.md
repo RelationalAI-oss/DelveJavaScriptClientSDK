@@ -28,6 +28,8 @@ Name | Type | Description | Notes
 
 * `BRANCH` (value: `"BRANCH"`)
 
+* `BRANCH_OVERWRITE` (value: `"BRANCH_OVERWRITE"`)
+
 
 
 

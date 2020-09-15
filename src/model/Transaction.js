@@ -176,7 +176,13 @@ Transaction['ModeEnum'] = {
      * value: "BRANCH"
      * @const
      */
-    "BRANCH": "BRANCH"
+    "BRANCH": "BRANCH",
+
+    /**
+     * value: "BRANCH_OVERWRITE"
+     * @const
+     */
+    "BRANCH_OVERWRITE": "BRANCH_OVERWRITE"
 };
 
 
