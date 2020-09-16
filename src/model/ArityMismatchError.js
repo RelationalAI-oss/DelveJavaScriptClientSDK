@@ -12,25 +12,26 @@
  */
 
 import ApiClient from '../ApiClient';
+import AnyType from './AnyType';
 import FrontProblem from './FrontProblem';
 import Range from './Range';
 
 /**
- * The UndefinedError model module.
- * @module model/UndefinedError
+ * The ArityMismatchError model module.
+ * @module model/ArityMismatchError
  * @version 1.0.1
  */
-class UndefinedError {
+class ArityMismatchError {
     /**
-     * Constructs a new <code>UndefinedError</code>.
-     * @alias module:model/UndefinedError
+     * Constructs a new <code>ArityMismatchError</code>.
+     * @alias module:model/ArityMismatchError
      * @extends module:model/FrontProblem
      * @implements module:model/FrontProblem
      * @param type {String} 
      */
     constructor(type) { 
         FrontProblem.initialize(this, type);
-        UndefinedError.initialize(this, type);
+        ArityMismatchError.initialize(this, type);
     }
 
     /**
@@ -39,28 +40,31 @@ class UndefinedError {
      * Only for internal use.
      */
     static initialize(obj, type) { 
+        obj['msg'] = msg;
         obj['range'] = range;
-        obj['var'] = _var;
     }
 
     /**
-     * Constructs a <code>UndefinedError</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ArityMismatchError</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/UndefinedError} obj Optional instance to populate.
-     * @return {module:model/UndefinedError} The populated <code>UndefinedError</code> instance.
+     * @param {module:model/ArityMismatchError} obj Optional instance to populate.
+     * @return {module:model/ArityMismatchError} The populated <code>ArityMismatchError</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new UndefinedError();
+            obj = obj || new ArityMismatchError();
             FrontProblem.constructFromObject(data, obj);
             FrontProblem.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('msg')) {
+                obj['msg'] = ApiClient.convertToType(data['msg'], 'String');
+            }
+            if (data.hasOwnProperty('node')) {
+                obj['node'] = ApiClient.convertToType(data['node'], AnyType);
+            }
             if (data.hasOwnProperty('range')) {
                 obj['range'] = Range.constructFromObject(data['range']);
-            }
-            if (data.hasOwnProperty('var')) {
-                obj['var'] = ApiClient.convertToType(data['var'], 'String');
             }
         }
         return obj;
@@ -70,15 +74,20 @@ class UndefinedError {
 }
 
 /**
- * @member {module:model/Range} range
- */
-UndefinedError.prototype['range'] = undefined;
-
-/**
- * @member {String} var
+ * @member {String} msg
  * @default ''
  */
-UndefinedError.prototype['var'] = '';
+ArityMismatchError.prototype['msg'] = '';
+
+/**
+ * @member {module:model/AnyType} node
+ */
+ArityMismatchError.prototype['node'] = undefined;
+
+/**
+ * @member {module:model/Range} range
+ */
+ArityMismatchError.prototype['range'] = undefined;
 
 
 // Implement FrontProblem interface:
@@ -91,5 +100,5 @@ FrontProblem.prototype['type'] = '';
 
 
 
-export default UndefinedError;
+export default ArityMismatchError;
 

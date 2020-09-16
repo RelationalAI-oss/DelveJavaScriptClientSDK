@@ -12,24 +12,24 @@
  */
 
 import ApiClient from '../ApiClient';
-import Action from './Action';
+import AbstractProblem from './AbstractProblem';
 
 /**
- * The ListSourceAction model module.
- * @module model/ListSourceAction
+ * The FrontProblem model module.
+ * @module model/FrontProblem
  * @version 1.0.1
  */
-class ListSourceAction {
+class FrontProblem {
     /**
-     * Constructs a new <code>ListSourceAction</code>.
-     * @alias module:model/ListSourceAction
-     * @extends module:model/Action
-     * @implements module:model/Action
+     * Constructs a new <code>FrontProblem</code>.
+     * @alias module:model/FrontProblem
+     * @extends module:model/AbstractProblem
+     * @implements module:model/AbstractProblem
      * @param type {String} 
      */
     constructor(type) { 
-        Action.initialize(this, type);
-        ListSourceAction.initialize(this, type);
+        AbstractProblem.initialize(this, type);
+        FrontProblem.initialize(this, type);
     }
 
     /**
@@ -41,17 +41,17 @@ class ListSourceAction {
     }
 
     /**
-     * Constructs a <code>ListSourceAction</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>FrontProblem</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListSourceAction} obj Optional instance to populate.
-     * @return {module:model/ListSourceAction} The populated <code>ListSourceAction</code> instance.
+     * @param {module:model/FrontProblem} obj Optional instance to populate.
+     * @return {module:model/FrontProblem} The populated <code>FrontProblem</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListSourceAction();
-            Action.constructFromObject(data, obj);
-            Action.constructFromObject(data, obj);
+            obj = obj || new FrontProblem();
+            AbstractProblem.constructFromObject(data, obj);
+            AbstractProblem.constructFromObject(data, obj);
 
         }
         return obj;
@@ -61,15 +61,15 @@ class ListSourceAction {
 }
 
 
-// Implement Action interface:
+// Implement AbstractProblem interface:
 /**
  * @member {String} type
  * @default ''
  */
-Action.prototype['type'] = '';
+AbstractProblem.prototype['type'] = '';
 
 
 
 
-export default ListSourceAction;
+export default FrontProblem;
 

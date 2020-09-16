@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **abort** | **Boolean** |  | [default to false]
 **actions** | [**[LabeledAction]**](LabeledAction.md) |  | [optional] 
 **dbname** | **String** |  | [default to &#39;&#39;]
-**debugLevel** | **Number** |  | [default to 0]
+**debugLevel** | **Number** |  | [optional] 
 **mode** | **String** |  | [default to &#39;OPEN&#39;]
 **readonly** | **Boolean** |  | [default to false]
 **sourceDbname** | **String** |  | [optional] 
@@ -27,6 +27,8 @@ Name | Type | Description | Notes
 * `OPEN_OR_CREATE` (value: `"OPEN_OR_CREATE"`)
 
 * `BRANCH` (value: `"BRANCH"`)
+
+* `BRANCH_OVERWRITE` (value: `"BRANCH_OVERWRITE"`)
 
 
 
