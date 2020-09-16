@@ -26,12 +26,11 @@ class TransactionResult {
      * Constructs a new <code>TransactionResult</code>.
      * @alias module:model/TransactionResult
      * @param aborted {Boolean} 
-     * @param debugLevel {Number} 
      * @param type {module:model/TransactionResult.TypeEnum} 
      */
-    constructor(aborted, debugLevel, type) { 
+    constructor(aborted, type) { 
         
-        TransactionResult.initialize(this, aborted, debugLevel, type);
+        TransactionResult.initialize(this, aborted, type);
     }
 
     /**
@@ -39,9 +38,8 @@ class TransactionResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, aborted, debugLevel, type) { 
+    static initialize(obj, aborted, type) { 
         obj['aborted'] = aborted;
-        obj['debug_level'] = debugLevel;
         obj['type'] = type;
     }
 
@@ -94,9 +92,8 @@ TransactionResult.prototype['actions'] = undefined;
 
 /**
  * @member {Number} debug_level
- * @default 0
  */
-TransactionResult.prototype['debug_level'] = 0;
+TransactionResult.prototype['debug_level'] = undefined;
 
 /**
  * @member {Array.<module:model/Relation>} output
