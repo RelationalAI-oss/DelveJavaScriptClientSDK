@@ -26,9 +26,9 @@ Name | Type | Description | Notes
 
 * `OPEN_OR_CREATE` (value: `"OPEN_OR_CREATE"`)
 
-* `BRANCH` (value: `"BRANCH"`)
+* `CLONE` (value: `"CLONE"`)
 
-* `BRANCH_OVERWRITE` (value: `"BRANCH_OVERWRITE"`)
+* `CLONE_OVERWRITE` (value: `"CLONE_OVERWRITE"`)
 
 
 
