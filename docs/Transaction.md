@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **mode** | **String** |  | [default to &#39;OPEN&#39;]
 **readonly** | **Boolean** |  | [default to false]
 **sourceDbname** | **String** |  | [optional] 
+**version** | **Number** |  | [optional] 
 **type** | **String** |  | [default to &#39;Transaction&#39;]
 
 

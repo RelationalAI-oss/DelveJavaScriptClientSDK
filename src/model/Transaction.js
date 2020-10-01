@@ -79,6 +79,9 @@ class Transaction {
             if (data.hasOwnProperty('source_dbname')) {
                 obj['source_dbname'] = ApiClient.convertToType(data['source_dbname'], 'String');
             }
+            if (data.hasOwnProperty('version')) {
+                obj['version'] = ApiClient.convertToType(data['version'], 'Number');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -127,6 +130,11 @@ Transaction.prototype['readonly'] = false;
  * @member {String} source_dbname
  */
 Transaction.prototype['source_dbname'] = undefined;
+
+/**
+ * @member {Number} version
+ */
+Transaction.prototype['version'] = undefined;
 
 /**
  * @member {module:model/Transaction.TypeEnum} type

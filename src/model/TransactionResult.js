@@ -69,6 +69,9 @@ class TransactionResult {
             if (data.hasOwnProperty('problems')) {
                 obj['problems'] = ApiClient.convertToType(data['problems'], [AbstractProblem]);
             }
+            if (data.hasOwnProperty('version')) {
+                obj['version'] = ApiClient.convertToType(data['version'], 'Number');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -104,6 +107,11 @@ TransactionResult.prototype['output'] = undefined;
  * @member {Array.<module:model/AbstractProblem>} problems
  */
 TransactionResult.prototype['problems'] = undefined;
+
+/**
+ * @member {Number} version
+ */
+TransactionResult.prototype['version'] = undefined;
 
 /**
  * @member {module:model/TransactionResult.TypeEnum} type
