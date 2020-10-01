@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **debugLevel** | **Number** |  | [optional] 
 **output** | [**[Relation]**](Relation.md) |  | [optional] 
 **problems** | [**[AbstractProblem]**](AbstractProblem.md) |  | [optional] 
+**version** | **Number** |  | [optional] 
 **type** | **String** |  | [default to &#39;TransactionResult&#39;]
 
 
