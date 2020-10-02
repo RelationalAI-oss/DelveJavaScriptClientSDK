@@ -39,7 +39,7 @@ class Relation {
      */
     static initialize(obj, relKey, type) { 
         obj['rel_key'] = relKey;
-        obj['type'] = type;
+        obj['type'] = type || 'Relation';
     }
 
     /**

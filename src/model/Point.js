@@ -37,9 +37,9 @@ class Point {
      * Only for internal use.
      */
     static initialize(obj, column, row, type) { 
-        obj['column'] = column;
-        obj['row'] = row;
-        obj['type'] = type;
+        obj['column'] = column || 0;
+        obj['row'] = row || 0;
+        obj['type'] = type || 'Point';
     }
 
     /**

@@ -39,8 +39,8 @@ class LabeledAction {
      */
     static initialize(obj, action, name, type) { 
         obj['action'] = action;
-        obj['name'] = name;
-        obj['type'] = type;
+        obj['name'] = name || '';
+        obj['type'] = type || 'LabeledAction';
     }
 
     /**

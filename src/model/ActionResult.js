@@ -35,7 +35,7 @@ class ActionResult {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['type'] = type;
+        obj['type'] = type || '';
     }
 
     /**

@@ -39,7 +39,7 @@ class ParseAction {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['nonterm'] = nonterm;
+        obj['nonterm'] = nonterm || '';
         obj['source'] = source;
     }
 

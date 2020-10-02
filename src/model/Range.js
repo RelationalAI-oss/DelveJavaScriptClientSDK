@@ -41,9 +41,9 @@ class Range {
      */
     static initialize(obj, area, endByte, startByte, type) { 
         obj['area'] = area;
-        obj['end_byte'] = endByte;
-        obj['start_byte'] = startByte;
-        obj['type'] = type;
+        obj['end_byte'] = endByte || 0;
+        obj['start_byte'] = startByte || 0;
+        obj['type'] = type || 'Range';
     }
 
     /**

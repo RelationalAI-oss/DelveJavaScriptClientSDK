@@ -39,8 +39,8 @@ class TransactionResult {
      * Only for internal use.
      */
     static initialize(obj, aborted, type) { 
-        obj['aborted'] = aborted;
-        obj['type'] = type;
+        obj['aborted'] = aborted || false;
+        obj['type'] = type || 'TransactionResult';
     }
 
     /**

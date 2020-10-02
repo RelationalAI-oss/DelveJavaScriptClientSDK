@@ -38,9 +38,9 @@ class LabeledActionResult {
      * Only for internal use.
      */
     static initialize(obj, name, result, type) { 
-        obj['name'] = name;
+        obj['name'] = name || '';
         obj['result'] = result;
-        obj['type'] = type;
+        obj['type'] = type || 'LabeledActionResult';
     }
 
     /**

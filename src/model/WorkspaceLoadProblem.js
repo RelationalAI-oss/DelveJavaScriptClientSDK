@@ -38,7 +38,7 @@ class WorkspaceLoadProblem {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['exception'] = exception;
+        obj['exception'] = exception || '';
     }
 
     /**

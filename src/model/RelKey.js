@@ -36,8 +36,8 @@ class RelKey {
      * Only for internal use.
      */
     static initialize(obj, name, type) { 
-        obj['name'] = name;
-        obj['type'] = type;
+        obj['name'] = name || '';
+        obj['type'] = type || 'RelKey';
     }
 
     /**

@@ -40,7 +40,7 @@ class Area {
     static initialize(obj, endPoint, startPoint, type) { 
         obj['end_point'] = endPoint;
         obj['start_point'] = startPoint;
-        obj['type'] = type;
+        obj['type'] = type || 'Area';
     }
 
     /**

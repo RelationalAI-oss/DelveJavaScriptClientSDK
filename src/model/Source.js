@@ -38,10 +38,10 @@ class Source {
      * Only for internal use.
      */
     static initialize(obj, name, path, value, type) { 
-        obj['name'] = name;
-        obj['path'] = path;
-        obj['value'] = value;
-        obj['type'] = type;
+        obj['name'] = name || '';
+        obj['path'] = path || '';
+        obj['value'] = value || '';
+        obj['type'] = type || 'Source';
     }
 
     /**

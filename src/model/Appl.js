@@ -39,10 +39,10 @@ class Appl {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['error'] = error;
-        obj['missing'] = missing;
+        obj['error'] = error || false;
+        obj['missing'] = missing || false;
         obj['range'] = range;
-        obj['symbol'] = symbol;
+        obj['symbol'] = symbol || '';
     }
 
     /**

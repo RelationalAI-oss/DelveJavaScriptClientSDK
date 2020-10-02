@@ -39,9 +39,9 @@ class Literal {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['missing'] = missing;
+        obj['missing'] = missing || false;
         obj['range'] = range;
-        obj['value'] = value;
+        obj['value'] = value || '';
     }
 
     /**

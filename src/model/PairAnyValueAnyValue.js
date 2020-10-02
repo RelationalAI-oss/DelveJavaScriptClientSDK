@@ -36,7 +36,7 @@ class PairAnyValueAnyValue {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['type'] = type;
+        obj['type'] = type || 'Pair_AnyValue_AnyValue_';
     }
 
     /**

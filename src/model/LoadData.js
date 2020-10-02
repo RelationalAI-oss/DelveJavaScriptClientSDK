@@ -40,9 +40,9 @@ class LoadData {
      * Only for internal use.
      */
     static initialize(obj, contentType, key, type) { 
-        obj['content_type'] = contentType;
+        obj['content_type'] = contentType || '';
         obj['key'] = key;
-        obj['type'] = type;
+        obj['type'] = type || 'LoadData';
     }
 
     /**

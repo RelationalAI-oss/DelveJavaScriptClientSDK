@@ -40,11 +40,11 @@ class Transaction {
      * Only for internal use.
      */
     static initialize(obj, abort, dbname, mode, readonly, type) { 
-        obj['abort'] = abort;
-        obj['dbname'] = dbname;
-        obj['mode'] = mode;
-        obj['readonly'] = readonly;
-        obj['type'] = type;
+        obj['abort'] = abort || false;
+        obj['dbname'] = dbname || '';
+        obj['mode'] = mode || 'OPEN';
+        obj['readonly'] = readonly || false;
+        obj['type'] = type || 'Transaction';
     }
 
     /**

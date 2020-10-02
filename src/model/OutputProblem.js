@@ -38,8 +38,8 @@ class OutputProblem {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['exception'] = exception;
-        obj['name'] = name;
+        obj['exception'] = exception || '';
+        obj['name'] = name || '';
     }
 
     /**

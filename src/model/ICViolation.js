@@ -39,8 +39,8 @@ class ICViolation {
      */
     static initialize(obj, relKey, source, type) { 
         obj['rel_key'] = relKey;
-        obj['source'] = source;
-        obj['type'] = type;
+        obj['source'] = source || '';
+        obj['type'] = type || 'ICViolation';
     }
 
     /**

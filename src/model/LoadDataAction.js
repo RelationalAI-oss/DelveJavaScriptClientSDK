@@ -39,7 +39,7 @@ class LoadDataAction {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['rel'] = rel;
+        obj['rel'] = rel || '';
         obj['value'] = value;
     }
 

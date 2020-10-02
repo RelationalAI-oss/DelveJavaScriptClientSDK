@@ -40,7 +40,7 @@ class ArityMismatchError {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['msg'] = msg;
+        obj['msg'] = msg || '';
         obj['range'] = range;
     }
 
