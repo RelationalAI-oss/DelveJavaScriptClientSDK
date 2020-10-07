@@ -1,4 +1,4 @@
-# DelveClientSdk.InstallActionResult
+# RaiDbSdk.InstallActionResult
 
 ## Properties
 

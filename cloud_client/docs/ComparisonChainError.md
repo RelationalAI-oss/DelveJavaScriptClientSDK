@@ -1,4 +1,4 @@
-# DelveClientSdk.ComparisonChainError
+# RaiDbSdk.ComparisonChainError
 
 ## Properties
 

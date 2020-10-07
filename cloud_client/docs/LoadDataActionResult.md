@@ -1,4 +1,4 @@
-# DelveClientSdk.LoadDataActionResult
+# RaiDbSdk.LoadDataActionResult
 
 ## Properties
 

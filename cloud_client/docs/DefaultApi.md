@@ -1,4 +1,4 @@
-# DelveClientSdk.DefaultApi
+# RaiDbSdk.DefaultApi
 
 All URIs are relative to *http://127.0.0.1:8010*
 
@@ -17,10 +17,10 @@ Issues a transaction to be executed
 ### Example
 
 ```javascript
-import DelveClientSdk from 'delve_client_sdk';
+import RaiDbSdk from 'rai_db_sdk';
 
-let apiInstance = new DelveClientSdk.DefaultApi();
-let transaction = new DelveClientSdk.Transaction(); // Transaction | Optional description in *Markdown*
+let apiInstance = new RaiDbSdk.DefaultApi();
+let transaction = new RaiDbSdk.Transaction(); // Transaction | Optional description in *Markdown*
 apiInstance.transactionPost(transaction, (error, data, response) => {
   if (error) {
     console.error(error);

@@ -1,4 +1,4 @@
-# DelveClientSdk.Point
+# RaiDbSdk.Point
 
 ## Properties
 

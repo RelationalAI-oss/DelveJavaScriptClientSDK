@@ -1,4 +1,4 @@
-# DelveClientSdk.CardinalityAction
+# RaiDbSdk.CardinalityAction
 
 ## Properties
 

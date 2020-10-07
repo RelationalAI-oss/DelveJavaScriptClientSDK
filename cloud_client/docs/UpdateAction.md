@@ -1,4 +1,4 @@
-# DelveClientSdk.UpdateAction
+# RaiDbSdk.UpdateAction
 
 ## Properties
 

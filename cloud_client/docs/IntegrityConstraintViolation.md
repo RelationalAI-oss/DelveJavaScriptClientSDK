@@ -1,4 +1,4 @@
-# DelveClientSdk.IntegrityConstraintViolation
+# RaiDbSdk.IntegrityConstraintViolation
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# DelveClientSdk.CollectProblemsAction
+# RaiDbSdk.CollectProblemsAction
 
 ## Properties
 

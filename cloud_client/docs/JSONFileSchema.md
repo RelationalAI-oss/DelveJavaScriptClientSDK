@@ -1,4 +1,4 @@
-# DelveClientSdk.JSONFileSchema
+# RaiDbSdk.JSONFileSchema
 
 ## Properties
 

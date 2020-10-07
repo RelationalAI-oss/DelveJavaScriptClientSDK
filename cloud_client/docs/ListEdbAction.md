@@ -1,4 +1,4 @@
-# DelveClientSdk.ListEdbAction
+# RaiDbSdk.ListEdbAction
 
 ## Properties
 

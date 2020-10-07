@@ -1,4 +1,4 @@
-# DelveClientSdk.SyntaxError
+# RaiDbSdk.SyntaxError
 
 ## Properties
 

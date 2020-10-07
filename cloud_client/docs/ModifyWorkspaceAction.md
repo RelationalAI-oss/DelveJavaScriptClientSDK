@@ -1,4 +1,4 @@
-# DelveClientSdk.ModifyWorkspaceAction
+# RaiDbSdk.ModifyWorkspaceAction
 
 ## Properties
 

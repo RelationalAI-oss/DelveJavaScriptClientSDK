@@ -1,4 +1,4 @@
-# DelveClientSdk.UndefinedError
+# RaiDbSdk.UndefinedError
 
 ## Properties
 

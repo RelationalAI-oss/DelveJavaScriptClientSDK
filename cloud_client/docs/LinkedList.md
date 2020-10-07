@@ -1,4 +1,4 @@
-# DelveClientSdk.LinkedList
+# RaiDbSdk.LinkedList
 
 ## Properties
 

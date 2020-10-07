@@ -1,4 +1,4 @@
-# DelveClientSdk.Area
+# RaiDbSdk.Area
 
 ## Properties
 

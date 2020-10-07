@@ -1,4 +1,4 @@
-# DelveClientSdk.ArityMismatchError
+# RaiDbSdk.ArityMismatchError
 
 ## Properties
 

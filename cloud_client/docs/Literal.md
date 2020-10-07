@@ -1,4 +1,4 @@
-# DelveClientSdk.Literal
+# RaiDbSdk.Literal
 
 ## Properties
 

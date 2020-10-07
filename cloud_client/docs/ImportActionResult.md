@@ -1,4 +1,4 @@
-# DelveClientSdk.ImportActionResult
+# RaiDbSdk.ImportActionResult
 
 ## Properties
 

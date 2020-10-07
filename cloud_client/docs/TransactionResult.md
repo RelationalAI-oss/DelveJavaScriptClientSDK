@@ -1,4 +1,4 @@
-# DelveClientSdk.TransactionResult
+# RaiDbSdk.TransactionResult
 
 ## Properties
 

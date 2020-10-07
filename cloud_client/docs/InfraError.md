@@ -1,4 +1,4 @@
-# DelveClientSdk.InfraError
+# RaiDbSdk.InfraError
 
 ## Properties
 

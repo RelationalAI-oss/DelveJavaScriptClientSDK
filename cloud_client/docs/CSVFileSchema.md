@@ -1,4 +1,4 @@
-# DelveClientSdk.CSVFileSchema
+# RaiDbSdk.CSVFileSchema
 
 ## Properties
 

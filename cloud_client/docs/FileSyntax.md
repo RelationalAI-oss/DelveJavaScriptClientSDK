@@ -1,4 +1,4 @@
-# DelveClientSdk.FileSyntax
+# RaiDbSdk.FileSyntax
 
 ## Properties
 

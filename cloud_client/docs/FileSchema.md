@@ -1,4 +1,4 @@
-# DelveClientSdk.FileSchema
+# RaiDbSdk.FileSchema
 
 ## Properties
 

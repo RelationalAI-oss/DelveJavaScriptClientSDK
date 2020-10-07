@@ -1,4 +1,4 @@
-# DelveClientSdk.LabeledActionResult
+# RaiDbSdk.LabeledActionResult
 
 ## Properties
 
