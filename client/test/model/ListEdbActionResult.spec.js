@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.ListEdbActionResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,19 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ListEdbActionResult', function() {
+    it('should create an instance of ListEdbActionResult', function() {
+      // uncomment below and update the code to test ListEdbActionResult
+      //var instane = new RaiDbSdk.ListEdbActionResult();
+      //expect(instance).to.be.a(RaiDbSdk.ListEdbActionResult);
     });
+
+    it('should have the property rels (base name: "rels")', function() {
+      // uncomment below and update the code to test the property rels
+      //var instane = new RaiDbSdk.ListEdbActionResult();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.LoadDataAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,25 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('LoadDataAction', function() {
+    it('should create an instance of LoadDataAction', function() {
+      // uncomment below and update the code to test LoadDataAction
+      //var instane = new RaiDbSdk.LoadDataAction();
+      //expect(instance).to.be.a(RaiDbSdk.LoadDataAction);
     });
+
+    it('should have the property rel (base name: "rel")', function() {
+      // uncomment below and update the code to test the property rel
+      //var instane = new RaiDbSdk.LoadDataAction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
+      //var instane = new RaiDbSdk.LoadDataAction();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

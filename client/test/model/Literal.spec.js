@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.Literal();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,31 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('Literal', function() {
+    it('should create an instance of Literal', function() {
+      // uncomment below and update the code to test Literal
+      //var instane = new RaiDbSdk.Literal();
+      //expect(instance).to.be.a(RaiDbSdk.Literal);
     });
+
+    it('should have the property missing (base name: "missing")', function() {
+      // uncomment below and update the code to test the property missing
+      //var instane = new RaiDbSdk.Literal();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property range (base name: "range")', function() {
+      // uncomment below and update the code to test the property range
+      //var instane = new RaiDbSdk.Literal();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
+      //var instane = new RaiDbSdk.Literal();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

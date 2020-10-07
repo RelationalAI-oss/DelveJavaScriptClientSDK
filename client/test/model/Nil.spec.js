@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.Nil();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,13 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('Nil', function() {
+    it('should create an instance of Nil', function() {
+      // uncomment below and update the code to test Nil
+      //var instane = new RaiDbSdk.Nil();
+      //expect(instance).to.be.a(RaiDbSdk.Nil);
     });
+
   });
 
 }));

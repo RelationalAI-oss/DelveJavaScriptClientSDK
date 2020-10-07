@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.SyntaxError();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,31 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('SyntaxError', function() {
+    it('should create an instance of SyntaxError', function() {
+      // uncomment below and update the code to test SyntaxError
+      //var instane = new RaiDbSdk.SyntaxError();
+      //expect(instance).to.be.a(RaiDbSdk.SyntaxError);
     });
+
+    it('should have the property next (base name: "next")', function() {
+      // uncomment below and update the code to test the property next
+      //var instane = new RaiDbSdk.SyntaxError();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property node (base name: "node")', function() {
+      // uncomment below and update the code to test the property node
+      //var instane = new RaiDbSdk.SyntaxError();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property trace (base name: "trace")', function() {
+      // uncomment below and update the code to test the property trace
+      //var instane = new RaiDbSdk.SyntaxError();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

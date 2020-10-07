@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.LabeledActionResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,31 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('LabeledActionResult', function() {
+    it('should create an instance of LabeledActionResult', function() {
+      // uncomment below and update the code to test LabeledActionResult
+      //var instane = new RaiDbSdk.LabeledActionResult();
+      //expect(instance).to.be.a(RaiDbSdk.LabeledActionResult);
     });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new RaiDbSdk.LabeledActionResult();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property result (base name: "result")', function() {
+      // uncomment below and update the code to test the property result
+      //var instane = new RaiDbSdk.LabeledActionResult();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instane = new RaiDbSdk.LabeledActionResult();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

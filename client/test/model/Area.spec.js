@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.Area();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,31 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('Area', function() {
+    it('should create an instance of Area', function() {
+      // uncomment below and update the code to test Area
+      //var instane = new RaiDbSdk.Area();
+      //expect(instance).to.be.a(RaiDbSdk.Area);
     });
+
+    it('should have the property endPoint (base name: "end_point")', function() {
+      // uncomment below and update the code to test the property endPoint
+      //var instane = new RaiDbSdk.Area();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property startPoint (base name: "start_point")', function() {
+      // uncomment below and update the code to test the property startPoint
+      //var instane = new RaiDbSdk.Area();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instane = new RaiDbSdk.Area();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

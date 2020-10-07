@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.AbstractProblem();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,19 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('AbstractProblem', function() {
+    it('should create an instance of AbstractProblem', function() {
+      // uncomment below and update the code to test AbstractProblem
+      //var instane = new RaiDbSdk.AbstractProblem();
+      //expect(instance).to.be.a(RaiDbSdk.AbstractProblem);
     });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instane = new RaiDbSdk.AbstractProblem();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

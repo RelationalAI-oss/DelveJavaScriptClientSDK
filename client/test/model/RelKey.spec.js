@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.RelKey();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,37 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('RelKey', function() {
+    it('should create an instance of RelKey', function() {
+      // uncomment below and update the code to test RelKey
+      //var instane = new RaiDbSdk.RelKey();
+      //expect(instance).to.be.a(RaiDbSdk.RelKey);
     });
+
+    it('should have the property keys (base name: "keys")', function() {
+      // uncomment below and update the code to test the property keys
+      //var instane = new RaiDbSdk.RelKey();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new RaiDbSdk.RelKey();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property values (base name: "values")', function() {
+      // uncomment below and update the code to test the property values
+      //var instane = new RaiDbSdk.RelKey();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instane = new RaiDbSdk.RelKey();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

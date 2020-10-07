@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.ICViolation();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,31 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ICViolation', function() {
+    it('should create an instance of ICViolation', function() {
+      // uncomment below and update the code to test ICViolation
+      //var instane = new RaiDbSdk.ICViolation();
+      //expect(instance).to.be.a(RaiDbSdk.ICViolation);
     });
+
+    it('should have the property relKey (base name: "rel_key")', function() {
+      // uncomment below and update the code to test the property relKey
+      //var instane = new RaiDbSdk.ICViolation();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property source (base name: "source")', function() {
+      // uncomment below and update the code to test the property source
+      //var instane = new RaiDbSdk.ICViolation();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instane = new RaiDbSdk.ICViolation();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

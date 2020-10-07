@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.IntegrityConstraintViolation();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,19 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('IntegrityConstraintViolation', function() {
+    it('should create an instance of IntegrityConstraintViolation', function() {
+      // uncomment below and update the code to test IntegrityConstraintViolation
+      //var instane = new RaiDbSdk.IntegrityConstraintViolation();
+      //expect(instance).to.be.a(RaiDbSdk.IntegrityConstraintViolation);
     });
+
+    it('should have the property sources (base name: "sources")', function() {
+      // uncomment below and update the code to test the property sources
+      //var instane = new RaiDbSdk.IntegrityConstraintViolation();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

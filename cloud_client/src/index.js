@@ -1,6 +1,6 @@
 /**
- * Delve Client SDK
- * This is a Client SDK for Delve API
+ * RAI Cloud SDK
+ * This is a Client SDK for RAI Cloud
  *
  * The version of the OpenAPI document: 1.0.8
  * Contact: support@relational.ai
@@ -13,84 +13,32 @@
 
 
 import ApiClient from './ApiClient';
-import AbstractProblem from './model/AbstractProblem';
-import Action from './model/Action';
-import ActionResult from './model/ActionResult';
-import Appl from './model/Appl';
-import Area from './model/Area';
-import ArityMismatchError from './model/ArityMismatchError';
-import CSVFileSchema from './model/CSVFileSchema';
-import CSVFileSyntax from './model/CSVFileSyntax';
-import CardinalityAction from './model/CardinalityAction';
-import CardinalityActionResult from './model/CardinalityActionResult';
-import ClientProblem from './model/ClientProblem';
-import CollectProblemsAction from './model/CollectProblemsAction';
-import CollectProblemsActionResult from './model/CollectProblemsActionResult';
-import ComparisonChainError from './model/ComparisonChainError';
-import Cons from './model/Cons';
-import ExceptionProblem from './model/ExceptionProblem';
-import FileSchema from './model/FileSchema';
-import FileSyntax from './model/FileSyntax';
-import FrontProblem from './model/FrontProblem';
-import ICViolation from './model/ICViolation';
-import ImportAction from './model/ImportAction';
-import ImportActionResult from './model/ImportActionResult';
-import InfraError from './model/InfraError';
-import InstallAction from './model/InstallAction';
-import InstallActionResult from './model/InstallActionResult';
-import IntegrityConstraintProblem from './model/IntegrityConstraintProblem';
-import IntegrityConstraintViolation from './model/IntegrityConstraintViolation';
-import JSONFileSchema from './model/JSONFileSchema';
-import JSONFileSyntax from './model/JSONFileSyntax';
-import LabeledAction from './model/LabeledAction';
-import LabeledActionResult from './model/LabeledActionResult';
-import LinkedList from './model/LinkedList';
-import ListEdbAction from './model/ListEdbAction';
-import ListEdbActionResult from './model/ListEdbActionResult';
-import ListSourceAction from './model/ListSourceAction';
-import ListSourceActionResult from './model/ListSourceActionResult';
-import Literal from './model/Literal';
-import LoadData from './model/LoadData';
-import LoadDataAction from './model/LoadDataAction';
-import LoadDataActionResult from './model/LoadDataActionResult';
-import ModifyWorkspaceAction from './model/ModifyWorkspaceAction';
-import ModifyWorkspaceActionResult from './model/ModifyWorkspaceActionResult';
-import Nil from './model/Nil';
-import OutputProblem from './model/OutputProblem';
-import PairAnyValueAnyValue from './model/PairAnyValueAnyValue';
-import ParseAction from './model/ParseAction';
-import ParseActionResult from './model/ParseActionResult';
-import PersistProblem from './model/PersistProblem';
-import Point from './model/Point';
-import QueryAction from './model/QueryAction';
-import QueryActionResult from './model/QueryActionResult';
-import Range from './model/Range';
-import RelKey from './model/RelKey';
-import Relation from './model/Relation';
-import SetOptionsAction from './model/SetOptionsAction';
-import SetOptionsActionResult from './model/SetOptionsActionResult';
-import Source from './model/Source';
-import SyntaxError from './model/SyntaxError';
-import SyntaxNode from './model/SyntaxNode';
-import Token from './model/Token';
-import Transaction from './model/Transaction';
-import TransactionResult from './model/TransactionResult';
-import UndefinedError from './model/UndefinedError';
-import UpdateAction from './model/UpdateAction';
-import UpdateActionResult from './model/UpdateActionResult';
-import WorkspaceLoadProblem from './model/WorkspaceLoadProblem';
+import ComputeData from './model/ComputeData';
+import CreateComputeRequestProtocol from './model/CreateComputeRequestProtocol';
+import CreateComputeResponseProtocol from './model/CreateComputeResponseProtocol';
+import CreateUserRequestProtocol from './model/CreateUserRequestProtocol';
+import CreateUserResponseProtocol from './model/CreateUserResponseProtocol';
+import DatabaseInfo from './model/DatabaseInfo';
+import DeleteComputeRequestProtocol from './model/DeleteComputeRequestProtocol';
+import DeleteComputeResponseProtocol from './model/DeleteComputeResponseProtocol';
+import DeleteComputeStatus from './model/DeleteComputeStatus';
+import ListComputesResponseProtocol from './model/ListComputesResponseProtocol';
+import ListDatabasesResponseProtocol from './model/ListDatabasesResponseProtocol';
+import ListUsersResponseProtocol from './model/ListUsersResponseProtocol';
+import UpdateDatabaseRequestProtocol from './model/UpdateDatabaseRequestProtocol';
+import UserInfoProtocol from './model/UserInfoProtocol';
 import DefaultApi from './api/DefaultApi';
 
 
 /**
-* This_is_a_Client_SDK_for_Delve_API.<br>
+* This_is_a_Client_SDK_for_RAI_Cloud.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var RaiDbSdk = require('index'); // See note below*.
-* var xxxSvc = new RaiDbSdk.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new RaiDbSdk.Yyy(); // Construct a model instance.
+* var RaiCloudSdk = require('index'); // See note below*.
+* var xxxSvc = new RaiCloudSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new RaiCloudSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -102,8 +50,8 @@ import DefaultApi from './api/DefaultApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new RaiDbSdk.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new RaiDbSdk.Yyy(); // Construct a model instance.
+* var xxxSvc = new RaiCloudSdk.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new RaiCloudSdk.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -121,400 +69,88 @@ export {
     ApiClient,
 
     /**
-     * The AbstractProblem model constructor.
-     * @property {module:model/AbstractProblem}
+     * The ComputeData model constructor.
+     * @property {module:model/ComputeData}
      */
-    AbstractProblem,
+    ComputeData,
 
     /**
-     * The Action model constructor.
-     * @property {module:model/Action}
+     * The CreateComputeRequestProtocol model constructor.
+     * @property {module:model/CreateComputeRequestProtocol}
      */
-    Action,
+    CreateComputeRequestProtocol,
 
     /**
-     * The ActionResult model constructor.
-     * @property {module:model/ActionResult}
+     * The CreateComputeResponseProtocol model constructor.
+     * @property {module:model/CreateComputeResponseProtocol}
      */
-    ActionResult,
+    CreateComputeResponseProtocol,
 
     /**
-     * The Appl model constructor.
-     * @property {module:model/Appl}
+     * The CreateUserRequestProtocol model constructor.
+     * @property {module:model/CreateUserRequestProtocol}
      */
-    Appl,
+    CreateUserRequestProtocol,
 
     /**
-     * The Area model constructor.
-     * @property {module:model/Area}
+     * The CreateUserResponseProtocol model constructor.
+     * @property {module:model/CreateUserResponseProtocol}
      */
-    Area,
+    CreateUserResponseProtocol,
 
     /**
-     * The ArityMismatchError model constructor.
-     * @property {module:model/ArityMismatchError}
+     * The DatabaseInfo model constructor.
+     * @property {module:model/DatabaseInfo}
      */
-    ArityMismatchError,
+    DatabaseInfo,
 
     /**
-     * The CSVFileSchema model constructor.
-     * @property {module:model/CSVFileSchema}
+     * The DeleteComputeRequestProtocol model constructor.
+     * @property {module:model/DeleteComputeRequestProtocol}
      */
-    CSVFileSchema,
+    DeleteComputeRequestProtocol,
 
     /**
-     * The CSVFileSyntax model constructor.
-     * @property {module:model/CSVFileSyntax}
+     * The DeleteComputeResponseProtocol model constructor.
+     * @property {module:model/DeleteComputeResponseProtocol}
      */
-    CSVFileSyntax,
+    DeleteComputeResponseProtocol,
 
     /**
-     * The CardinalityAction model constructor.
-     * @property {module:model/CardinalityAction}
+     * The DeleteComputeStatus model constructor.
+     * @property {module:model/DeleteComputeStatus}
      */
-    CardinalityAction,
+    DeleteComputeStatus,
 
     /**
-     * The CardinalityActionResult model constructor.
-     * @property {module:model/CardinalityActionResult}
+     * The ListComputesResponseProtocol model constructor.
+     * @property {module:model/ListComputesResponseProtocol}
      */
-    CardinalityActionResult,
+    ListComputesResponseProtocol,
 
     /**
-     * The ClientProblem model constructor.
-     * @property {module:model/ClientProblem}
+     * The ListDatabasesResponseProtocol model constructor.
+     * @property {module:model/ListDatabasesResponseProtocol}
      */
-    ClientProblem,
+    ListDatabasesResponseProtocol,
 
     /**
-     * The CollectProblemsAction model constructor.
-     * @property {module:model/CollectProblemsAction}
+     * The ListUsersResponseProtocol model constructor.
+     * @property {module:model/ListUsersResponseProtocol}
      */
-    CollectProblemsAction,
+    ListUsersResponseProtocol,
 
     /**
-     * The CollectProblemsActionResult model constructor.
-     * @property {module:model/CollectProblemsActionResult}
+     * The UpdateDatabaseRequestProtocol model constructor.
+     * @property {module:model/UpdateDatabaseRequestProtocol}
      */
-    CollectProblemsActionResult,
+    UpdateDatabaseRequestProtocol,
 
     /**
-     * The ComparisonChainError model constructor.
-     * @property {module:model/ComparisonChainError}
+     * The UserInfoProtocol model constructor.
+     * @property {module:model/UserInfoProtocol}
      */
-    ComparisonChainError,
-
-    /**
-     * The Cons model constructor.
-     * @property {module:model/Cons}
-     */
-    Cons,
-
-    /**
-     * The ExceptionProblem model constructor.
-     * @property {module:model/ExceptionProblem}
-     */
-    ExceptionProblem,
-
-    /**
-     * The FileSchema model constructor.
-     * @property {module:model/FileSchema}
-     */
-    FileSchema,
-
-    /**
-     * The FileSyntax model constructor.
-     * @property {module:model/FileSyntax}
-     */
-    FileSyntax,
-
-    /**
-     * The FrontProblem model constructor.
-     * @property {module:model/FrontProblem}
-     */
-    FrontProblem,
-
-    /**
-     * The ICViolation model constructor.
-     * @property {module:model/ICViolation}
-     */
-    ICViolation,
-
-    /**
-     * The ImportAction model constructor.
-     * @property {module:model/ImportAction}
-     */
-    ImportAction,
-
-    /**
-     * The ImportActionResult model constructor.
-     * @property {module:model/ImportActionResult}
-     */
-    ImportActionResult,
-
-    /**
-     * The InfraError model constructor.
-     * @property {module:model/InfraError}
-     */
-    InfraError,
-
-    /**
-     * The InstallAction model constructor.
-     * @property {module:model/InstallAction}
-     */
-    InstallAction,
-
-    /**
-     * The InstallActionResult model constructor.
-     * @property {module:model/InstallActionResult}
-     */
-    InstallActionResult,
-
-    /**
-     * The IntegrityConstraintProblem model constructor.
-     * @property {module:model/IntegrityConstraintProblem}
-     */
-    IntegrityConstraintProblem,
-
-    /**
-     * The IntegrityConstraintViolation model constructor.
-     * @property {module:model/IntegrityConstraintViolation}
-     */
-    IntegrityConstraintViolation,
-
-    /**
-     * The JSONFileSchema model constructor.
-     * @property {module:model/JSONFileSchema}
-     */
-    JSONFileSchema,
-
-    /**
-     * The JSONFileSyntax model constructor.
-     * @property {module:model/JSONFileSyntax}
-     */
-    JSONFileSyntax,
-
-    /**
-     * The LabeledAction model constructor.
-     * @property {module:model/LabeledAction}
-     */
-    LabeledAction,
-
-    /**
-     * The LabeledActionResult model constructor.
-     * @property {module:model/LabeledActionResult}
-     */
-    LabeledActionResult,
-
-    /**
-     * The LinkedList model constructor.
-     * @property {module:model/LinkedList}
-     */
-    LinkedList,
-
-    /**
-     * The ListEdbAction model constructor.
-     * @property {module:model/ListEdbAction}
-     */
-    ListEdbAction,
-
-    /**
-     * The ListEdbActionResult model constructor.
-     * @property {module:model/ListEdbActionResult}
-     */
-    ListEdbActionResult,
-
-    /**
-     * The ListSourceAction model constructor.
-     * @property {module:model/ListSourceAction}
-     */
-    ListSourceAction,
-
-    /**
-     * The ListSourceActionResult model constructor.
-     * @property {module:model/ListSourceActionResult}
-     */
-    ListSourceActionResult,
-
-    /**
-     * The Literal model constructor.
-     * @property {module:model/Literal}
-     */
-    Literal,
-
-    /**
-     * The LoadData model constructor.
-     * @property {module:model/LoadData}
-     */
-    LoadData,
-
-    /**
-     * The LoadDataAction model constructor.
-     * @property {module:model/LoadDataAction}
-     */
-    LoadDataAction,
-
-    /**
-     * The LoadDataActionResult model constructor.
-     * @property {module:model/LoadDataActionResult}
-     */
-    LoadDataActionResult,
-
-    /**
-     * The ModifyWorkspaceAction model constructor.
-     * @property {module:model/ModifyWorkspaceAction}
-     */
-    ModifyWorkspaceAction,
-
-    /**
-     * The ModifyWorkspaceActionResult model constructor.
-     * @property {module:model/ModifyWorkspaceActionResult}
-     */
-    ModifyWorkspaceActionResult,
-
-    /**
-     * The Nil model constructor.
-     * @property {module:model/Nil}
-     */
-    Nil,
-
-    /**
-     * The OutputProblem model constructor.
-     * @property {module:model/OutputProblem}
-     */
-    OutputProblem,
-
-    /**
-     * The PairAnyValueAnyValue model constructor.
-     * @property {module:model/PairAnyValueAnyValue}
-     */
-    PairAnyValueAnyValue,
-
-    /**
-     * The ParseAction model constructor.
-     * @property {module:model/ParseAction}
-     */
-    ParseAction,
-
-    /**
-     * The ParseActionResult model constructor.
-     * @property {module:model/ParseActionResult}
-     */
-    ParseActionResult,
-
-    /**
-     * The PersistProblem model constructor.
-     * @property {module:model/PersistProblem}
-     */
-    PersistProblem,
-
-    /**
-     * The Point model constructor.
-     * @property {module:model/Point}
-     */
-    Point,
-
-    /**
-     * The QueryAction model constructor.
-     * @property {module:model/QueryAction}
-     */
-    QueryAction,
-
-    /**
-     * The QueryActionResult model constructor.
-     * @property {module:model/QueryActionResult}
-     */
-    QueryActionResult,
-
-    /**
-     * The Range model constructor.
-     * @property {module:model/Range}
-     */
-    Range,
-
-    /**
-     * The RelKey model constructor.
-     * @property {module:model/RelKey}
-     */
-    RelKey,
-
-    /**
-     * The Relation model constructor.
-     * @property {module:model/Relation}
-     */
-    Relation,
-
-    /**
-     * The SetOptionsAction model constructor.
-     * @property {module:model/SetOptionsAction}
-     */
-    SetOptionsAction,
-
-    /**
-     * The SetOptionsActionResult model constructor.
-     * @property {module:model/SetOptionsActionResult}
-     */
-    SetOptionsActionResult,
-
-    /**
-     * The Source model constructor.
-     * @property {module:model/Source}
-     */
-    Source,
-
-    /**
-     * The SyntaxError model constructor.
-     * @property {module:model/SyntaxError}
-     */
-    SyntaxError,
-
-    /**
-     * The SyntaxNode model constructor.
-     * @property {module:model/SyntaxNode}
-     */
-    SyntaxNode,
-
-    /**
-     * The Token model constructor.
-     * @property {module:model/Token}
-     */
-    Token,
-
-    /**
-     * The Transaction model constructor.
-     * @property {module:model/Transaction}
-     */
-    Transaction,
-
-    /**
-     * The TransactionResult model constructor.
-     * @property {module:model/TransactionResult}
-     */
-    TransactionResult,
-
-    /**
-     * The UndefinedError model constructor.
-     * @property {module:model/UndefinedError}
-     */
-    UndefinedError,
-
-    /**
-     * The UpdateAction model constructor.
-     * @property {module:model/UpdateAction}
-     */
-    UpdateAction,
-
-    /**
-     * The UpdateActionResult model constructor.
-     * @property {module:model/UpdateActionResult}
-     */
-    UpdateActionResult,
-
-    /**
-     * The WorkspaceLoadProblem model constructor.
-     * @property {module:model/WorkspaceLoadProblem}
-     */
-    WorkspaceLoadProblem,
+    UserInfoProtocol,
 
     /**
     * The DefaultApi service constructor.

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.ModifyWorkspaceActionResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,19 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ModifyWorkspaceActionResult', function() {
+    it('should create an instance of ModifyWorkspaceActionResult', function() {
+      // uncomment below and update the code to test ModifyWorkspaceActionResult
+      //var instane = new RaiDbSdk.ModifyWorkspaceActionResult();
+      //expect(instance).to.be.a(RaiDbSdk.ModifyWorkspaceActionResult);
     });
+
+    it('should have the property deleteEdbResult (base name: "delete_edb_result")', function() {
+      // uncomment below and update the code to test the property deleteEdbResult
+      //var instane = new RaiDbSdk.ModifyWorkspaceActionResult();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.QueryAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,37 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('QueryAction', function() {
+    it('should create an instance of QueryAction', function() {
+      // uncomment below and update the code to test QueryAction
+      //var instane = new RaiDbSdk.QueryAction();
+      //expect(instance).to.be.a(RaiDbSdk.QueryAction);
     });
+
+    it('should have the property inputs (base name: "inputs")', function() {
+      // uncomment below and update the code to test the property inputs
+      //var instane = new RaiDbSdk.QueryAction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property outputs (base name: "outputs")', function() {
+      // uncomment below and update the code to test the property outputs
+      //var instane = new RaiDbSdk.QueryAction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property persist (base name: "persist")', function() {
+      // uncomment below and update the code to test the property persist
+      //var instane = new RaiDbSdk.QueryAction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property source (base name: "source")', function() {
+      // uncomment below and update the code to test the property source
+      //var instane = new RaiDbSdk.QueryAction();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

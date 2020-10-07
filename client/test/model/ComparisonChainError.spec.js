@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.ComparisonChainError();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,31 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ComparisonChainError', function() {
+    it('should create an instance of ComparisonChainError', function() {
+      // uncomment below and update the code to test ComparisonChainError
+      //var instane = new RaiDbSdk.ComparisonChainError();
+      //expect(instance).to.be.a(RaiDbSdk.ComparisonChainError);
     });
+
+    it('should have the property msg (base name: "msg")', function() {
+      // uncomment below and update the code to test the property msg
+      //var instane = new RaiDbSdk.ComparisonChainError();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property node (base name: "node")', function() {
+      // uncomment below and update the code to test the property node
+      //var instane = new RaiDbSdk.ComparisonChainError();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property range (base name: "range")', function() {
+      // uncomment below and update the code to test the property range
+      //var instane = new RaiDbSdk.ComparisonChainError();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

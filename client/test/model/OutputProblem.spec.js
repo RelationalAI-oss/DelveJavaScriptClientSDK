@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.OutputProblem();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,31 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('OutputProblem', function() {
+    it('should create an instance of OutputProblem', function() {
+      // uncomment below and update the code to test OutputProblem
+      //var instane = new RaiDbSdk.OutputProblem();
+      //expect(instance).to.be.a(RaiDbSdk.OutputProblem);
     });
+
+    it('should have the property exception (base name: "exception")', function() {
+      // uncomment below and update the code to test the property exception
+      //var instane = new RaiDbSdk.OutputProblem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property exceptionStacktrace (base name: "exception_stacktrace")', function() {
+      // uncomment below and update the code to test the property exceptionStacktrace
+      //var instane = new RaiDbSdk.OutputProblem();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new RaiDbSdk.OutputProblem();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

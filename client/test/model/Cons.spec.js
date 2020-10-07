@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.Cons();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,25 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('Cons', function() {
+    it('should create an instance of Cons', function() {
+      // uncomment below and update the code to test Cons
+      //var instane = new RaiDbSdk.Cons();
+      //expect(instance).to.be.a(RaiDbSdk.Cons);
     });
+
+    it('should have the property head (base name: "head")', function() {
+      // uncomment below and update the code to test the property head
+      //var instane = new RaiDbSdk.Cons();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tail (base name: "tail")', function() {
+      // uncomment below and update the code to test the property tail
+      //var instane = new RaiDbSdk.Cons();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -1,6 +1,6 @@
 /**
- * RAI Cloud SDK
- * This is a Client SDK for RAI Cloud
+ * Delve Client SDK
+ * This is a Client SDK for Delve API
  *
  * The version of the OpenAPI document: 1.0.8
  * Contact: support@relational.ai
@@ -32,9 +32,9 @@ class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default http://127.0.0.1:8080
+         * @default http://127.0.0.1:8010
          */
-        this.basePath = 'http://127.0.0.1:8080'.replace(/\/+$/, '');
+        this.basePath = 'http://127.0.0.1:8010'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
@@ -575,7 +575,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "http://127.0.0.1:8080",
+              'url': "http://127.0.0.1:8010",
               'description': "No description provided",
             }
       ];

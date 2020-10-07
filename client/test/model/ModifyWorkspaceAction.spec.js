@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.ModifyWorkspaceAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,31 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ModifyWorkspaceAction', function() {
+    it('should create an instance of ModifyWorkspaceAction', function() {
+      // uncomment below and update the code to test ModifyWorkspaceAction
+      //var instane = new RaiDbSdk.ModifyWorkspaceAction();
+      //expect(instance).to.be.a(RaiDbSdk.ModifyWorkspaceAction);
     });
+
+    it('should have the property deleteEdb (base name: "delete_edb")', function() {
+      // uncomment below and update the code to test the property deleteEdb
+      //var instane = new RaiDbSdk.ModifyWorkspaceAction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property deleteSource (base name: "delete_source")', function() {
+      // uncomment below and update the code to test the property deleteSource
+      //var instane = new RaiDbSdk.ModifyWorkspaceAction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property enableLibrary (base name: "enable_library")', function() {
+      // uncomment below and update the code to test the property enableLibrary
+      //var instane = new RaiDbSdk.ModifyWorkspaceAction();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

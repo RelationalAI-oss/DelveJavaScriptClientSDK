@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.UndefinedError();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,25 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('UndefinedError', function() {
+    it('should create an instance of UndefinedError', function() {
+      // uncomment below and update the code to test UndefinedError
+      //var instane = new RaiDbSdk.UndefinedError();
+      //expect(instance).to.be.a(RaiDbSdk.UndefinedError);
     });
+
+    it('should have the property range (base name: "range")', function() {
+      // uncomment below and update the code to test the property range
+      //var instane = new RaiDbSdk.UndefinedError();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property _var (base name: "var")', function() {
+      // uncomment below and update the code to test the property _var
+      //var instane = new RaiDbSdk.UndefinedError();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

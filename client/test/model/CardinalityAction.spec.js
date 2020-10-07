@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.CardinalityAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,19 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('CardinalityAction', function() {
+    it('should create an instance of CardinalityAction', function() {
+      // uncomment below and update the code to test CardinalityAction
+      //var instane = new RaiDbSdk.CardinalityAction();
+      //expect(instance).to.be.a(RaiDbSdk.CardinalityAction);
     });
+
+    it('should have the property relname (base name: "relname")', function() {
+      // uncomment below and update the code to test the property relname
+      //var instane = new RaiDbSdk.CardinalityAction();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

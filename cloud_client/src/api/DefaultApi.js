@@ -1,6 +1,6 @@
 /**
- * Delve Client SDK
- * This is a Client SDK for Delve API
+ * RAI Cloud SDK
+ * This is a Client SDK for RAI Cloud
  *
  * The version of the OpenAPI document: 1.0.8
  * Contact: support@relational.ai
@@ -13,9 +13,16 @@
 
 
 import ApiClient from "../ApiClient";
-import InfraError from '../model/InfraError';
-import Transaction from '../model/Transaction';
-import TransactionResult from '../model/TransactionResult';
+import CreateComputeRequestProtocol from '../model/CreateComputeRequestProtocol';
+import CreateComputeResponseProtocol from '../model/CreateComputeResponseProtocol';
+import CreateUserRequestProtocol from '../model/CreateUserRequestProtocol';
+import CreateUserResponseProtocol from '../model/CreateUserResponseProtocol';
+import DeleteComputeRequestProtocol from '../model/DeleteComputeRequestProtocol';
+import DeleteComputeResponseProtocol from '../model/DeleteComputeResponseProtocol';
+import ListComputesResponseProtocol from '../model/ListComputesResponseProtocol';
+import ListDatabasesResponseProtocol from '../model/ListDatabasesResponseProtocol';
+import ListUsersResponseProtocol from '../model/ListUsersResponseProtocol';
+import UpdateDatabaseRequestProtocol from '../model/UpdateDatabaseRequestProtocol';
 
 /**
 * Default service.
@@ -37,24 +44,24 @@ export default class DefaultApi {
 
 
     /**
-     * Callback function to receive the result of the transactionPost operation.
-     * @callback module:api/DefaultApi~transactionPostCallback
+     * Callback function to receive the result of the computeDelete operation.
+     * @callback module:api/DefaultApi~computeDeleteCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/TransactionResult} data The data returned by the service call.
+     * @param {module:model/DeleteComputeResponseProtocol} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Issues a transaction to be executed
-     * @param {module:model/Transaction} transaction Optional description in *Markdown*
-     * @param {module:api/DefaultApi~transactionPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TransactionResult}
+     * Delete compute
+     * @param {module:model/DeleteComputeRequestProtocol} deleteComputeRequestProtocol Compute to be deleted
+     * @param {module:api/DefaultApi~computeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DeleteComputeResponseProtocol}
      */
-    transactionPost(transaction, callback) {
-      let postBody = transaction;
-      // verify the required parameter 'transaction' is set
-      if (transaction === undefined || transaction === null) {
-        throw new Error("Missing the required parameter 'transaction' when calling transactionPost");
+    computeDelete(deleteComputeRequestProtocol, callback) {
+      let postBody = deleteComputeRequestProtocol;
+      // verify the required parameter 'deleteComputeRequestProtocol' is set
+      if (deleteComputeRequestProtocol === undefined || deleteComputeRequestProtocol === null) {
+        throw new Error("Missing the required parameter 'deleteComputeRequestProtocol' when calling computeDelete");
       }
 
       let pathParams = {
@@ -69,9 +76,239 @@ export default class DefaultApi {
       let authNames = [];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = TransactionResult;
+      let returnType = DeleteComputeResponseProtocol;
       return this.apiClient.callApi(
-        '/transaction', 'POST',
+        '/compute', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the computeGet operation.
+     * @callback module:api/DefaultApi~computeGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ListComputesResponseProtocol} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List computes
+     * @param {module:api/DefaultApi~computeGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ListComputesResponseProtocol}
+     */
+    computeGet(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ListComputesResponseProtocol;
+      return this.apiClient.callApi(
+        '/compute', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the computePut operation.
+     * @callback module:api/DefaultApi~computePutCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CreateComputeResponseProtocol} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create compute
+     * @param {module:model/CreateComputeRequestProtocol} createComputeRequestProtocol New compute
+     * @param {module:api/DefaultApi~computePutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CreateComputeResponseProtocol}
+     */
+    computePut(createComputeRequestProtocol, callback) {
+      let postBody = createComputeRequestProtocol;
+      // verify the required parameter 'createComputeRequestProtocol' is set
+      if (createComputeRequestProtocol === undefined || createComputeRequestProtocol === null) {
+        throw new Error("Missing the required parameter 'createComputeRequestProtocol' when calling computePut");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = CreateComputeResponseProtocol;
+      return this.apiClient.callApi(
+        '/compute', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the databaseGet operation.
+     * @callback module:api/DefaultApi~databaseGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ListDatabasesResponseProtocol} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List databases
+     * @param {module:api/DefaultApi~databaseGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ListDatabasesResponseProtocol}
+     */
+    databaseGet(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ListDatabasesResponseProtocol;
+      return this.apiClient.callApi(
+        '/database', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the databasePost operation.
+     * @callback module:api/DefaultApi~databasePostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update database
+     * @param {module:model/UpdateDatabaseRequestProtocol} updateDatabaseRequestProtocol Database fields to be updated
+     * @param {module:api/DefaultApi~databasePostCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    databasePost(updateDatabaseRequestProtocol, callback) {
+      let postBody = updateDatabaseRequestProtocol;
+      // verify the required parameter 'updateDatabaseRequestProtocol' is set
+      if (updateDatabaseRequestProtocol === undefined || updateDatabaseRequestProtocol === null) {
+        throw new Error("Missing the required parameter 'updateDatabaseRequestProtocol' when calling databasePost");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/database', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the userGet operation.
+     * @callback module:api/DefaultApi~userGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ListUsersResponseProtocol} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List users
+     * @param {module:api/DefaultApi~userGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ListUsersResponseProtocol}
+     */
+    userGet(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ListUsersResponseProtocol;
+      return this.apiClient.callApi(
+        '/user', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the userPut operation.
+     * @callback module:api/DefaultApi~userPutCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CreateUserResponseProtocol} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create user
+     * @param {module:model/CreateUserRequestProtocol} createUserRequestProtocol New user
+     * @param {module:api/DefaultApi~userPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CreateUserResponseProtocol}
+     */
+    userPut(createUserRequestProtocol, callback) {
+      let postBody = createUserRequestProtocol;
+      // verify the required parameter 'createUserRequestProtocol' is set
+      if (createUserRequestProtocol === undefined || createUserRequestProtocol === null) {
+        throw new Error("Missing the required parameter 'createUserRequestProtocol' when calling userPut");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = CreateUserResponseProtocol;
+      return this.apiClient.callApi(
+        '/user', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

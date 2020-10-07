@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.InstallAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,19 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('InstallAction', function() {
+    it('should create an instance of InstallAction', function() {
+      // uncomment below and update the code to test InstallAction
+      //var instane = new RaiDbSdk.InstallAction();
+      //expect(instance).to.be.a(RaiDbSdk.InstallAction);
     });
+
+    it('should have the property sources (base name: "sources")', function() {
+      // uncomment below and update the code to test the property sources
+      //var instane = new RaiDbSdk.InstallAction();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

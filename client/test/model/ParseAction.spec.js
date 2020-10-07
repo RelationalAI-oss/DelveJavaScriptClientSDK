@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.ParseAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,25 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ParseAction', function() {
+    it('should create an instance of ParseAction', function() {
+      // uncomment below and update the code to test ParseAction
+      //var instane = new RaiDbSdk.ParseAction();
+      //expect(instance).to.be.a(RaiDbSdk.ParseAction);
     });
+
+    it('should have the property nonterm (base name: "nonterm")', function() {
+      // uncomment below and update the code to test the property nonterm
+      //var instane = new RaiDbSdk.ParseAction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property source (base name: "source")', function() {
+      // uncomment below and update the code to test the property source
+      //var instane = new RaiDbSdk.ParseAction();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

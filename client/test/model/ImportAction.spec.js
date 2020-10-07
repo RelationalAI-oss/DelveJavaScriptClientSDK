@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiDbSdk.DefaultApi();
+    instance = new RaiDbSdk.ImportAction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,19 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ImportAction', function() {
+    it('should create an instance of ImportAction', function() {
+      // uncomment below and update the code to test ImportAction
+      //var instane = new RaiDbSdk.ImportAction();
+      //expect(instance).to.be.a(RaiDbSdk.ImportAction);
     });
+
+    it('should have the property inputs (base name: "inputs")', function() {
+      // uncomment below and update the code to test the property inputs
+      //var instane = new RaiDbSdk.ImportAction();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

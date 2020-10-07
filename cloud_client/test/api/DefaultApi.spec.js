@@ -1,6 +1,6 @@
 /**
- * Delve Client SDK
- * This is a Client SDK for Delve API
+ * RAI Cloud SDK
+ * This is a Client SDK for RAI Cloud
  *
  * The version of the OpenAPI document: 1.0.8
  * Contact: support@relational.ai
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DelveClientSdk);
+    factory(root.expect, root.RaiCloudSdk);
   }
-}(this, function(expect, DelveClientSdk) {
+}(this, function(expect, RaiCloudSdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DelveClientSdk.DefaultApi();
+    instance = new RaiCloudSdk.DefaultApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,10 +48,70 @@
   }
 
   describe('DefaultApi', function() {
-    describe('transactionPost', function() {
-      it('should call transactionPost successfully', function(done) {
-        //uncomment below and update the code to test transactionPost
-        //instance.transactionPost(function(error) {
+    describe('computeDelete', function() {
+      it('should call computeDelete successfully', function(done) {
+        //uncomment below and update the code to test computeDelete
+        //instance.computeDelete(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('computeGet', function() {
+      it('should call computeGet successfully', function(done) {
+        //uncomment below and update the code to test computeGet
+        //instance.computeGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('computePut', function() {
+      it('should call computePut successfully', function(done) {
+        //uncomment below and update the code to test computePut
+        //instance.computePut(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('databaseGet', function() {
+      it('should call databaseGet successfully', function(done) {
+        //uncomment below and update the code to test databaseGet
+        //instance.databaseGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('databasePost', function() {
+      it('should call databasePost successfully', function(done) {
+        //uncomment below and update the code to test databasePost
+        //instance.databasePost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('userGet', function() {
+      it('should call userGet successfully', function(done) {
+        //uncomment below and update the code to test userGet
+        //instance.userGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('userPut', function() {
+      it('should call userPut successfully', function(done) {
+        //uncomment below and update the code to test userPut
+        //instance.userPut(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
