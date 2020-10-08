@@ -1,0 +1,14 @@
+{
+  "name": "sample_js_sdk_project",
+  "version": "1.0.0",
+  "description": "Test JS SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No Tests\""
+  },
+  "author": "Mohammad Dashti",
+  "license": "MIT",
+  "dependencies": {
+    "rai_db_sdk": "file:../client"
+  }
+}
