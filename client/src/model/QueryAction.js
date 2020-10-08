@@ -40,7 +40,7 @@ class QueryAction {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['source'] = source;
+        obj['source'] = null;
     }
 
     /**

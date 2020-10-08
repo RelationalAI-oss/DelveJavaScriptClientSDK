@@ -13,6 +13,7 @@
 
 
 import ApiClient from './ApiClient';
+import AnyType from './model/AnyType';
 import AbstractProblem from './model/AbstractProblem';
 import Action from './model/Action';
 import ActionResult from './model/ActionResult';
@@ -119,6 +120,8 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
+
+    AnyType,
 
     /**
      * The AbstractProblem model constructor.
