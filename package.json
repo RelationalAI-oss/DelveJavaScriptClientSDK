@@ -1,8 +1,9 @@
 {
   "name": "delve_client_sdk",
-  "version": "1.0.8",
-  "description": "This is the Delve JavaScript client SDK and you can use it to connect to the RelationalAI infrastructure.",
-  "main": "index.js",
+  "version": "1.0.9",
+  "description": "This_is_a_Client_SDK_for_Delve_API",
+  "license": "Apache 2.0",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
