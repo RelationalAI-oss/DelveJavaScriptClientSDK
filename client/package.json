@@ -1,6 +1,6 @@
 {
   "name": "rai_db_sdk",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "This_is_a_Client_SDK_for_Delve_API",
   "license": "Apache 2.0",
   "main": "dist/index.js",
