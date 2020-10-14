@@ -778,7 +778,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 */
 var DefaultApi = /*#__PURE__*/function () {
   /**
-  * Constructs a new DefaultApi. 
+  * Constructs a new DefaultApi.
   * @alias module:api/DefaultApi
   * @class
   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
@@ -1417,7 +1417,7 @@ var AbstractProblem = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AbstractProblem</code>.
    * @alias module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function AbstractProblem(type) {
     _classCallCheck(this, AbstractProblem);
@@ -1497,7 +1497,7 @@ var Action = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Action</code>.
    * @alias module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function Action(type) {
     _classCallCheck(this, Action);
@@ -1658,8 +1658,8 @@ var AnyType = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>AnyType</code>.
    * @alias module:model/AnyType
-   * @param target_value {Number} 
-   * @param type {module:model/AnyType.TypeEnum} 
+   * @param target_value {Number}
+   * @param type {module:model/AnyType.TypeEnum}
    */
   function AnyType(target_value, type) {
     _classCallCheck(this, AnyType);
@@ -1769,7 +1769,7 @@ var Appl = /*#__PURE__*/function () {
    * @alias module:model/Appl
    * @extends module:model/SyntaxNode
    * @implements module:model/SyntaxNode
-   * @param type {String} 
+   * @param type {String}
    */
   function Appl(type) {
     _classCallCheck(this, Appl);
@@ -1905,9 +1905,9 @@ var Area = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Area</code>.
    * @alias module:model/Area
-   * @param endPoint {module:model/Point} 
-   * @param startPoint {module:model/Point} 
-   * @param type {module:model/Area.TypeEnum} 
+   * @param endPoint {module:model/Point}
+   * @param startPoint {module:model/Point}
+   * @param type {module:model/Area.TypeEnum}
    */
   function Area(endPoint, startPoint, type) {
     _classCallCheck(this, Area);
@@ -2028,7 +2028,7 @@ var ArityMismatchError = /*#__PURE__*/function () {
    * @alias module:model/ArityMismatchError
    * @extends module:model/FrontProblem
    * @implements module:model/FrontProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function ArityMismatchError(type) {
     _classCallCheck(this, ArityMismatchError);
@@ -2144,7 +2144,7 @@ var CSVFileSchema = /*#__PURE__*/function () {
    * @alias module:model/CSVFileSchema
    * @extends module:model/FileSchema
    * @implements module:model/FileSchema
-   * @param type {String} 
+   * @param type {String}
    */
   function CSVFileSchema(type) {
     _classCallCheck(this, CSVFileSchema);
@@ -2238,7 +2238,7 @@ var CSVFileSyntax = /*#__PURE__*/function () {
    * @alias module:model/CSVFileSyntax
    * @extends module:model/FileSyntax
    * @implements module:model/FileSyntax
-   * @param type {String} 
+   * @param type {String}
    */
   function CSVFileSyntax(type) {
     _classCallCheck(this, CSVFileSyntax);
@@ -2419,7 +2419,7 @@ var CardinalityAction = /*#__PURE__*/function () {
    * @alias module:model/CardinalityAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function CardinalityAction(type) {
     _classCallCheck(this, CardinalityAction);
@@ -2515,7 +2515,7 @@ var CardinalityActionResult = /*#__PURE__*/function () {
    * @alias module:model/CardinalityActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function CardinalityActionResult(type) {
     _classCallCheck(this, CardinalityActionResult);
@@ -2609,7 +2609,7 @@ var ClientProblem = /*#__PURE__*/function () {
    * @alias module:model/ClientProblem
    * @extends module:model/AbstractProblem
    * @implements module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function ClientProblem(type) {
     _classCallCheck(this, ClientProblem);
@@ -2761,7 +2761,7 @@ var CollectProblemsAction = /*#__PURE__*/function () {
    * @alias module:model/CollectProblemsAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function CollectProblemsAction(type) {
     _classCallCheck(this, CollectProblemsAction);
@@ -2848,7 +2848,7 @@ var CollectProblemsActionResult = /*#__PURE__*/function () {
    * @alias module:model/CollectProblemsActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function CollectProblemsActionResult(type) {
     _classCallCheck(this, CollectProblemsActionResult);
@@ -2946,7 +2946,7 @@ var ComparisonChainError = /*#__PURE__*/function () {
    * @alias module:model/ComparisonChainError
    * @extends module:model/FrontProblem
    * @implements module:model/FrontProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function ComparisonChainError(type) {
     _classCallCheck(this, ComparisonChainError);
@@ -3064,7 +3064,7 @@ var Cons = /*#__PURE__*/function () {
    * @alias module:model/Cons
    * @extends module:model/LinkedList
    * @implements module:model/LinkedList
-   * @param type {String} 
+   * @param type {String}
    */
   function Cons(type) {
     _classCallCheck(this, Cons);
@@ -3170,7 +3170,7 @@ var ExceptionProblem = /*#__PURE__*/function () {
    * @alias module:model/ExceptionProblem
    * @extends module:model/AbstractProblem
    * @implements module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function ExceptionProblem(type) {
     _classCallCheck(this, ExceptionProblem);
@@ -3272,7 +3272,7 @@ var FileSchema = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>FileSchema</code>.
    * @alias module:model/FileSchema
-   * @param type {String} 
+   * @param type {String}
    */
   function FileSchema(type) {
     _classCallCheck(this, FileSchema);
@@ -3352,7 +3352,7 @@ var FileSyntax = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>FileSyntax</code>.
    * @alias module:model/FileSyntax
-   * @param type {String} 
+   * @param type {String}
    */
   function FileSyntax(type) {
     _classCallCheck(this, FileSyntax);
@@ -3436,7 +3436,7 @@ var FrontProblem = /*#__PURE__*/function () {
    * @alias module:model/FrontProblem
    * @extends module:model/AbstractProblem
    * @implements module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function FrontProblem(type) {
     _classCallCheck(this, FrontProblem);
@@ -3519,9 +3519,9 @@ var ICViolation = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>ICViolation</code>.
    * @alias module:model/ICViolation
-   * @param relKey {module:model/RelKey} 
-   * @param source {String} 
-   * @param type {module:model/ICViolation.TypeEnum} 
+   * @param relKey {module:model/RelKey}
+   * @param source {String}
+   * @param type {module:model/ICViolation.TypeEnum}
    */
   function ICViolation(relKey, source, type) {
     _classCallCheck(this, ICViolation);
@@ -3641,7 +3641,7 @@ var ImportAction = /*#__PURE__*/function () {
    * @alias module:model/ImportAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function ImportAction(type) {
     _classCallCheck(this, ImportAction);
@@ -3735,7 +3735,7 @@ var ImportActionResult = /*#__PURE__*/function () {
    * @alias module:model/ImportActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function ImportActionResult(type) {
     _classCallCheck(this, ImportActionResult);
@@ -3816,8 +3816,8 @@ var InfraError = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>InfraError</code>.
    * @alias module:model/InfraError
-   * @param status {String} 
-   * @param message {String} 
+   * @param status {String}
+   * @param message {String}
    */
   function InfraError(status, message) {
     _classCallCheck(this, InfraError);
@@ -3912,7 +3912,7 @@ var InstallAction = /*#__PURE__*/function () {
    * @alias module:model/InstallAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function InstallAction(type) {
     _classCallCheck(this, InstallAction);
@@ -4006,7 +4006,7 @@ var InstallActionResult = /*#__PURE__*/function () {
    * @alias module:model/InstallActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function InstallActionResult(type) {
     _classCallCheck(this, InstallActionResult);
@@ -4091,7 +4091,7 @@ var IntegrityConstraintProblem = /*#__PURE__*/function () {
    * @alias module:model/IntegrityConstraintProblem
    * @extends module:model/AbstractProblem
    * @implements module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function IntegrityConstraintProblem(type) {
     _classCallCheck(this, IntegrityConstraintProblem);
@@ -4190,7 +4190,7 @@ var IntegrityConstraintViolation = /*#__PURE__*/function () {
    * @alias module:model/IntegrityConstraintViolation
    * @extends module:model/AbstractProblem
    * @implements module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function IntegrityConstraintViolation(type) {
     _classCallCheck(this, IntegrityConstraintViolation);
@@ -4284,7 +4284,7 @@ var JSONFileSchema = /*#__PURE__*/function () {
    * @alias module:model/JSONFileSchema
    * @extends module:model/FileSchema
    * @implements module:model/FileSchema
-   * @param type {String} 
+   * @param type {String}
    */
   function JSONFileSchema(type) {
     _classCallCheck(this, JSONFileSchema);
@@ -4369,7 +4369,7 @@ var JSONFileSyntax = /*#__PURE__*/function () {
    * @alias module:model/JSONFileSyntax
    * @extends module:model/FileSyntax
    * @implements module:model/FileSyntax
-   * @param type {String} 
+   * @param type {String}
    */
   function JSONFileSyntax(type) {
     _classCallCheck(this, JSONFileSyntax);
@@ -4452,9 +4452,9 @@ var LabeledAction = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>LabeledAction</code>.
    * @alias module:model/LabeledAction
-   * @param action {module:model/Action} 
-   * @param name {String} 
-   * @param type {module:model/LabeledAction.TypeEnum} 
+   * @param action {module:model/Action}
+   * @param name {String}
+   * @param type {module:model/LabeledAction.TypeEnum}
    */
   function LabeledAction(action, name, type) {
     _classCallCheck(this, LabeledAction);
@@ -4570,9 +4570,9 @@ var LabeledActionResult = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>LabeledActionResult</code>.
    * @alias module:model/LabeledActionResult
-   * @param name {String} 
-   * @param result {module:model/ActionResult} 
-   * @param type {module:model/LabeledActionResult.TypeEnum} 
+   * @param name {String}
+   * @param result {module:model/ActionResult}
+   * @param type {module:model/LabeledActionResult.TypeEnum}
    */
   function LabeledActionResult(name, result, type) {
     _classCallCheck(this, LabeledActionResult);
@@ -4686,7 +4686,7 @@ var LinkedList = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>LinkedList</code>.
    * @alias module:model/LinkedList
-   * @param type {String} 
+   * @param type {String}
    */
   function LinkedList(type) {
     _classCallCheck(this, LinkedList);
@@ -4770,7 +4770,7 @@ var ListEdbAction = /*#__PURE__*/function () {
    * @alias module:model/ListEdbAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function ListEdbAction(type) {
     _classCallCheck(this, ListEdbAction);
@@ -4866,7 +4866,7 @@ var ListEdbActionResult = /*#__PURE__*/function () {
    * @alias module:model/ListEdbActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function ListEdbActionResult(type) {
     _classCallCheck(this, ListEdbActionResult);
@@ -4960,7 +4960,7 @@ var ListSourceAction = /*#__PURE__*/function () {
    * @alias module:model/ListSourceAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function ListSourceAction(type) {
     _classCallCheck(this, ListSourceAction);
@@ -5047,7 +5047,7 @@ var ListSourceActionResult = /*#__PURE__*/function () {
    * @alias module:model/ListSourceActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function ListSourceActionResult(type) {
     _classCallCheck(this, ListSourceActionResult);
@@ -5143,7 +5143,7 @@ var Literal = /*#__PURE__*/function () {
    * @alias module:model/Literal
    * @extends module:model/SyntaxNode
    * @implements module:model/SyntaxNode
-   * @param type {String} 
+   * @param type {String}
    */
   function Literal(type) {
     _classCallCheck(this, Literal);
@@ -5263,9 +5263,9 @@ var LoadData = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>LoadData</code>.
    * @alias module:model/LoadData
-   * @param contentType {String} 
-   * @param key {module:model/AnyType} 
-   * @param type {module:model/LoadData.TypeEnum} 
+   * @param contentType {String}
+   * @param key {module:model/AnyType}
+   * @param type {module:model/LoadData.TypeEnum}
    */
   function LoadData(contentType, key, type) {
     _classCallCheck(this, LoadData);
@@ -5421,7 +5421,7 @@ var LoadDataAction = /*#__PURE__*/function () {
    * @alias module:model/LoadDataAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function LoadDataAction(type) {
     _classCallCheck(this, LoadDataAction);
@@ -5528,7 +5528,7 @@ var LoadDataActionResult = /*#__PURE__*/function () {
    * @alias module:model/LoadDataActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function LoadDataActionResult(type) {
     _classCallCheck(this, LoadDataActionResult);
@@ -5613,7 +5613,7 @@ var ModifyWorkspaceAction = /*#__PURE__*/function () {
    * @alias module:model/ModifyWorkspaceAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function ModifyWorkspaceAction(type) {
     _classCallCheck(this, ModifyWorkspaceAction);
@@ -5727,7 +5727,7 @@ var ModifyWorkspaceActionResult = /*#__PURE__*/function () {
    * @alias module:model/ModifyWorkspaceActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function ModifyWorkspaceActionResult(type) {
     _classCallCheck(this, ModifyWorkspaceActionResult);
@@ -5821,7 +5821,7 @@ var Nil = /*#__PURE__*/function () {
    * @alias module:model/Nil
    * @extends module:model/LinkedList
    * @implements module:model/LinkedList
-   * @param type {String} 
+   * @param type {String}
    */
   function Nil(type) {
     _classCallCheck(this, Nil);
@@ -5906,7 +5906,7 @@ var OutputProblem = /*#__PURE__*/function () {
    * @alias module:model/OutputProblem
    * @extends module:model/AbstractProblem
    * @implements module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function OutputProblem(type) {
     _classCallCheck(this, OutputProblem);
@@ -6021,7 +6021,7 @@ var PairAnyValueAnyValue = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>PairAnyValueAnyValue</code>.
    * @alias module:model/PairAnyValueAnyValue
-   * @param type {module:model/PairAnyValueAnyValue.TypeEnum} 
+   * @param type {module:model/PairAnyValueAnyValue.TypeEnum}
    */
   function PairAnyValueAnyValue(type) {
     _classCallCheck(this, PairAnyValueAnyValue);
@@ -6138,7 +6138,7 @@ var ParseAction = /*#__PURE__*/function () {
    * @alias module:model/ParseAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function ParseAction(type) {
     _classCallCheck(this, ParseAction);
@@ -6247,7 +6247,7 @@ var ParseActionResult = /*#__PURE__*/function () {
    * @alias module:model/ParseActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function ParseActionResult(type) {
     _classCallCheck(this, ParseActionResult);
@@ -6341,7 +6341,7 @@ var PersistProblem = /*#__PURE__*/function () {
    * @alias module:model/PersistProblem
    * @extends module:model/AbstractProblem
    * @implements module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function PersistProblem(type) {
     _classCallCheck(this, PersistProblem);
@@ -6443,9 +6443,9 @@ var Point = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Point</code>.
    * @alias module:model/Point
-   * @param column {Number} 
-   * @param row {Number} 
-   * @param type {module:model/Point.TypeEnum} 
+   * @param column {Number}
+   * @param row {Number}
+   * @param type {module:model/Point.TypeEnum}
    */
   function Point(column, row, type) {
     _classCallCheck(this, Point);
@@ -6693,7 +6693,7 @@ var QueryActionResult = /*#__PURE__*/function () {
    * @alias module:model/QueryActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function QueryActionResult(type) {
     _classCallCheck(this, QueryActionResult);
@@ -6787,10 +6787,10 @@ var Range = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Range</code>.
    * @alias module:model/Range
-   * @param area {module:model/Area} 
-   * @param endByte {Number} 
-   * @param startByte {Number} 
-   * @param type {module:model/Range.TypeEnum} 
+   * @param area {module:model/Area}
+   * @param endByte {Number}
+   * @param startByte {Number}
+   * @param type {module:model/Range.TypeEnum}
    */
   function Range(area, endByte, startByte, type) {
     _classCallCheck(this, Range);
@@ -6924,8 +6924,8 @@ var RelKey = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>RelKey</code>.
    * @alias module:model/RelKey
-   * @param name {String} 
-   * @param type {module:model/RelKey.TypeEnum} 
+   * @param name {String}
+   * @param type {module:model/RelKey.TypeEnum}
    */
   function RelKey(name, type) {
     _classCallCheck(this, RelKey);
@@ -7051,8 +7051,8 @@ var Relation = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Relation</code>.
    * @alias module:model/Relation
-   * @param relKey {module:model/RelKey} 
-   * @param type {module:model/Relation.TypeEnum} 
+   * @param relKey {module:model/RelKey}
+   * @param type {module:model/Relation.TypeEnum}
    */
   function Relation(relKey, type) {
     _classCallCheck(this, Relation);
@@ -7168,7 +7168,7 @@ var SetOptionsAction = /*#__PURE__*/function () {
    * @alias module:model/SetOptionsAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function SetOptionsAction(type) {
     _classCallCheck(this, SetOptionsAction);
@@ -7298,7 +7298,7 @@ var SetOptionsActionResult = /*#__PURE__*/function () {
    * @alias module:model/SetOptionsActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function SetOptionsActionResult(type) {
     _classCallCheck(this, SetOptionsActionResult);
@@ -7379,10 +7379,10 @@ var Source = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Source</code>.
    * @alias module:model/Source
-   * @param name {String} 
-   * @param path {String} 
-   * @param value {String} 
-   * @param type {module:model/Source.TypeEnum} 
+   * @param name {String}
+   * @param path {String}
+   * @param value {String}
+   * @param type {module:model/Source.TypeEnum}
    */
   function Source(name, path, value, type) {
     _classCallCheck(this, Source);
@@ -7516,7 +7516,7 @@ var SyntaxError = /*#__PURE__*/function () {
    * @alias module:model/SyntaxError
    * @extends module:model/AbstractProblem
    * @implements module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function SyntaxError(type) {
     _classCallCheck(this, SyntaxError);
@@ -7627,7 +7627,7 @@ var SyntaxNode = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>SyntaxNode</code>.
    * @alias module:model/SyntaxNode
-   * @param type {String} 
+   * @param type {String}
    */
   function SyntaxNode(type) {
     _classCallCheck(this, SyntaxNode);
@@ -7713,7 +7713,7 @@ var Token = /*#__PURE__*/function () {
    * @alias module:model/Token
    * @extends module:model/SyntaxNode
    * @implements module:model/SyntaxNode
-   * @param type {String} 
+   * @param type {String}
    */
   function Token(type) {
     _classCallCheck(this, Token);
@@ -7818,11 +7818,11 @@ var Transaction = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Transaction</code>.
    * @alias module:model/Transaction
-   * @param abort {Boolean} 
-   * @param dbname {String} 
-   * @param mode {module:model/Transaction.ModeEnum} 
-   * @param readonly {Boolean} 
-   * @param type {module:model/Transaction.TypeEnum} 
+   * @param abort {Boolean}
+   * @param dbname {String}
+   * @param mode {module:model/Transaction.ModeEnum}
+   * @param readonly {Boolean}
+   * @param type {module:model/Transaction.TypeEnum}
    */
   function Transaction(abort, dbname, mode, readonly, type) {
     _classCallCheck(this, Transaction);
@@ -8044,8 +8044,8 @@ var TransactionResult = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>TransactionResult</code>.
    * @alias module:model/TransactionResult
-   * @param aborted {Boolean} 
-   * @param type {module:model/TransactionResult.TypeEnum} 
+   * @param aborted {Boolean}
+   * @param type {module:model/TransactionResult.TypeEnum}
    */
   function TransactionResult(aborted, type) {
     _classCallCheck(this, TransactionResult);
@@ -8200,7 +8200,7 @@ var UndefinedError = /*#__PURE__*/function () {
    * @alias module:model/UndefinedError
    * @extends module:model/FrontProblem
    * @implements module:model/FrontProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function UndefinedError(type) {
     _classCallCheck(this, UndefinedError);
@@ -8311,7 +8311,7 @@ var UpdateAction = /*#__PURE__*/function () {
    * @alias module:model/UpdateAction
    * @extends module:model/Action
    * @implements module:model/Action
-   * @param type {String} 
+   * @param type {String}
    */
   function UpdateAction(type) {
     _classCallCheck(this, UpdateAction);
@@ -8425,7 +8425,7 @@ var UpdateActionResult = /*#__PURE__*/function () {
    * @alias module:model/UpdateActionResult
    * @extends module:model/ActionResult
    * @implements module:model/ActionResult
-   * @param type {String} 
+   * @param type {String}
    */
   function UpdateActionResult(type) {
     _classCallCheck(this, UpdateActionResult);
@@ -8510,7 +8510,7 @@ var WorkspaceLoadProblem = /*#__PURE__*/function () {
    * @alias module:model/WorkspaceLoadProblem
    * @extends module:model/AbstractProblem
    * @implements module:model/AbstractProblem
-   * @param type {String} 
+   * @param type {String}
    */
   function WorkspaceLoadProblem(type) {
     _classCallCheck(this, WorkspaceLoadProblem);
