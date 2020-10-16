@@ -20,6 +20,7 @@ import ActionResult from './model/ActionResult';
 import Appl from './model/Appl';
 import Area from './model/Area';
 import ArityMismatchError from './model/ArityMismatchError';
+import AzureIntegration from './model/AzureIntegration';
 import CSVFileSchema from './model/CSVFileSchema';
 import CSVFileSyntax from './model/CSVFileSyntax';
 import CardinalityAction from './model/CardinalityAction';
@@ -29,6 +30,7 @@ import CollectProblemsAction from './model/CollectProblemsAction';
 import CollectProblemsActionResult from './model/CollectProblemsActionResult';
 import ComparisonChainError from './model/ComparisonChainError';
 import Cons from './model/Cons';
+import DefaultIntegration from './model/DefaultIntegration';
 import ExceptionProblem from './model/ExceptionProblem';
 import FileSchema from './model/FileSchema';
 import FileSyntax from './model/FileSyntax';
@@ -39,6 +41,7 @@ import ImportActionResult from './model/ImportActionResult';
 import InfraError from './model/InfraError';
 import InstallAction from './model/InstallAction';
 import InstallActionResult from './model/InstallActionResult';
+import Integration from './model/Integration';
 import IntegrityConstraintProblem from './model/IntegrityConstraintProblem';
 import IntegrityConstraintViolation from './model/IntegrityConstraintViolation';
 import JSONFileSchema from './model/JSONFileSchema';
@@ -54,11 +57,13 @@ import Literal from './model/Literal';
 import LoadData from './model/LoadData';
 import LoadDataAction from './model/LoadDataAction';
 import LoadDataActionResult from './model/LoadDataActionResult';
+import LoadDataProblem from './model/LoadDataProblem';
 import ModifyWorkspaceAction from './model/ModifyWorkspaceAction';
 import ModifyWorkspaceActionResult from './model/ModifyWorkspaceActionResult';
 import Nil from './model/Nil';
 import OutputProblem from './model/OutputProblem';
 import PairAnyValueAnyValue from './model/PairAnyValueAnyValue';
+import PairSymbolString from './model/PairSymbolString';
 import ParseAction from './model/ParseAction';
 import ParseActionResult from './model/ParseActionResult';
 import PersistProblem from './model/PersistProblem';
@@ -68,6 +73,7 @@ import QueryActionResult from './model/QueryActionResult';
 import Range from './model/Range';
 import RelKey from './model/RelKey';
 import Relation from './model/Relation';
+import S3Integration from './model/S3Integration';
 import SetOptionsAction from './model/SetOptionsAction';
 import SetOptionsActionResult from './model/SetOptionsActionResult';
 import Source from './model/Source';
@@ -160,6 +166,12 @@ export {
     ArityMismatchError,
 
     /**
+     * The AzureIntegration model constructor.
+     * @property {module:model/AzureIntegration}
+     */
+    AzureIntegration,
+
+    /**
      * The CSVFileSchema model constructor.
      * @property {module:model/CSVFileSchema}
      */
@@ -212,6 +224,12 @@ export {
      * @property {module:model/Cons}
      */
     Cons,
+
+    /**
+     * The DefaultIntegration model constructor.
+     * @property {module:model/DefaultIntegration}
+     */
+    DefaultIntegration,
 
     /**
      * The ExceptionProblem model constructor.
@@ -272,6 +290,12 @@ export {
      * @property {module:model/InstallActionResult}
      */
     InstallActionResult,
+
+    /**
+     * The Integration model constructor.
+     * @property {module:model/Integration}
+     */
+    Integration,
 
     /**
      * The IntegrityConstraintProblem model constructor.
@@ -364,6 +388,12 @@ export {
     LoadDataActionResult,
 
     /**
+     * The LoadDataProblem model constructor.
+     * @property {module:model/LoadDataProblem}
+     */
+    LoadDataProblem,
+
+    /**
      * The ModifyWorkspaceAction model constructor.
      * @property {module:model/ModifyWorkspaceAction}
      */
@@ -392,6 +422,12 @@ export {
      * @property {module:model/PairAnyValueAnyValue}
      */
     PairAnyValueAnyValue,
+
+    /**
+     * The PairSymbolString model constructor.
+     * @property {module:model/PairSymbolString}
+     */
+    PairSymbolString,
 
     /**
      * The ParseAction model constructor.
@@ -446,6 +482,12 @@ export {
      * @property {module:model/Relation}
      */
     Relation,
+
+    /**
+     * The S3Integration model constructor.
+     * @property {module:model/S3Integration}
+     */
+    S3Integration,
 
     /**
      * The SetOptionsAction model constructor.

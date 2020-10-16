@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import AnyType from './AnyType';
 import FileSchema from './FileSchema';
 import FileSyntax from './FileSyntax';
+import Integration from './Integration';
 
 /**
  * The LoadData model module.
@@ -68,6 +69,9 @@ class LoadData {
             if (data.hasOwnProperty('file_syntax')) {
                 obj['file_syntax'] = FileSyntax.constructFromObject(data['file_syntax']);
             }
+            if (data.hasOwnProperty('integration')) {
+                obj['integration'] = Integration.constructFromObject(data['integration']);
+            }
             if (data.hasOwnProperty('key')) {
                 obj['key'] = ApiClient.convertToType(data['key'], AnyType);
             }
@@ -104,6 +108,11 @@ LoadData.prototype['file_schema'] = undefined;
  * @member {module:model/FileSyntax} file_syntax
  */
 LoadData.prototype['file_syntax'] = undefined;
+
+/**
+ * @member {module:model/Integration} integration
+ */
+LoadData.prototype['integration'] = undefined;
 
 /**
  * @member {module:model/AnyType} key
