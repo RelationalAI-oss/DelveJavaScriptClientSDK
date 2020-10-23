@@ -77,6 +77,8 @@ import S3Integration from './model/S3Integration';
 import SetOptionsAction from './model/SetOptionsAction';
 import SetOptionsActionResult from './model/SetOptionsActionResult';
 import Source from './model/Source';
+import StatusAction from './model/StatusAction';
+import StatusActionResult from './model/StatusActionResult';
 import SyntaxError from './model/SyntaxError';
 import SyntaxNode from './model/SyntaxNode';
 import Token from './model/Token';
@@ -506,6 +508,18 @@ export {
      * @property {module:model/Source}
      */
     Source,
+
+    /**
+     * The StatusAction model constructor.
+     * @property {module:model/StatusAction}
+     */
+    StatusAction,
+
+    /**
+     * The StatusActionResult model constructor.
+     * @property {module:model/StatusActionResult}
+     */
+    StatusActionResult,
 
     /**
      * The SyntaxError model constructor.

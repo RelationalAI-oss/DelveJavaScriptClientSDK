@@ -182,6 +182,8 @@ Class | Method | HTTP request | Description
  - [DelveClientSdk.SetOptionsAction](docs/SetOptionsAction.md)
  - [DelveClientSdk.SetOptionsActionResult](docs/SetOptionsActionResult.md)
  - [DelveClientSdk.Source](docs/Source.md)
+ - [DelveClientSdk.StatusAction](docs/StatusAction.md)
+ - [DelveClientSdk.StatusActionResult](docs/StatusActionResult.md)
  - [DelveClientSdk.SyntaxError](docs/SyntaxError.md)
  - [DelveClientSdk.SyntaxNode](docs/SyntaxNode.md)
  - [DelveClientSdk.Token](docs/Token.md)
