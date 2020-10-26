@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**computeName** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
 **dryrun** | **Boolean** |  | [optional] 
 
 
