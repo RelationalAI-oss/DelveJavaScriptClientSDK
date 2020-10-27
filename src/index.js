@@ -56,7 +56,6 @@ import Literal from './model/Literal';
 import LoadData from './model/LoadData';
 import LoadDataAction from './model/LoadDataAction';
 import LoadDataActionResult from './model/LoadDataActionResult';
-import LoadDataProblem from './model/LoadDataProblem';
 import ModifyWorkspaceAction from './model/ModifyWorkspaceAction';
 import ModifyWorkspaceActionResult from './model/ModifyWorkspaceActionResult';
 import Nil from './model/Nil';
@@ -78,6 +77,7 @@ import SetOptionsActionResult from './model/SetOptionsActionResult';
 import Source from './model/Source';
 import StatusAction from './model/StatusAction';
 import StatusActionResult from './model/StatusActionResult';
+import StorageProblem from './model/StorageProblem';
 import SyntaxError from './model/SyntaxError';
 import SyntaxNode from './model/SyntaxNode';
 import Token from './model/Token';
@@ -387,12 +387,6 @@ export {
     LoadDataActionResult,
 
     /**
-     * The LoadDataProblem model constructor.
-     * @property {module:model/LoadDataProblem}
-     */
-    LoadDataProblem,
-
-    /**
      * The ModifyWorkspaceAction model constructor.
      * @property {module:model/ModifyWorkspaceAction}
      */
@@ -517,6 +511,12 @@ export {
      * @property {module:model/StatusActionResult}
      */
     StatusActionResult,
+
+    /**
+     * The StorageProblem model constructor.
+     * @property {module:model/StorageProblem}
+     */
+    StorageProblem,
 
     /**
      * The SyntaxError model constructor.
