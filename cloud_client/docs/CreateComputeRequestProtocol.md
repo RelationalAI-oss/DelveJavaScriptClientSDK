@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **region** | **String** |  | [optional] 
-**displayName** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
 **size** | **String** |  | [optional] 
 **dryrun** | **Boolean** |  | [optional] 
 
