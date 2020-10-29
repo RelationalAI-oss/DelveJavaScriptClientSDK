@@ -23,8 +23,8 @@ class UserInfoProtocol {
      * Constructs a new <code>UserInfoProtocol</code>.
      * @alias module:model/UserInfoProtocol
      */
-    constructor() {
-
+    constructor() { 
+        
         UserInfoProtocol.initialize(this);
     }
 
@@ -33,7 +33,7 @@ class UserInfoProtocol {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -92,3 +92,4 @@ UserInfoProtocol.prototype['access_key1'] = undefined;
 
 
 export default UserInfoProtocol;
+

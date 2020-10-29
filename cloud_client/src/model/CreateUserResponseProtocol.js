@@ -24,8 +24,8 @@ class CreateUserResponseProtocol {
      * Constructs a new <code>CreateUserResponseProtocol</code>.
      * @alias module:model/CreateUserResponseProtocol
      */
-    constructor() {
-
+    constructor() { 
+        
         CreateUserResponseProtocol.initialize(this);
     }
 
@@ -34,7 +34,7 @@ class CreateUserResponseProtocol {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -77,3 +77,4 @@ CreateUserResponseProtocol.prototype['private_key'] = undefined;
 
 
 export default CreateUserResponseProtocol;
+

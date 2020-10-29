@@ -23,8 +23,8 @@ class DeleteComputeStatus {
      * Constructs a new <code>DeleteComputeStatus</code>.
      * @alias module:model/DeleteComputeStatus
      */
-    constructor() {
-
+    constructor() { 
+        
         DeleteComputeStatus.initialize(this);
     }
 
@@ -33,7 +33,7 @@ class DeleteComputeStatus {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -84,3 +84,4 @@ DeleteComputeStatus.prototype['message'] = undefined;
 
 
 export default DeleteComputeStatus;
+

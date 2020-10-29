@@ -23,8 +23,8 @@ class DeleteComputeRequestProtocol {
      * Constructs a new <code>DeleteComputeRequestProtocol</code>.
      * @alias module:model/DeleteComputeRequestProtocol
      */
-    constructor() {
-
+    constructor() { 
+        
         DeleteComputeRequestProtocol.initialize(this);
     }
 
@@ -33,7 +33,7 @@ class DeleteComputeRequestProtocol {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -76,3 +76,4 @@ DeleteComputeRequestProtocol.prototype['dryrun'] = undefined;
 
 
 export default DeleteComputeRequestProtocol;
+

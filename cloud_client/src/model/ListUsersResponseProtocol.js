@@ -24,8 +24,8 @@ class ListUsersResponseProtocol {
      * Constructs a new <code>ListUsersResponseProtocol</code>.
      * @alias module:model/ListUsersResponseProtocol
      */
-    constructor() {
-
+    constructor() { 
+        
         ListUsersResponseProtocol.initialize(this);
     }
 
@@ -34,7 +34,7 @@ class ListUsersResponseProtocol {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -69,3 +69,4 @@ ListUsersResponseProtocol.prototype['users'] = undefined;
 
 
 export default ListUsersResponseProtocol;
+

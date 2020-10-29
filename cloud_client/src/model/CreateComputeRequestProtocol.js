@@ -23,8 +23,8 @@ class CreateComputeRequestProtocol {
      * Constructs a new <code>CreateComputeRequestProtocol</code>.
      * @alias module:model/CreateComputeRequestProtocol
      */
-    constructor() {
-
+    constructor() { 
+        
         CreateComputeRequestProtocol.initialize(this);
     }
 
@@ -33,7 +33,7 @@ class CreateComputeRequestProtocol {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -92,3 +92,4 @@ CreateComputeRequestProtocol.prototype['dryrun'] = undefined;
 
 
 export default CreateComputeRequestProtocol;
+

@@ -23,8 +23,8 @@ class CreateUserRequestProtocol {
      * Constructs a new <code>CreateUserRequestProtocol</code>.
      * @alias module:model/CreateUserRequestProtocol
      */
-    constructor() {
-
+    constructor() { 
+        
         CreateUserRequestProtocol.initialize(this);
     }
 
@@ -33,7 +33,7 @@ class CreateUserRequestProtocol {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -76,3 +76,4 @@ CreateUserRequestProtocol.prototype['dryrun'] = undefined;
 
 
 export default CreateUserRequestProtocol;
+

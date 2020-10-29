@@ -24,8 +24,8 @@ class ListComputesResponseProtocol {
      * Constructs a new <code>ListComputesResponseProtocol</code>.
      * @alias module:model/ListComputesResponseProtocol
      */
-    constructor() {
-
+    constructor() { 
+        
         ListComputesResponseProtocol.initialize(this);
     }
 
@@ -34,7 +34,7 @@ class ListComputesResponseProtocol {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -69,3 +69,4 @@ ListComputesResponseProtocol.prototype['computes'] = undefined;
 
 
 export default ListComputesResponseProtocol;
+

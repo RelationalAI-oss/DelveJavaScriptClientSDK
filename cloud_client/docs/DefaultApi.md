@@ -59,7 +59,7 @@ No authorization required
 
 ## computeGet
 
-> ListComputesResponseProtocol computeGet()
+> ListComputesResponseProtocol computeGet(opts)
 
 List computes
 
@@ -69,7 +69,13 @@ List computes
 import RaiCloudSdk from 'rai_cloud_sdk';
 
 let apiInstance = new RaiCloudSdk.DefaultApi();
-apiInstance.computeGet((error, data, response) => {
+let opts = {
+  'id': ["null"], // [String] | 
+  'name': ["null"], // [String] | 
+  'size': ["null"], // [String] | 
+  'state': ["null"] // [String] | 
+};
+apiInstance.computeGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -80,7 +86,13 @@ apiInstance.computeGet((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**[String]**](String.md)|  | [optional] 
+ **name** | [**[String]**](String.md)|  | [optional] 
+ **size** | [**[String]**](String.md)|  | [optional] 
+ **state** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
 

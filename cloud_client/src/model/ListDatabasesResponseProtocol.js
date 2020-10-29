@@ -24,8 +24,8 @@ class ListDatabasesResponseProtocol {
      * Constructs a new <code>ListDatabasesResponseProtocol</code>.
      * @alias module:model/ListDatabasesResponseProtocol
      */
-    constructor() {
-
+    constructor() { 
+        
         ListDatabasesResponseProtocol.initialize(this);
     }
 
@@ -34,7 +34,7 @@ class ListDatabasesResponseProtocol {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -69,3 +69,4 @@ ListDatabasesResponseProtocol.prototype['databases'] = undefined;
 
 
 export default ListDatabasesResponseProtocol;
+

@@ -24,8 +24,8 @@ class CreateComputeResponseProtocol {
      * Constructs a new <code>CreateComputeResponseProtocol</code>.
      * @alias module:model/CreateComputeResponseProtocol
      */
-    constructor() {
-
+    constructor() { 
+        
         CreateComputeResponseProtocol.initialize(this);
     }
 
@@ -34,7 +34,7 @@ class CreateComputeResponseProtocol {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) {
+    static initialize(obj) { 
     }
 
     /**
@@ -69,3 +69,4 @@ CreateComputeResponseProtocol.prototype['compute'] = undefined;
 
 
 export default CreateComputeResponseProtocol;
+
