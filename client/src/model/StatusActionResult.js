@@ -17,7 +17,7 @@ import ActionResult from './ActionResult';
 /**
  * The StatusActionResult model module.
  * @module model/StatusActionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class StatusActionResult {
     /**

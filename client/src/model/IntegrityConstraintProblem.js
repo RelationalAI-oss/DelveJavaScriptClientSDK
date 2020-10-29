@@ -17,7 +17,7 @@ import AbstractProblem from './AbstractProblem';
 /**
  * The IntegrityConstraintProblem model module.
  * @module model/IntegrityConstraintProblem
- * @version 1.0.13
+ * @version 1.1.1
  */
 class IntegrityConstraintProblem {
     /**

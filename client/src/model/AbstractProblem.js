@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AbstractProblem model module.
  * @module model/AbstractProblem
- * @version 1.0.13
+ * @version 1.1.1
  */
 class AbstractProblem {
     /**

@@ -17,7 +17,7 @@ import Action from './Action';
 /**
  * The LabeledAction model module.
  * @module model/LabeledAction
- * @version 1.0.13
+ * @version 1.1.1
  */
 class LabeledAction {
     /**

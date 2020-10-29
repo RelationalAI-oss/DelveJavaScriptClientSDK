@@ -20,7 +20,7 @@ import TransactionResult from '../model/TransactionResult';
 /**
 * Default service.
 * @module api/DefaultApi
-* @version 1.0.13
+* @version 1.1.1
 */
 export default class DefaultApi {
 

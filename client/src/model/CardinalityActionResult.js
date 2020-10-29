@@ -18,7 +18,7 @@ import Relation from './Relation';
 /**
  * The CardinalityActionResult model module.
  * @module model/CardinalityActionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class CardinalityActionResult {
     /**

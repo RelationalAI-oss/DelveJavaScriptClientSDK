@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InfraError model module.
  * @module model/InfraError
- * @version 1.0.13
+ * @version 1.1.1
  */
 class InfraError {
     /**

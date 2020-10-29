@@ -17,7 +17,7 @@ import Action from './Action';
 /**
  * The CollectProblemsAction model module.
  * @module model/CollectProblemsAction
- * @version 1.0.13
+ * @version 1.1.1
  */
 class CollectProblemsAction {
     /**

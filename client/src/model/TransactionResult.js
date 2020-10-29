@@ -19,7 +19,7 @@ import Relation from './Relation';
 /**
  * The TransactionResult model module.
  * @module model/TransactionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class TransactionResult {
     /**

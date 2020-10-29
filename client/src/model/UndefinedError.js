@@ -18,7 +18,7 @@ import Range from './Range';
 /**
  * The UndefinedError model module.
  * @module model/UndefinedError
- * @version 1.0.13
+ * @version 1.1.1
  */
 class UndefinedError {
     /**

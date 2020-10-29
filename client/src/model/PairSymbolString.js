@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PairSymbolString model module.
  * @module model/PairSymbolString
- * @version 1.0.13
+ * @version 1.1.1
  */
 class PairSymbolString {
     /**

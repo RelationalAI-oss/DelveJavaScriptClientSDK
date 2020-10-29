@@ -17,7 +17,7 @@ import Integration from './Integration';
 /**
  * The DefaultIntegration model module.
  * @module model/DefaultIntegration
- * @version 1.0.13
+ * @version 1.1.1
  */
 class DefaultIntegration {
     /**

@@ -17,7 +17,7 @@ import LinkedList from './LinkedList';
 /**
  * The Nil model module.
  * @module model/Nil
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Nil {
     /**

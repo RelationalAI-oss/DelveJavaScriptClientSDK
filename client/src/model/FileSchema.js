@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FileSchema model module.
  * @module model/FileSchema
- * @version 1.0.13
+ * @version 1.1.1
  */
 class FileSchema {
     /**

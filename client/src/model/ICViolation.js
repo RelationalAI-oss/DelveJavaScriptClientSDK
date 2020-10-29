@@ -17,7 +17,7 @@ import RelKey from './RelKey';
 /**
  * The ICViolation model module.
  * @module model/ICViolation
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ICViolation {
     /**

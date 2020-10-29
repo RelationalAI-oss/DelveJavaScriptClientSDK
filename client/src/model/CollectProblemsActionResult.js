@@ -18,7 +18,7 @@ import ActionResult from './ActionResult';
 /**
  * The CollectProblemsActionResult model module.
  * @module model/CollectProblemsActionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class CollectProblemsActionResult {
     /**

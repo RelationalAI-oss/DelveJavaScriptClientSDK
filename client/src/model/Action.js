@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Action model module.
  * @module model/Action
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Action {
     /**

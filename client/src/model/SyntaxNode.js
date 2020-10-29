@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SyntaxNode model module.
  * @module model/SyntaxNode
- * @version 1.0.13
+ * @version 1.1.1
  */
 class SyntaxNode {
     /**

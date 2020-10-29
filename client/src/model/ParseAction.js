@@ -18,7 +18,7 @@ import Source from './Source';
 /**
  * The ParseAction model module.
  * @module model/ParseAction
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ParseAction {
     /**

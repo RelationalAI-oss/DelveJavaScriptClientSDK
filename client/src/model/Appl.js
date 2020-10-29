@@ -18,7 +18,7 @@ import SyntaxNode from './SyntaxNode';
 /**
  * The Appl model module.
  * @module model/Appl
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Appl {
     /**

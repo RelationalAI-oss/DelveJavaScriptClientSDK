@@ -18,7 +18,7 @@ import RelKey from './RelKey';
 /**
  * The ListEdbActionResult model module.
  * @module model/ListEdbActionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ListEdbActionResult {
     /**

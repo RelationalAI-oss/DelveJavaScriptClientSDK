@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ActionResult model module.
  * @module model/ActionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ActionResult {
     /**

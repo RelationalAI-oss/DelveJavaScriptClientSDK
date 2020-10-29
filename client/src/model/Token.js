@@ -18,7 +18,7 @@ import SyntaxNode from './SyntaxNode';
 /**
  * The Token model module.
  * @module model/Token
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Token {
     /**

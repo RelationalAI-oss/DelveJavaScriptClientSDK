@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RelKey model module.
  * @module model/RelKey
- * @version 1.0.13
+ * @version 1.1.1
  */
 class RelKey {
     /**

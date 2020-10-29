@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Integration model module.
  * @module model/Integration
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Integration {
     /**

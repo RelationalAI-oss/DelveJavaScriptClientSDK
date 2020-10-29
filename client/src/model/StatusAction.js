@@ -17,7 +17,7 @@ import Action from './Action';
 /**
  * The StatusAction model module.
  * @module model/StatusAction
- * @version 1.0.13
+ * @version 1.1.1
  */
 class StatusAction {
     /**

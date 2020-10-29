@@ -17,7 +17,7 @@ import Point from './Point';
 /**
  * The Area model module.
  * @module model/Area
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Area {
     /**

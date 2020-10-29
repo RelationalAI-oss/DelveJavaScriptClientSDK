@@ -18,7 +18,7 @@ import Area from './Area';
 /**
  * The Range model module.
  * @module model/Range
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Range {
     /**

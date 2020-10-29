@@ -17,7 +17,7 @@ import FileSchema from './FileSchema';
 /**
  * The CSVFileSchema model module.
  * @module model/CSVFileSchema
- * @version 1.0.13
+ * @version 1.1.1
  */
 class CSVFileSchema {
     /**

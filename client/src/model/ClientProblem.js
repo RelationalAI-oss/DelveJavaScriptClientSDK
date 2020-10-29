@@ -17,7 +17,7 @@ import AbstractProblem from './AbstractProblem';
 /**
  * The ClientProblem model module.
  * @module model/ClientProblem
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ClientProblem {
     /**

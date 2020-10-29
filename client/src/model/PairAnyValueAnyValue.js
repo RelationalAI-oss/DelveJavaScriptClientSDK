@@ -17,7 +17,7 @@ import AnyType from './AnyType';
 /**
  * The PairAnyValueAnyValue model module.
  * @module model/PairAnyValueAnyValue
- * @version 1.0.13
+ * @version 1.1.1
  */
 class PairAnyValueAnyValue {
     /**

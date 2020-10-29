@@ -17,7 +17,7 @@ import Action from './Action';
 /**
  * The ListSourceAction model module.
  * @module model/ListSourceAction
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ListSourceAction {
     /**

@@ -17,7 +17,7 @@ import ActionResult from './ActionResult';
 /**
  * The SetOptionsActionResult model module.
  * @module model/SetOptionsActionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class SetOptionsActionResult {
     /**

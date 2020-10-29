@@ -17,7 +17,7 @@ import LabeledAction from './LabeledAction';
 /**
  * The Transaction model module.
  * @module model/Transaction
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Transaction {
     /**

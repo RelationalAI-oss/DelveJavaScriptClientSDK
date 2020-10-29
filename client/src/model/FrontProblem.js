@@ -17,7 +17,7 @@ import AbstractProblem from './AbstractProblem';
 /**
  * The FrontProblem model module.
  * @module model/FrontProblem
- * @version 1.0.13
+ * @version 1.1.1
  */
 class FrontProblem {
     /**

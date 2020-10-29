@@ -18,7 +18,7 @@ import ICViolation from './ICViolation';
 /**
  * The IntegrityConstraintViolation model module.
  * @module model/IntegrityConstraintViolation
- * @version 1.0.13
+ * @version 1.1.1
  */
 class IntegrityConstraintViolation {
     /**

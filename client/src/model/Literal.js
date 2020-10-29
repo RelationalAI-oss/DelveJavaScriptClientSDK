@@ -18,7 +18,7 @@ import SyntaxNode from './SyntaxNode';
 /**
  * The Literal model module.
  * @module model/Literal
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Literal {
     /**

@@ -18,7 +18,7 @@ import ActionResult from './ActionResult';
 /**
  * The ParseActionResult model module.
  * @module model/ParseActionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ParseActionResult {
     /**

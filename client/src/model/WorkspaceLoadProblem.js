@@ -17,7 +17,7 @@ import AbstractProblem from './AbstractProblem';
 /**
  * The WorkspaceLoadProblem model module.
  * @module model/WorkspaceLoadProblem
- * @version 1.0.13
+ * @version 1.1.1
  */
 class WorkspaceLoadProblem {
     /**

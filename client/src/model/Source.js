@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Source model module.
  * @module model/Source
- * @version 1.0.13
+ * @version 1.1.1
  */
 class Source {
     /**

@@ -17,7 +17,7 @@ import FileSchema from './FileSchema';
 /**
  * The JSONFileSchema model module.
  * @module model/JSONFileSchema
- * @version 1.0.13
+ * @version 1.1.1
  */
 class JSONFileSchema {
     /**

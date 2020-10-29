@@ -18,7 +18,7 @@ import Relation from './Relation';
 /**
  * The ImportAction model module.
  * @module model/ImportAction
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ImportAction {
     /**

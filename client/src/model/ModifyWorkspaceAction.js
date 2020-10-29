@@ -17,7 +17,7 @@ import Action from './Action';
 /**
  * The ModifyWorkspaceAction model module.
  * @module model/ModifyWorkspaceAction
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ModifyWorkspaceAction {
     /**

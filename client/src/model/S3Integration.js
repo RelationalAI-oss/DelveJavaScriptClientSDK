@@ -17,7 +17,7 @@ import Integration from './Integration';
 /**
  * The S3Integration model module.
  * @module model/S3Integration
- * @version 1.0.13
+ * @version 1.1.1
  */
 class S3Integration {
     /**

@@ -18,7 +18,7 @@ import Relation from './Relation';
 /**
  * The QueryActionResult model module.
  * @module model/QueryActionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class QueryActionResult {
     /**

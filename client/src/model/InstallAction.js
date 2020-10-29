@@ -18,7 +18,7 @@ import Source from './Source';
 /**
  * The InstallAction model module.
  * @module model/InstallAction
- * @version 1.0.13
+ * @version 1.1.1
  */
 class InstallAction {
     /**

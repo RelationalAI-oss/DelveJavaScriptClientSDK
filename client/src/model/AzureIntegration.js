@@ -18,7 +18,7 @@ import PairSymbolString from './PairSymbolString';
 /**
  * The AzureIntegration model module.
  * @module model/AzureIntegration
- * @version 1.0.13
+ * @version 1.1.1
  */
 class AzureIntegration {
     /**

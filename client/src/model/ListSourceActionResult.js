@@ -18,7 +18,7 @@ import Source from './Source';
 /**
  * The ListSourceActionResult model module.
  * @module model/ListSourceActionResult
- * @version 1.0.13
+ * @version 1.1.1
  */
 class ListSourceActionResult {
     /**

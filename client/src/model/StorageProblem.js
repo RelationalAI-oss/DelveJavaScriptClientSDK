@@ -17,7 +17,7 @@ import AbstractProblem from './AbstractProblem';
 /**
  * The StorageProblem model module.
  * @module model/StorageProblem
- * @version 1.0.13
+ * @version 1.1.1
  */
 class StorageProblem {
     /**
