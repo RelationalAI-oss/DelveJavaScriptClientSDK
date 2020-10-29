@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deleteStatus** | [**DeleteComputeStatus**](DeleteComputeStatus.md) |  | [optional] 
+**status** | [**DeleteComputeStatus**](DeleteComputeStatus.md) |  | [optional] 
 
 

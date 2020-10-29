@@ -1,19 +1,17 @@
-# RaiCloudSdk.ComputeData
+# RaiCloudSdk.ComputeInfoProtocol
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
-**getEtag** | **String** |  | [optional] 
 **accountName** | **String** |  | [optional] 
-**computeId** | **String** |  | [optional] 
+**id** | **String** |  | [optional] 
 **createdBy** | **String** |  | [optional] 
-**computeName** | **String** |  | [optional] 
-**computeSize** | **String** |  | [optional] 
-**computeRegion** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**size** | **String** |  | [optional] 
+**region** | **String** |  | [optional] 
 **infrastructure** | **String** |  | [optional] 
-**computeState** | **String** |  | [optional] 
+**state** | **String** |  | [optional] 
 **requestedOn** | **String** |  | [optional] 
 **createdOn** | **String** |  | [optional] 
 **deletedOn** | **String** |  | [optional] 
