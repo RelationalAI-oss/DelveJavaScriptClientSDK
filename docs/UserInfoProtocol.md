@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **username** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **accessKey1** | **String** |  | [optional] 
+**createdBy** | **String** |  | [optional] 
 
 
