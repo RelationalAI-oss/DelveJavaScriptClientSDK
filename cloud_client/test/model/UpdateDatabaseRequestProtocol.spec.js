@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(RaiCloudSdk.UpdateDatabaseRequestProtocol);
     });
 
-    it('should have the property displayName (base name: "display_name")', function() {
-      // uncomment below and update the code to test the property displayName
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
       //var instane = new RaiCloudSdk.UpdateDatabaseRequestProtocol();
       //expect(instance).to.be();
     });
