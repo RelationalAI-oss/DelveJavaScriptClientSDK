@@ -153,7 +153,7 @@ No authorization required
 
 ## databaseGet
 
-> ListDatabasesResponseProtocol databaseGet()
+> ListDatabasesResponseProtocol databaseGet(opts)
 
 List databases
 
@@ -163,7 +163,12 @@ List databases
 import RaiCloudSdk from 'rai_cloud_sdk';
 
 let apiInstance = new RaiCloudSdk.DefaultApi();
-apiInstance.databaseGet((error, data, response) => {
+let opts = {
+  'id': ["null"], // [String] | 
+  'name': ["null"], // [String] | 
+  'state': ["null"] // [String] | 
+};
+apiInstance.databaseGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -174,7 +179,12 @@ apiInstance.databaseGet((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**[String]**](String.md)|  | [optional] 
+ **name** | [**[String]**](String.md)|  | [optional] 
+ **state** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
 
