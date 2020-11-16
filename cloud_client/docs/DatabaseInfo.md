@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **createdBy** | **String** |  | [optional] 
 **defaultComputeName** | **String** |  | [optional] 
-**status** | **String** |  | [optional] 
+**state** | **String** |  | [optional] 
 
 
