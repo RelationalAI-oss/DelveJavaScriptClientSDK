@@ -151,6 +151,7 @@ Class | Method | HTTP request | Description
  - [RaiDbSdk.ImportAction](docs/ImportAction.md)
  - [RaiDbSdk.ImportActionResult](docs/ImportActionResult.md)
  - [RaiDbSdk.InfraError](docs/InfraError.md)
+ - [RaiDbSdk.InlineInconsistent](docs/InlineInconsistent.md)
  - [RaiDbSdk.InstallAction](docs/InstallAction.md)
  - [RaiDbSdk.InstallActionResult](docs/InstallActionResult.md)
  - [RaiDbSdk.Integration](docs/Integration.md)

@@ -39,6 +39,7 @@ import ICViolation from './model/ICViolation';
 import ImportAction from './model/ImportAction';
 import ImportActionResult from './model/ImportActionResult';
 import InfraError from './model/InfraError';
+import InlineInconsistent from './model/InlineInconsistent';
 import InstallAction from './model/InstallAction';
 import InstallActionResult from './model/InstallActionResult';
 import Integration from './model/Integration';
@@ -280,6 +281,12 @@ export {
      * @property {module:model/InfraError}
      */
     InfraError,
+
+    /**
+     * The InlineInconsistent model constructor.
+     * @property {module:model/InlineInconsistent}
+     */
+    InlineInconsistent,
 
     /**
      * The InstallAction model constructor.
