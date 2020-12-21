@@ -76,6 +76,7 @@ import Relation from './model/Relation';
 import S3Integration from './model/S3Integration';
 import SetOptionsAction from './model/SetOptionsAction';
 import SetOptionsActionResult from './model/SetOptionsActionResult';
+import ShadowError from './model/ShadowError';
 import Source from './model/Source';
 import StatusAction from './model/StatusAction';
 import StatusActionResult from './model/StatusActionResult';
@@ -503,6 +504,12 @@ export {
      * @property {module:model/SetOptionsActionResult}
      */
     SetOptionsActionResult,
+
+    /**
+     * The ShadowError model constructor.
+     * @property {module:model/ShadowError}
+     */
+    ShadowError,
 
     /**
      * The Source model constructor.

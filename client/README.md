@@ -188,6 +188,7 @@ Class | Method | HTTP request | Description
  - [RaiDbSdk.S3Integration](docs/S3Integration.md)
  - [RaiDbSdk.SetOptionsAction](docs/SetOptionsAction.md)
  - [RaiDbSdk.SetOptionsActionResult](docs/SetOptionsActionResult.md)
+ - [RaiDbSdk.ShadowError](docs/ShadowError.md)
  - [RaiDbSdk.Source](docs/Source.md)
  - [RaiDbSdk.StatusAction](docs/StatusAction.md)
  - [RaiDbSdk.StatusActionResult](docs/StatusActionResult.md)
