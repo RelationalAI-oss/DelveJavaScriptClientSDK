@@ -56,9 +56,6 @@ class SetOptionsAction {
             if (data.hasOwnProperty('abort_on_error')) {
                 obj['abort_on_error'] = ApiClient.convertToType(data['abort_on_error'], 'Boolean');
             }
-            if (data.hasOwnProperty('broken')) {
-                obj['broken'] = ApiClient.convertToType(data['broken'], 'Boolean');
-            }
             if (data.hasOwnProperty('debug')) {
                 obj['debug'] = ApiClient.convertToType(data['debug'], 'Boolean');
             }
@@ -79,11 +76,6 @@ class SetOptionsAction {
  * @member {Boolean} abort_on_error
  */
 SetOptionsAction.prototype['abort_on_error'] = undefined;
-
-/**
- * @member {Boolean} broken
- */
-SetOptionsAction.prototype['broken'] = undefined;
 
 /**
  * @member {Boolean} debug

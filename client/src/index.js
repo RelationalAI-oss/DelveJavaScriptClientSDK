@@ -19,7 +19,6 @@ import Action from './model/Action';
 import ActionResult from './model/ActionResult';
 import Appl from './model/Appl';
 import Area from './model/Area';
-import ArityMismatchError from './model/ArityMismatchError';
 import AzureIntegration from './model/AzureIntegration';
 import CSVFileSchema from './model/CSVFileSchema';
 import CSVFileSyntax from './model/CSVFileSyntax';
@@ -28,13 +27,11 @@ import CardinalityActionResult from './model/CardinalityActionResult';
 import ClientProblem from './model/ClientProblem';
 import CollectProblemsAction from './model/CollectProblemsAction';
 import CollectProblemsActionResult from './model/CollectProblemsActionResult';
-import ComparisonChainError from './model/ComparisonChainError';
 import Cons from './model/Cons';
 import DefaultIntegration from './model/DefaultIntegration';
 import ExceptionProblem from './model/ExceptionProblem';
 import FileSchema from './model/FileSchema';
 import FileSyntax from './model/FileSyntax';
-import FrontProblem from './model/FrontProblem';
 import ICViolation from './model/ICViolation';
 import ImportAction from './model/ImportAction';
 import ImportActionResult from './model/ImportActionResult';
@@ -84,7 +81,6 @@ import SyntaxNode from './model/SyntaxNode';
 import Token from './model/Token';
 import Transaction from './model/Transaction';
 import TransactionResult from './model/TransactionResult';
-import UndefinedError from './model/UndefinedError';
 import UpdateAction from './model/UpdateAction';
 import UpdateActionResult from './model/UpdateActionResult';
 import WorkspaceLoadProblem from './model/WorkspaceLoadProblem';
@@ -162,12 +158,6 @@ export {
     Area,
 
     /**
-     * The ArityMismatchError model constructor.
-     * @property {module:model/ArityMismatchError}
-     */
-    ArityMismatchError,
-
-    /**
      * The AzureIntegration model constructor.
      * @property {module:model/AzureIntegration}
      */
@@ -216,12 +206,6 @@ export {
     CollectProblemsActionResult,
 
     /**
-     * The ComparisonChainError model constructor.
-     * @property {module:model/ComparisonChainError}
-     */
-    ComparisonChainError,
-
-    /**
      * The Cons model constructor.
      * @property {module:model/Cons}
      */
@@ -250,12 +234,6 @@ export {
      * @property {module:model/FileSyntax}
      */
     FileSyntax,
-
-    /**
-     * The FrontProblem model constructor.
-     * @property {module:model/FrontProblem}
-     */
-    FrontProblem,
 
     /**
      * The ICViolation model constructor.
@@ -550,12 +528,6 @@ export {
      * @property {module:model/TransactionResult}
      */
     TransactionResult,
-
-    /**
-     * The UndefinedError model constructor.
-     * @property {module:model/UndefinedError}
-     */
-    UndefinedError,
 
     /**
      * The UpdateAction model constructor.
