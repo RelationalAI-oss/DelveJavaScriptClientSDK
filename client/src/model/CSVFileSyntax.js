@@ -38,7 +38,7 @@ class CSVFileSyntax {
      * Only for internal use.
      */
     static initialize(obj, type) { 
-        obj['datarow'] = datarow || 0;
+        obj['data_row'] = dataRow || 0;
         obj['delim'] = delim || '';
         obj['escapechar'] = escapechar || '';
         obj['header_row'] = headerRow || 0;
@@ -60,8 +60,8 @@ class CSVFileSyntax {
             FileSyntax.constructFromObject(data, obj);
             FileSyntax.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('datarow')) {
-                obj['datarow'] = ApiClient.convertToType(data['datarow'], 'Number');
+            if (data.hasOwnProperty('data_row')) {
+                obj['data_row'] = ApiClient.convertToType(data['data_row'], 'Number');
             }
             if (data.hasOwnProperty('delim')) {
                 obj['delim'] = ApiClient.convertToType(data['delim'], 'String');
@@ -95,10 +95,10 @@ class CSVFileSyntax {
 }
 
 /**
- * @member {Number} datarow
+ * @member {Number} data_row
  * @default 0
  */
-CSVFileSyntax.prototype['datarow'] = 0;
+CSVFileSyntax.prototype['data_row'] = 0;
 
 /**
  * @member {String} delim
