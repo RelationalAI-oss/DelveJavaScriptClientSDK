@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **fileSchema** | [**FileSchema**](FileSchema.md) |  | [optional] 
 **fileSyntax** | [**FileSyntax**](FileSyntax.md) |  | [optional] 
 **integration** | [**Integration**](Integration.md) |  | [optional] 
-**key** | **Object** |  | 
+**key** | [**AnyType**](.md) |  | 
 **path** | **String** |  | [optional] 
 **type** | **String** |  | [default to &#39;LoadData&#39;]
 

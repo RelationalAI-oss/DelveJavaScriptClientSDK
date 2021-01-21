@@ -147,7 +147,7 @@ class ApiClient {
             url = apiBasePath + path;
         }
 
-        url = url.replace(/\{([\w-\.]+)\}/g, (fullMatch, key) => {
+        url = url.replace(/\{([\w-]+)\}/g, (fullMatch, key) => {
             var value;
             if (pathParams.hasOwnProperty(key)) {
                 value = this.paramToString(pathParams[key]);
@@ -265,18 +265,16 @@ class ApiClient {
         }
         switch (collectionFormat) {
             case 'csv':
-                return param.map(this.paramToString, this).join(',');
+                return param.map(this.paramToString).join(',');
             case 'ssv':
-                return param.map(this.paramToString, this).join(' ');
+                return param.map(this.paramToString).join(' ');
             case 'tsv':
-                return param.map(this.paramToString, this).join('\t');
+                return param.map(this.paramToString).join('\t');
             case 'pipes':
-                return param.map(this.paramToString, this).join('|');
+                return param.map(this.paramToString).join('|');
             case 'multi':
                 //return the array directly as SuperAgent will handle it as expected
-                return param.map(this.paramToString, this);
-            case 'passthrough':
-                return param;
+                return param.map(this.paramToString);
             default:
                 throw new Error('Unknown collection format: ' + collectionFormat);
         }
@@ -299,10 +297,7 @@ class ApiClient {
                     break;
                 case 'bearer':
                     if (auth.accessToken) {
-                        var localVarBearerToken = typeof auth.accessToken === 'function'
-                          ? auth.accessToken()
-                          : auth.accessToken
-                        request.set({'Authorization': 'Bearer ' + localVarBearerToken});
+                        request.set({'Authorization': 'Bearer ' + auth.accessToken});
                     }
 
                     break;
@@ -436,16 +431,11 @@ class ApiClient {
             var _formParams = this.normalizeParams(formParams);
             for (var key in _formParams) {
                 if (_formParams.hasOwnProperty(key)) {
-                    let _formParamsValue = _formParams[key];
-                    if (this.isFileParam(_formParamsValue)) {
+                    if (this.isFileParam(_formParams[key])) {
                         // file field
-                        request.attach(key, _formParamsValue);
-                    } else if (Array.isArray(_formParamsValue) && _formParamsValue.length
-                        && this.isFileParam(_formParamsValue[0])) {
-                        // multiple files
-                        _formParamsValue.forEach(file => request.attach(key, file));
+                        request.attach(key, _formParams[key]);
                     } else {
-                        request.field(key, _formParamsValue);
+                        request.field(key, _formParams[key]);
                     }
                 }
             }
