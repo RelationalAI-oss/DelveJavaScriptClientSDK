@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dataRow** | **Number** |  | [default to 0]
+**datarow** | **Number** |  | [default to 0]
 **delim** | **String** |  | [default to &#39;&#39;]
 **escapechar** | **String** |  | [default to &#39;&#39;]
 **header** | **[String]** |  | [optional] 
