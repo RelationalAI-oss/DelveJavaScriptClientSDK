@@ -158,7 +158,7 @@ describe('LocalConnection', () => {
                 out: 'bar',
                 query: 'def bar = 2',
             }).then(res => {
-                assert(res.output[0].columns[0][0] === 2);
+                assert(res.query_output[0].columns[0][0] === 2);
             });
         })
         it(`def p = {(1,); (2,); (3,)}`, () => {
@@ -166,7 +166,7 @@ describe('LocalConnection', () => {
                 out: 'p',
                 query: 'def p = {(1,); (2,); (3,)}',
             }).then(res => {
-                assert(setsEqual(new Set(res.output[0].columns[0]), new Set([1,2,3])));
+                assert(setsEqual(new Set(res.query_output[0].columns[0]), new Set([1,2,3])));
             });
         })
         it(`def p = {(1.1,); (2.2,); (3.4,)}`, () => {
@@ -174,7 +174,7 @@ describe('LocalConnection', () => {
                 out: 'p',
                 query: 'def p = {(1.1,); (2.2,); (3.4,)}',
             }).then(res => {
-                assert(setsEqual(new Set(res.output[0].columns[0]), new Set([1.1,2.2,3.4])));
+                assert(setsEqual(new Set(res.query_output[0].columns[0]), new Set([1.1,2.2,3.4])));
             });
         })
         it(`def p = {(parse_decimal[64, 2, \"1.1\"],); (parse_decimal[64, 2, \"2.2\"],); (parse_decimal[64, 2, \"3.4\"],)}`, () => {
@@ -182,7 +182,7 @@ describe('LocalConnection', () => {
                 out: 'p',
                 query: 'def p = {(parse_decimal[64, 2, \"1.1\"],); (parse_decimal[64, 2, \"2.2\"],); (parse_decimal[64, 2, \"3.4\"],)}',
             }).then(res => {
-                assert(setsEqual(new Set(res.output[0].columns[0]), new Set([1.1,2.2,3.4])));
+                assert(setsEqual(new Set(res.query_output[0].columns[0]), new Set([1.1,2.2,3.4])));
             });
         })
         it(`def p = {(1, 5); (2, 7); (3, 9)}`, () => {
@@ -192,7 +192,7 @@ describe('LocalConnection', () => {
             }).then(res => {
                 let success = [];
                 success = [[1,2,3],[5,7,9]].map((X,i) => {
-                    return setsEqual(new Set(X), new Set(res.output[0].columns[i]));
+                    return setsEqual(new Set(X), new Set(res.query_output[0].columns[i]));
                 });
                 assert.deepStrictEqual(success, [true, true]);
             });
@@ -227,7 +227,7 @@ describe('LocalConnection', () => {
                 persist: ['p'],
                 query: 'def p = {(1,); (2,); (3,)}'
             }).then(res => {
-                assert(setsEqual(new Set(res.output[0].columns[0]), new Set([1,2,3])));
+                assert(setsEqual(new Set(res.query_output[0].columns[0]), new Set([1,2,3])));
             });
         })
         it(`cardinality of relation p is equal to 3`, () => {
