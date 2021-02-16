@@ -227,11 +227,6 @@ class LocalConnection extends Connection {
      * @return {Object} - {txn_output, query_output, problems}
      */
     query(params) {
-        // Check if `outputs` is valid, exit if not.
-        if (typeof params.out === 'undefined' || params.out === null || params.out.length === null || params.out.length === 0) {
-            throw new Error("`params.outputs` array must have values.")
-        }
-
         return new Promise((resolve, reject) => {
             let action = new sdk.QueryAction()
             action.source = new sdk.Source()
