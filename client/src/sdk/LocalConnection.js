@@ -224,7 +224,7 @@ class LocalConnection extends Connection {
      * @param {string} [params.path=''] -
      * @param {string[]} [params.inputs=[]] -
      * @param {string[]} [params.persist=[]] - Name(s) of relation(s) to persist.
-     * @return {Object} - {output, problems}
+     * @return {Object} - {txn_output, query_output, problems}
      */
     query(params) {
         // Check if `outputs` is valid, exit if not.
@@ -255,9 +255,10 @@ class LocalConnection extends Connection {
             this.runAction(action, txnParams)
                 .then(res => {
                     const tr = res.transactionResult;
-                    const output = tr.actions[0].result.output;
+                    const txn_output = tr.output;
+                    const query_output = tr.actions[0].result.output;
                     const problems = tr.problems;
-                    resolve({output, problems});
+                    resolve({txn_output, query_output, problems});
                 })
                 .catch(error => reject(error))
         })
