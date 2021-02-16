@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Action from './Action';
+import SetOptionsActionAllOf from './SetOptionsActionAllOf';
 
 /**
  * The SetOptionsAction model module.
@@ -25,10 +26,11 @@ class SetOptionsAction {
      * @alias module:model/SetOptionsAction
      * @extends module:model/Action
      * @implements module:model/Action
+     * @implements module:model/SetOptionsActionAllOf
      * @param type {String} 
      */
     constructor(type) { 
-        Action.initialize(this, type);
+        Action.initialize(this, type);SetOptionsActionAllOf.initialize(this);
         SetOptionsAction.initialize(this, type);
     }
 
@@ -52,6 +54,7 @@ class SetOptionsAction {
             obj = obj || new SetOptionsAction();
             Action.constructFromObject(data, obj);
             Action.constructFromObject(data, obj);
+            SetOptionsActionAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('abort_on_error')) {
                 obj['abort_on_error'] = ApiClient.convertToType(data['abort_on_error'], 'Boolean');
@@ -99,6 +102,23 @@ SetOptionsAction.prototype['silent'] = undefined;
  * @default ''
  */
 Action.prototype['type'] = '';
+// Implement SetOptionsActionAllOf interface:
+/**
+ * @member {Boolean} abort_on_error
+ */
+SetOptionsActionAllOf.prototype['abort_on_error'] = undefined;
+/**
+ * @member {Boolean} debug
+ */
+SetOptionsActionAllOf.prototype['debug'] = undefined;
+/**
+ * @member {Boolean} debug_trace
+ */
+SetOptionsActionAllOf.prototype['debug_trace'] = undefined;
+/**
+ * @member {Boolean} silent
+ */
+SetOptionsActionAllOf.prototype['silent'] = undefined;
 
 
 

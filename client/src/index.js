@@ -13,34 +13,48 @@
 
 
 import ApiClient from './ApiClient';
-import AnyType from './model/AnyType';
 import AbstractProblem from './model/AbstractProblem';
 import Action from './model/Action';
 import ActionResult from './model/ActionResult';
 import Appl from './model/Appl';
+import ApplAllOf from './model/ApplAllOf';
 import Area from './model/Area';
 import AzureIntegration from './model/AzureIntegration';
+import AzureIntegrationAllOf from './model/AzureIntegrationAllOf';
 import CSVFileSchema from './model/CSVFileSchema';
+import CSVFileSchemaAllOf from './model/CSVFileSchemaAllOf';
 import CSVFileSyntax from './model/CSVFileSyntax';
+import CSVFileSyntaxAllOf from './model/CSVFileSyntaxAllOf';
 import CardinalityAction from './model/CardinalityAction';
+import CardinalityActionAllOf from './model/CardinalityActionAllOf';
 import CardinalityActionResult from './model/CardinalityActionResult';
+import CardinalityActionResultAllOf from './model/CardinalityActionResultAllOf';
 import ClientProblem from './model/ClientProblem';
+import ClientProblemAllOf from './model/ClientProblemAllOf';
 import CollectProblemsAction from './model/CollectProblemsAction';
+import CollectProblemsActionAllOf from './model/CollectProblemsActionAllOf';
 import CollectProblemsActionResult from './model/CollectProblemsActionResult';
+import CollectProblemsActionResultAllOf from './model/CollectProblemsActionResultAllOf';
 import Cons from './model/Cons';
+import ConsAllOf from './model/ConsAllOf';
 import DefaultIntegration from './model/DefaultIntegration';
 import ExceptionProblem from './model/ExceptionProblem';
+import ExceptionProblemAllOf from './model/ExceptionProblemAllOf';
 import FileSchema from './model/FileSchema';
 import FileSyntax from './model/FileSyntax';
 import ICViolation from './model/ICViolation';
 import ImportAction from './model/ImportAction';
+import ImportActionAllOf from './model/ImportActionAllOf';
 import ImportActionResult from './model/ImportActionResult';
 import InfraError from './model/InfraError';
 import InstallAction from './model/InstallAction';
+import InstallActionAllOf from './model/InstallActionAllOf';
 import InstallActionResult from './model/InstallActionResult';
 import Integration from './model/Integration';
 import IntegrityConstraintProblem from './model/IntegrityConstraintProblem';
+import IntegrityConstraintProblemAllOf from './model/IntegrityConstraintProblemAllOf';
 import IntegrityConstraintViolation from './model/IntegrityConstraintViolation';
+import IntegrityConstraintViolationAllOf from './model/IntegrityConstraintViolationAllOf';
 import JSONFileSchema from './model/JSONFileSchema';
 import JSONFileSyntax from './model/JSONFileSyntax';
 import LabeledAction from './model/LabeledAction';
@@ -48,40 +62,53 @@ import LabeledActionResult from './model/LabeledActionResult';
 import LinkedList from './model/LinkedList';
 import ListEdbAction from './model/ListEdbAction';
 import ListEdbActionResult from './model/ListEdbActionResult';
+import ListEdbActionResultAllOf from './model/ListEdbActionResultAllOf';
 import ListSourceAction from './model/ListSourceAction';
 import ListSourceActionResult from './model/ListSourceActionResult';
 import Literal from './model/Literal';
+import LiteralAllOf from './model/LiteralAllOf';
 import LoadData from './model/LoadData';
 import LoadDataAction from './model/LoadDataAction';
+import LoadDataActionAllOf from './model/LoadDataActionAllOf';
 import LoadDataActionResult from './model/LoadDataActionResult';
 import ModifyWorkspaceAction from './model/ModifyWorkspaceAction';
+import ModifyWorkspaceActionAllOf from './model/ModifyWorkspaceActionAllOf';
 import ModifyWorkspaceActionResult from './model/ModifyWorkspaceActionResult';
+import ModifyWorkspaceActionResultAllOf from './model/ModifyWorkspaceActionResultAllOf';
 import Nil from './model/Nil';
 import OutputProblem from './model/OutputProblem';
+import OutputProblemAllOf from './model/OutputProblemAllOf';
 import PairAnyValueAnyValue from './model/PairAnyValueAnyValue';
 import PairSymbolString from './model/PairSymbolString';
 import ParseAction from './model/ParseAction';
+import ParseActionAllOf from './model/ParseActionAllOf';
 import ParseActionResult from './model/ParseActionResult';
 import PersistProblem from './model/PersistProblem';
 import Point from './model/Point';
 import QueryAction from './model/QueryAction';
+import QueryActionAllOf from './model/QueryActionAllOf';
 import QueryActionResult from './model/QueryActionResult';
+import QueryActionResultAllOf from './model/QueryActionResultAllOf';
 import Range from './model/Range';
 import RelKey from './model/RelKey';
 import Relation from './model/Relation';
 import S3Integration from './model/S3Integration';
 import SetOptionsAction from './model/SetOptionsAction';
+import SetOptionsActionAllOf from './model/SetOptionsActionAllOf';
 import SetOptionsActionResult from './model/SetOptionsActionResult';
 import Source from './model/Source';
 import StatusAction from './model/StatusAction';
 import StatusActionResult from './model/StatusActionResult';
 import StorageProblem from './model/StorageProblem';
 import SyntaxError from './model/SyntaxError';
+import SyntaxErrorAllOf from './model/SyntaxErrorAllOf';
 import SyntaxNode from './model/SyntaxNode';
 import Token from './model/Token';
+import TokenAllOf from './model/TokenAllOf';
 import Transaction from './model/Transaction';
 import TransactionResult from './model/TransactionResult';
 import UpdateAction from './model/UpdateAction';
+import UpdateActionAllOf from './model/UpdateActionAllOf';
 import UpdateActionResult from './model/UpdateActionResult';
 import WorkspaceLoadProblem from './model/WorkspaceLoadProblem';
 import DefaultApi from './api/DefaultApi';
@@ -125,8 +152,6 @@ export {
      */
     ApiClient,
 
-    AnyType,
-
     /**
      * The AbstractProblem model constructor.
      * @property {module:model/AbstractProblem}
@@ -152,6 +177,12 @@ export {
     Appl,
 
     /**
+     * The ApplAllOf model constructor.
+     * @property {module:model/ApplAllOf}
+     */
+    ApplAllOf,
+
+    /**
      * The Area model constructor.
      * @property {module:model/Area}
      */
@@ -164,10 +195,22 @@ export {
     AzureIntegration,
 
     /**
+     * The AzureIntegrationAllOf model constructor.
+     * @property {module:model/AzureIntegrationAllOf}
+     */
+    AzureIntegrationAllOf,
+
+    /**
      * The CSVFileSchema model constructor.
      * @property {module:model/CSVFileSchema}
      */
     CSVFileSchema,
+
+    /**
+     * The CSVFileSchemaAllOf model constructor.
+     * @property {module:model/CSVFileSchemaAllOf}
+     */
+    CSVFileSchemaAllOf,
 
     /**
      * The CSVFileSyntax model constructor.
@@ -176,10 +219,22 @@ export {
     CSVFileSyntax,
 
     /**
+     * The CSVFileSyntaxAllOf model constructor.
+     * @property {module:model/CSVFileSyntaxAllOf}
+     */
+    CSVFileSyntaxAllOf,
+
+    /**
      * The CardinalityAction model constructor.
      * @property {module:model/CardinalityAction}
      */
     CardinalityAction,
+
+    /**
+     * The CardinalityActionAllOf model constructor.
+     * @property {module:model/CardinalityActionAllOf}
+     */
+    CardinalityActionAllOf,
 
     /**
      * The CardinalityActionResult model constructor.
@@ -188,10 +243,22 @@ export {
     CardinalityActionResult,
 
     /**
+     * The CardinalityActionResultAllOf model constructor.
+     * @property {module:model/CardinalityActionResultAllOf}
+     */
+    CardinalityActionResultAllOf,
+
+    /**
      * The ClientProblem model constructor.
      * @property {module:model/ClientProblem}
      */
     ClientProblem,
+
+    /**
+     * The ClientProblemAllOf model constructor.
+     * @property {module:model/ClientProblemAllOf}
+     */
+    ClientProblemAllOf,
 
     /**
      * The CollectProblemsAction model constructor.
@@ -200,16 +267,34 @@ export {
     CollectProblemsAction,
 
     /**
+     * The CollectProblemsActionAllOf model constructor.
+     * @property {module:model/CollectProblemsActionAllOf}
+     */
+    CollectProblemsActionAllOf,
+
+    /**
      * The CollectProblemsActionResult model constructor.
      * @property {module:model/CollectProblemsActionResult}
      */
     CollectProblemsActionResult,
 
     /**
+     * The CollectProblemsActionResultAllOf model constructor.
+     * @property {module:model/CollectProblemsActionResultAllOf}
+     */
+    CollectProblemsActionResultAllOf,
+
+    /**
      * The Cons model constructor.
      * @property {module:model/Cons}
      */
     Cons,
+
+    /**
+     * The ConsAllOf model constructor.
+     * @property {module:model/ConsAllOf}
+     */
+    ConsAllOf,
 
     /**
      * The DefaultIntegration model constructor.
@@ -222,6 +307,12 @@ export {
      * @property {module:model/ExceptionProblem}
      */
     ExceptionProblem,
+
+    /**
+     * The ExceptionProblemAllOf model constructor.
+     * @property {module:model/ExceptionProblemAllOf}
+     */
+    ExceptionProblemAllOf,
 
     /**
      * The FileSchema model constructor.
@@ -248,6 +339,12 @@ export {
     ImportAction,
 
     /**
+     * The ImportActionAllOf model constructor.
+     * @property {module:model/ImportActionAllOf}
+     */
+    ImportActionAllOf,
+
+    /**
      * The ImportActionResult model constructor.
      * @property {module:model/ImportActionResult}
      */
@@ -264,6 +361,12 @@ export {
      * @property {module:model/InstallAction}
      */
     InstallAction,
+
+    /**
+     * The InstallActionAllOf model constructor.
+     * @property {module:model/InstallActionAllOf}
+     */
+    InstallActionAllOf,
 
     /**
      * The InstallActionResult model constructor.
@@ -284,10 +387,22 @@ export {
     IntegrityConstraintProblem,
 
     /**
+     * The IntegrityConstraintProblemAllOf model constructor.
+     * @property {module:model/IntegrityConstraintProblemAllOf}
+     */
+    IntegrityConstraintProblemAllOf,
+
+    /**
      * The IntegrityConstraintViolation model constructor.
      * @property {module:model/IntegrityConstraintViolation}
      */
     IntegrityConstraintViolation,
+
+    /**
+     * The IntegrityConstraintViolationAllOf model constructor.
+     * @property {module:model/IntegrityConstraintViolationAllOf}
+     */
+    IntegrityConstraintViolationAllOf,
 
     /**
      * The JSONFileSchema model constructor.
@@ -332,6 +447,12 @@ export {
     ListEdbActionResult,
 
     /**
+     * The ListEdbActionResultAllOf model constructor.
+     * @property {module:model/ListEdbActionResultAllOf}
+     */
+    ListEdbActionResultAllOf,
+
+    /**
      * The ListSourceAction model constructor.
      * @property {module:model/ListSourceAction}
      */
@@ -350,6 +471,12 @@ export {
     Literal,
 
     /**
+     * The LiteralAllOf model constructor.
+     * @property {module:model/LiteralAllOf}
+     */
+    LiteralAllOf,
+
+    /**
      * The LoadData model constructor.
      * @property {module:model/LoadData}
      */
@@ -360,6 +487,12 @@ export {
      * @property {module:model/LoadDataAction}
      */
     LoadDataAction,
+
+    /**
+     * The LoadDataActionAllOf model constructor.
+     * @property {module:model/LoadDataActionAllOf}
+     */
+    LoadDataActionAllOf,
 
     /**
      * The LoadDataActionResult model constructor.
@@ -374,10 +507,22 @@ export {
     ModifyWorkspaceAction,
 
     /**
+     * The ModifyWorkspaceActionAllOf model constructor.
+     * @property {module:model/ModifyWorkspaceActionAllOf}
+     */
+    ModifyWorkspaceActionAllOf,
+
+    /**
      * The ModifyWorkspaceActionResult model constructor.
      * @property {module:model/ModifyWorkspaceActionResult}
      */
     ModifyWorkspaceActionResult,
+
+    /**
+     * The ModifyWorkspaceActionResultAllOf model constructor.
+     * @property {module:model/ModifyWorkspaceActionResultAllOf}
+     */
+    ModifyWorkspaceActionResultAllOf,
 
     /**
      * The Nil model constructor.
@@ -390,6 +535,12 @@ export {
      * @property {module:model/OutputProblem}
      */
     OutputProblem,
+
+    /**
+     * The OutputProblemAllOf model constructor.
+     * @property {module:model/OutputProblemAllOf}
+     */
+    OutputProblemAllOf,
 
     /**
      * The PairAnyValueAnyValue model constructor.
@@ -408,6 +559,12 @@ export {
      * @property {module:model/ParseAction}
      */
     ParseAction,
+
+    /**
+     * The ParseActionAllOf model constructor.
+     * @property {module:model/ParseActionAllOf}
+     */
+    ParseActionAllOf,
 
     /**
      * The ParseActionResult model constructor.
@@ -434,10 +591,22 @@ export {
     QueryAction,
 
     /**
+     * The QueryActionAllOf model constructor.
+     * @property {module:model/QueryActionAllOf}
+     */
+    QueryActionAllOf,
+
+    /**
      * The QueryActionResult model constructor.
      * @property {module:model/QueryActionResult}
      */
     QueryActionResult,
+
+    /**
+     * The QueryActionResultAllOf model constructor.
+     * @property {module:model/QueryActionResultAllOf}
+     */
+    QueryActionResultAllOf,
 
     /**
      * The Range model constructor.
@@ -468,6 +637,12 @@ export {
      * @property {module:model/SetOptionsAction}
      */
     SetOptionsAction,
+
+    /**
+     * The SetOptionsActionAllOf model constructor.
+     * @property {module:model/SetOptionsActionAllOf}
+     */
+    SetOptionsActionAllOf,
 
     /**
      * The SetOptionsActionResult model constructor.
@@ -506,6 +681,12 @@ export {
     SyntaxError,
 
     /**
+     * The SyntaxErrorAllOf model constructor.
+     * @property {module:model/SyntaxErrorAllOf}
+     */
+    SyntaxErrorAllOf,
+
+    /**
      * The SyntaxNode model constructor.
      * @property {module:model/SyntaxNode}
      */
@@ -516,6 +697,12 @@ export {
      * @property {module:model/Token}
      */
     Token,
+
+    /**
+     * The TokenAllOf model constructor.
+     * @property {module:model/TokenAllOf}
+     */
+    TokenAllOf,
 
     /**
      * The Transaction model constructor.
@@ -534,6 +721,12 @@ export {
      * @property {module:model/UpdateAction}
      */
     UpdateAction,
+
+    /**
+     * The UpdateActionAllOf model constructor.
+     * @property {module:model/UpdateActionAllOf}
+     */
+    UpdateActionAllOf,
 
     /**
      * The UpdateActionResult model constructor.
