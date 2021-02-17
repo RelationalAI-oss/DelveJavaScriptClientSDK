@@ -199,6 +199,48 @@ describe('LocalConnection', () => {
         })
     })
     
+    describe('#top-level query output', () => {
+        it(`def output = 2`, () => {
+            return defaultConnection.query({
+                query: 'def output = 2',
+            }).then(res => {
+                assert(res.txn_output[0].columns[0][0] === 2);
+            });
+        })
+        it(`def output = {(1,); (2,); (3,)}`, () => {
+            return defaultConnection.query({
+                query: 'def output = {(1,); (2,); (3,)}',
+            }).then(res => {
+                assert(setsEqual(new Set(res.txn_output[0].columns[0]), new Set([1,2,3])));
+            });
+        })
+        it(`def output = {(1.1,); (2.2,); (3.4,)}`, () => {
+            return defaultConnection.query({
+                query: 'def output = {(1.1,); (2.2,); (3.4,)}',
+            }).then(res => {
+                assert(setsEqual(new Set(res.txn_output[0].columns[0]), new Set([1.1,2.2,3.4])));
+            });
+        })
+        it(`def output = {(parse_decimal[64, 2, \"1.1\"],); (parse_decimal[64, 2, \"2.2\"],); (parse_decimal[64, 2, \"3.4\"],)}`, () => {
+            return defaultConnection.query({
+                query: 'def output = {(parse_decimal[64, 2, \"1.1\"],); (parse_decimal[64, 2, \"2.2\"],); (parse_decimal[64, 2, \"3.4\"],)}',
+            }).then(res => {
+                assert(setsEqual(new Set(res.txn_output[0].columns[0]), new Set([1.1,2.2,3.4])));
+            });
+        })
+        it(`def output = {(1, 5); (2, 7); (3, 9)}`, () => {
+            return defaultConnection.query({
+                query: 'def output = {(1, 5); (2, 7); (3, 9)}',
+            }).then(res => {
+                let success = [];
+                success = [[1,2,3],[5,7,9]].map((X,i) => {
+                    return setsEqual(new Set(X), new Set(res.txn_output[0].columns[i]));
+                });
+                assert.deepStrictEqual(success, [true, true]);
+            });
+        })
+    })
+
     describe('#list_edb', () => {
         it(`create_database() should execute without error`, () => {
             defaultConnection.defaultOpenMode = 'CREATE_OVERWRITE'
