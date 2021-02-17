@@ -224,7 +224,7 @@ class LocalConnection extends Connection {
      * @param {string} [params.path=''] -
      * @param {string[]} [params.inputs=[]] -
      * @param {string[]} [params.persist=[]] - Name(s) of relation(s) to persist.
-     * @return {Object} - {txn_output, query_output, problems}
+     * @return {Object} - {txnOutput, resultOutput, problems}
      */
     query(params) {
         return new Promise((resolve, reject) => {
@@ -256,14 +256,14 @@ class LocalConnection extends Connection {
                     // TransactionResult to look at the top-level output. The expected
                     // values appear correct in the response, but we run into AnyType
                     // types in the TransactionResult top-level output.
-                    console.dir(JSON.parse(res.response.text));
-                    console.dir(res.transactionResult);
+                    //console.dir(JSON.parse(res.response.text));
+                    //console.dir(res.transactionResult);
                     
                     const tr = res.transactionResult;
-                    const txn_output = tr.output;
-                    const query_output = tr.actions[0].result.output;
+                    const txnOutput = tr.output;
+                    const resultOutput = tr.actions[0].result.output;
                     const problems = tr.problems;
-                    resolve({txn_output, query_output, problems});
+                    resolve({txnOutput, resultOutput, problems});
                 })
                 .catch(error => reject(error))
         })
