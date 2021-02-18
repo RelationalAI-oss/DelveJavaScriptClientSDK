@@ -16,7 +16,7 @@ before(() => {
         port: 9090,
         debugLevel: 77,
         connectionTimeout: 999,
-        defaultOpenMode: 'OPEN_OR_CREATE'    
+        defaultOpenMode: 'OPEN_OR_CREATE'
     });
 });
 
@@ -36,7 +36,7 @@ describe('LocalConnection', () => {
     })
 
     // Test Default Connection Object
-    describe('#new with default params', () => {        
+    describe('#new with default params', () => {
         it('scheme should return "http"', () => {
             assert.strictEqual(defaultConnection.scheme, 'http')
         })
@@ -60,10 +60,10 @@ describe('LocalConnection', () => {
         it('defaultOpenMode should return "OPEN"', () => {
             assert.strictEqual(defaultConnection.defaultOpenMode, sdk.Transaction.ModeEnum.OPEN)
         })
-    }) 
+    })
 
     // Test Nondefault Connection Object
-    describe('#new with default params', () => {        
+    describe('#new with default params', () => {
         it('scheme should return "ws"', () => {
             assert.strictEqual(nonDefaultConnection.scheme, 'ws')
         })
@@ -87,7 +87,7 @@ describe('LocalConnection', () => {
         it('defaultOpenMode should return "OPEN_OR_CREATE"', () => {
             assert.strictEqual(nonDefaultConnection.defaultOpenMode, 'OPEN_OR_CREATE')
         })
-    }) 
+    })
 
     // Test `LocalConnection` methods
     describe('#create_database', () => {
@@ -122,7 +122,7 @@ describe('LocalConnection', () => {
             assert.strictEqual(defaultConnection.defaultOpenMode, 'OPEN')
         })
     })
-    
+
     describe('#install_source', () => {
         it('`def foo = 1` should install without error', () => {
             return defaultConnection.install_source(sourceNameOne, 'def foo = 1').then(res => {
@@ -135,7 +135,7 @@ describe('LocalConnection', () => {
             });
         })
     })
-    
+
     describe('#delete_source', () => {
         it(`${sourceNameOne} should delete without error`, () => {
             return defaultConnection.delete_source(sourceNameOne).then(res => {
@@ -198,7 +198,7 @@ describe('LocalConnection', () => {
             });
         })
     })
-    
+
     describe('#top-level query output', () => {
         it(`def output = 2`, () => {
             return defaultConnection.query({
@@ -217,13 +217,6 @@ describe('LocalConnection', () => {
         it(`def output = {(1.1,); (2.2,); (3.4,)}`, () => {
             return defaultConnection.query({
                 query: 'def output = {(1.1,); (2.2,); (3.4,)}',
-            }).then(res => {
-                assert(setsEqual(new Set(res.txnOutput[0].columns[0]), new Set([1.1,2.2,3.4])));
-            });
-        })
-        it(`def output = {(parse_decimal[64, 2, \"1.1\"],); (parse_decimal[64, 2, \"2.2\"],); (parse_decimal[64, 2, \"3.4\"],)}`, () => {
-            return defaultConnection.query({
-                query: 'def output = {(parse_decimal[64, 2, \"1.1\"],); (parse_decimal[64, 2, \"2.2\"],); (parse_decimal[64, 2, \"3.4\"],)}',
             }).then(res => {
                 assert(setsEqual(new Set(res.txnOutput[0].columns[0]), new Set([1.1,2.2,3.4])));
             });
