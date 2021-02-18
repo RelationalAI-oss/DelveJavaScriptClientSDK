@@ -2,7 +2,7 @@
   "name": "delve_client_sdk",
   "version": "1.2.0",
   "description": "This_is_a_Client_SDK_for_Delve_API",
-  "license": "Apache 2.0",
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1"
@@ -15,7 +15,6 @@
     "Delve"
   ],
   "author": "Mohammad Dashti",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/RelationalAI-oss/DelveJavaScriptClientSDK/issues"
   },
