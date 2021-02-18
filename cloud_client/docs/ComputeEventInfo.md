@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **accountName** | **String** |  | [optional] 
 **computeId** | **String** |  | [optional] 
 **event** | **String** |  | [optional] 
-**time** | **String** |  | [optional] 
+**time** | **Date** |  | [optional] 
 
 

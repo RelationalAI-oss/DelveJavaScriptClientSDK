@@ -60,7 +60,7 @@ class ComputeEventInfo {
                 obj['event'] = ApiClient.convertToType(data['event'], 'String');
             }
             if (data.hasOwnProperty('time')) {
-                obj['time'] = ApiClient.convertToType(data['time'], 'String');
+                obj['time'] = ApiClient.convertToType(data['time'], 'Date');
             }
         }
         return obj;
@@ -90,7 +90,7 @@ ComputeEventInfo.prototype['compute_id'] = undefined;
 ComputeEventInfo.prototype['event'] = undefined;
 
 /**
- * @member {String} time
+ * @member {Date} time
  */
 ComputeEventInfo.prototype['time'] = undefined;
 

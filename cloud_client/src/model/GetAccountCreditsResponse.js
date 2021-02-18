@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import ComputeCreditsInfo from './ComputeCreditsInfo';
-import DateTime from './DateTime';
 import StorageCreditsInfo from './StorageCreditsInfo';
 
 /**
@@ -70,12 +69,12 @@ class GetAccountCreditsResponse {
 }
 
 /**
- * @member {module:model/Date} start_period
+ * @member {Date} start_period
  */
 GetAccountCreditsResponse.prototype['start_period'] = undefined;
 
 /**
- * @member {module:model/Date} end_period
+ * @member {Date} end_period
  */
 GetAccountCreditsResponse.prototype['end_period'] = undefined;
 
