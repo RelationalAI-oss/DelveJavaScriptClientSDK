@@ -251,14 +251,6 @@ class LocalConnection extends Connection {
 
             this.runAction(action, txnParams)
                 .then(res => {
-                    // TODO(PR): remove
-                    // Compare the raw response.text with the OpenAPI-deserialized
-                    // TransactionResult to look at the top-level output. The expected
-                    // values appear correct in the response, but we run into AnyType
-                    // types in the TransactionResult top-level output.
-                    //console.dir(JSON.parse(res.response.text));
-                    //console.dir(res.transactionResult);
-                    
                     const tr = res.transactionResult;
                     const txnOutput = tr.output;
                     const resultOutput = tr.actions[0].result.output;
