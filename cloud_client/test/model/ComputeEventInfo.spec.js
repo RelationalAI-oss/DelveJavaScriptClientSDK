@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiCloudSdk.DeleteComputeStatus();
+    instance = new RaiCloudSdk.ComputeEventInfo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,40 @@
       object[property] = value;
   }
 
-  describe('DeleteComputeStatus', function() {
-    it('should create an instance of DeleteComputeStatus', function() {
-      // uncomment below and update the code to test DeleteComputeStatus
-      //var instane = new RaiCloudSdk.DeleteComputeStatus();
-      //expect(instance).to.be.a(RaiCloudSdk.DeleteComputeStatus);
+  describe('ComputeEventInfo', function() {
+    it('should create an instance of ComputeEventInfo', function() {
+      // uncomment below and update the code to test ComputeEventInfo
+      //var instane = new RaiCloudSdk.ComputeEventInfo();
+      //expect(instance).to.be.a(RaiCloudSdk.ComputeEventInfo);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instane = new RaiCloudSdk.DeleteComputeStatus();
+    it('should have the property eventId (base name: "event_id")', function() {
+      // uncomment below and update the code to test the property eventId
+      //var instane = new RaiCloudSdk.ComputeEventInfo();
       //expect(instance).to.be();
     });
 
-    it('should have the property state (base name: "state")', function() {
-      // uncomment below and update the code to test the property state
-      //var instane = new RaiCloudSdk.DeleteComputeStatus();
+    it('should have the property accountName (base name: "account_name")', function() {
+      // uncomment below and update the code to test the property accountName
+      //var instane = new RaiCloudSdk.ComputeEventInfo();
       //expect(instance).to.be();
     });
 
-    it('should have the property message (base name: "message")', function() {
-      // uncomment below and update the code to test the property message
-      //var instane = new RaiCloudSdk.DeleteComputeStatus();
+    it('should have the property computeId (base name: "compute_id")', function() {
+      // uncomment below and update the code to test the property computeId
+      //var instane = new RaiCloudSdk.ComputeEventInfo();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property event (base name: "event")', function() {
+      // uncomment below and update the code to test the property event
+      //var instane = new RaiCloudSdk.ComputeEventInfo();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property time (base name: "time")', function() {
+      // uncomment below and update the code to test the property time
+      //var instane = new RaiCloudSdk.ComputeEventInfo();
       //expect(instance).to.be();
     });
 

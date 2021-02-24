@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiCloudSdk.CreateUserRequestProtocol();
+    instance = new RaiCloudSdk.GetAccountCreditsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,34 @@
       object[property] = value;
   }
 
-  describe('CreateUserRequestProtocol', function() {
-    it('should create an instance of CreateUserRequestProtocol', function() {
-      // uncomment below and update the code to test CreateUserRequestProtocol
-      //var instane = new RaiCloudSdk.CreateUserRequestProtocol();
-      //expect(instance).to.be.a(RaiCloudSdk.CreateUserRequestProtocol);
+  describe('GetAccountCreditsResponse', function() {
+    it('should create an instance of GetAccountCreditsResponse', function() {
+      // uncomment below and update the code to test GetAccountCreditsResponse
+      //var instane = new RaiCloudSdk.GetAccountCreditsResponse();
+      //expect(instance).to.be.a(RaiCloudSdk.GetAccountCreditsResponse);
     });
 
-    it('should have the property username (base name: "username")', function() {
-      // uncomment below and update the code to test the property username
-      //var instane = new RaiCloudSdk.CreateUserRequestProtocol();
+    it('should have the property startPeriod (base name: "start_period")', function() {
+      // uncomment below and update the code to test the property startPeriod
+      //var instane = new RaiCloudSdk.GetAccountCreditsResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property dryrun (base name: "dryrun")', function() {
-      // uncomment below and update the code to test the property dryrun
-      //var instane = new RaiCloudSdk.CreateUserRequestProtocol();
+    it('should have the property endPeriod (base name: "end_period")', function() {
+      // uncomment below and update the code to test the property endPeriod
+      //var instane = new RaiCloudSdk.GetAccountCreditsResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property compute (base name: "compute")', function() {
+      // uncomment below and update the code to test the property compute
+      //var instane = new RaiCloudSdk.GetAccountCreditsResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property storage (base name: "storage")', function() {
+      // uncomment below and update the code to test the property storage
+      //var instane = new RaiCloudSdk.GetAccountCreditsResponse();
       //expect(instance).to.be();
     });
 

@@ -12,21 +12,20 @@
  */
 
 import ApiClient from '../ApiClient';
-import UserInfoProtocol from './UserInfoProtocol';
 
 /**
- * The ListUsersResponseProtocol model module.
- * @module model/ListUsersResponseProtocol
+ * The ComputeCreditsInfo model module.
+ * @module model/ComputeCreditsInfo
  * @version 1.4.0
  */
-class ListUsersResponseProtocol {
+class ComputeCreditsInfo {
     /**
-     * Constructs a new <code>ListUsersResponseProtocol</code>.
-     * @alias module:model/ListUsersResponseProtocol
+     * Constructs a new <code>ComputeCreditsInfo</code>.
+     * @alias module:model/ComputeCreditsInfo
      */
     constructor() { 
         
-        ListUsersResponseProtocol.initialize(this);
+        ComputeCreditsInfo.initialize(this);
     }
 
     /**
@@ -38,18 +37,18 @@ class ListUsersResponseProtocol {
     }
 
     /**
-     * Constructs a <code>ListUsersResponseProtocol</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ComputeCreditsInfo</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListUsersResponseProtocol} obj Optional instance to populate.
-     * @return {module:model/ListUsersResponseProtocol} The populated <code>ListUsersResponseProtocol</code> instance.
+     * @param {module:model/ComputeCreditsInfo} obj Optional instance to populate.
+     * @return {module:model/ComputeCreditsInfo} The populated <code>ComputeCreditsInfo</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListUsersResponseProtocol();
+            obj = obj || new ComputeCreditsInfo();
 
-            if (data.hasOwnProperty('users')) {
-                obj['users'] = ApiClient.convertToType(data['users'], [UserInfoProtocol]);
+            if (data.hasOwnProperty('credits')) {
+                obj['credits'] = ApiClient.convertToType(data['credits'], 'Number');
             }
         }
         return obj;
@@ -59,14 +58,14 @@ class ListUsersResponseProtocol {
 }
 
 /**
- * @member {Array.<module:model/UserInfoProtocol>} users
+ * @member {Number} credits
  */
-ListUsersResponseProtocol.prototype['users'] = undefined;
+ComputeCreditsInfo.prototype['credits'] = undefined;
 
 
 
 
 
 
-export default ListUsersResponseProtocol;
+export default ComputeCreditsInfo;
 

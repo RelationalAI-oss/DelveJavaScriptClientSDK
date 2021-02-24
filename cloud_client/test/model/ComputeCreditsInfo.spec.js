@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new RaiCloudSdk.CreateUserRequestProtocol();
+    instance = new RaiCloudSdk.ComputeCreditsInfo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,16 @@
       object[property] = value;
   }
 
-  describe('CreateUserRequestProtocol', function() {
-    it('should create an instance of CreateUserRequestProtocol', function() {
-      // uncomment below and update the code to test CreateUserRequestProtocol
-      //var instane = new RaiCloudSdk.CreateUserRequestProtocol();
-      //expect(instance).to.be.a(RaiCloudSdk.CreateUserRequestProtocol);
+  describe('ComputeCreditsInfo', function() {
+    it('should create an instance of ComputeCreditsInfo', function() {
+      // uncomment below and update the code to test ComputeCreditsInfo
+      //var instane = new RaiCloudSdk.ComputeCreditsInfo();
+      //expect(instance).to.be.a(RaiCloudSdk.ComputeCreditsInfo);
     });
 
-    it('should have the property username (base name: "username")', function() {
-      // uncomment below and update the code to test the property username
-      //var instane = new RaiCloudSdk.CreateUserRequestProtocol();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property dryrun (base name: "dryrun")', function() {
-      // uncomment below and update the code to test the property dryrun
-      //var instane = new RaiCloudSdk.CreateUserRequestProtocol();
+    it('should have the property credits (base name: "credits")', function() {
+      // uncomment below and update the code to test the property credits
+      //var instane = new RaiCloudSdk.ComputeCreditsInfo();
       //expect(instance).to.be();
     });
 

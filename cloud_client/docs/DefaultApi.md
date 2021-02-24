@@ -4,14 +4,61 @@ All URIs are relative to *http://127.0.0.1:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**accountCreditsGet**](DefaultApi.md#accountCreditsGet) | **GET** /account/credits | Get account credits consumption
 [**computeDelete**](DefaultApi.md#computeDelete) | **DELETE** /compute | Delete compute
 [**computeGet**](DefaultApi.md#computeGet) | **GET** /compute | List computes
 [**computePut**](DefaultApi.md#computePut) | **PUT** /compute | Create compute
 [**databaseGet**](DefaultApi.md#databaseGet) | **GET** /database | List databases
 [**databasePost**](DefaultApi.md#databasePost) | **POST** /database | Update database
+[**listComputeEvents**](DefaultApi.md#listComputeEvents) | **GET** /compute/{computeId}/events | List compute events
 [**userGet**](DefaultApi.md#userGet) | **GET** /user | List users
 [**userPut**](DefaultApi.md#userPut) | **PUT** /user | Create user
 
+
+
+## accountCreditsGet
+
+> GetAccountCreditsResponse accountCreditsGet(opts)
+
+Get account credits consumption
+
+### Example
+
+```javascript
+import RaiCloudSdk from 'rai_cloud_sdk';
+
+let apiInstance = new RaiCloudSdk.DefaultApi();
+let opts = {
+  'period': "period_example" // String | 
+};
+apiInstance.accountCreditsGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **period** | **String**|  | [optional] 
+
+### Return type
+
+[**GetAccountCreditsResponse**](GetAccountCreditsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## computeDelete
@@ -241,6 +288,49 @@ No authorization required
 
 - **Content-Type**: application/json
 - **Accept**: Not defined
+
+
+## listComputeEvents
+
+> ListComputeEventsResponse listComputeEvents(computeId)
+
+List compute events
+
+### Example
+
+```javascript
+import RaiCloudSdk from 'rai_cloud_sdk';
+
+let apiInstance = new RaiCloudSdk.DefaultApi();
+let computeId = "computeId_example"; // String | 
+apiInstance.listComputeEvents(computeId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **computeId** | **String**|  | 
+
+### Return type
+
+[**ListComputeEventsResponse**](ListComputeEventsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## userGet
