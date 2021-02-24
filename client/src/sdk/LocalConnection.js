@@ -234,7 +234,7 @@ class LocalConnection extends Connection {
             action.source.type = 'Source'
 
             action.outputs = []
-            if (params.out != null) {
+            if (params.out) {
                 action.outputs.push(params.out)
             }
 
