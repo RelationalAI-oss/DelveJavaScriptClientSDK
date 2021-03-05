@@ -16,7 +16,7 @@ before(() => {
         port: 9090,
         debugLevel: 77,
         connectionTimeout: 999,
-        defaultOpenMode: 'OPEN_OR_CREATE'    
+        defaultOpenMode: 'OPEN_OR_CREATE'
     });
 });
 
@@ -36,7 +36,7 @@ describe('LocalConnection', () => {
     })
 
     // Test Default Connection Object
-    describe('#new with default params', () => {        
+    describe('#new with default params', () => {
         it('scheme should return "http"', () => {
             assert.strictEqual(defaultConnection.scheme, 'http')
         })
@@ -60,10 +60,10 @@ describe('LocalConnection', () => {
         it('defaultOpenMode should return "OPEN"', () => {
             assert.strictEqual(defaultConnection.defaultOpenMode, sdk.Transaction.ModeEnum.OPEN)
         })
-    }) 
+    })
 
     // Test Nondefault Connection Object
-    describe('#new with default params', () => {        
+    describe('#new with default params', () => {
         it('scheme should return "ws"', () => {
             assert.strictEqual(nonDefaultConnection.scheme, 'ws')
         })
@@ -87,7 +87,7 @@ describe('LocalConnection', () => {
         it('defaultOpenMode should return "OPEN_OR_CREATE"', () => {
             assert.strictEqual(nonDefaultConnection.defaultOpenMode, 'OPEN_OR_CREATE')
         })
-    }) 
+    })
 
     // Test `LocalConnection` methods
     describe('#create_database', () => {
@@ -99,7 +99,7 @@ describe('LocalConnection', () => {
             return defaultConnection.create_database().then(res => {
                 assert(res.problems.length === 0);
             });
-        })
+        }).timeout(60000)
         it('defaultOpenMode should now return \'CREATE\'', () => {
             defaultConnection.defaultOpenMode = 'CREATE'
             assert.strictEqual(defaultConnection.defaultOpenMode, 'CREATE')
@@ -113,7 +113,7 @@ describe('LocalConnection', () => {
                 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422
                 assert.strictEqual(error.response.status, 422);
             });
-        })
+        }).timeout(60000)
         it('defaultOpenMode should still return \'CREATE\'', () => {
             assert.strictEqual(defaultConnection.defaultOpenMode, 'CREATE')
         })
@@ -122,26 +122,26 @@ describe('LocalConnection', () => {
             assert.strictEqual(defaultConnection.defaultOpenMode, 'OPEN')
         })
     })
-    
+
     describe('#install_source', () => {
         it('`def foo = 1` should install without error', () => {
             return defaultConnection.install_source(sourceNameOne, 'def foo = 1').then(res => {
                 assert(res.problems.length === 0);
             });
-        })
+        }).timeout(60000)
         it('`def foo = ` should error on install', () => {
             return defaultConnection.install_source(sourceNameOne, 'def foo = ').then(res => {
                 assert(res.problems.length === 2);
             });
-        })
+        }).timeout(60000)
     })
-    
+
     describe('#delete_source', () => {
         it(`${sourceNameOne} should delete without error`, () => {
             return defaultConnection.delete_source(sourceNameOne).then(res => {
                 assert(res.problems.length === 0);
             });
-        })
+        }).timeout(60000)
     })
 
     describe('#list_source', () => {
@@ -149,7 +149,7 @@ describe('LocalConnection', () => {
             return defaultConnection.list_source().then(res => {
                 assert(setsEqual(new Set(res.sources.map(x => x.name)), new Set(["intrinsics", "stdlib", "ml"])));
             });
-        })
+        }).timeout(60000)
     })
 
     describe('#query', () => {
@@ -158,33 +158,25 @@ describe('LocalConnection', () => {
                 out: 'bar',
                 query: 'def bar = 2',
             }).then(res => {
-                assert(res.output[0].columns[0][0] === 2);
+                assert(res.resultOutput[0].columns[0][0] === 2);
             });
-        })
+        }).timeout(60000)
         it(`def p = {(1,); (2,); (3,)}`, () => {
             return defaultConnection.query({
                 out: 'p',
                 query: 'def p = {(1,); (2,); (3,)}',
             }).then(res => {
-                assert(setsEqual(new Set(res.output[0].columns[0]), new Set([1,2,3])));
+                assert(setsEqual(new Set(res.resultOutput[0].columns[0]), new Set([1,2,3])));
             });
-        })
+        }).timeout(60000)
         it(`def p = {(1.1,); (2.2,); (3.4,)}`, () => {
             return defaultConnection.query({
                 out: 'p',
                 query: 'def p = {(1.1,); (2.2,); (3.4,)}',
             }).then(res => {
-                assert(setsEqual(new Set(res.output[0].columns[0]), new Set([1.1,2.2,3.4])));
+                assert(setsEqual(new Set(res.resultOutput[0].columns[0]), new Set([1.1,2.2,3.4])));
             });
-        })
-        it(`def p = {(parse_decimal[64, 2, \"1.1\"],); (parse_decimal[64, 2, \"2.2\"],); (parse_decimal[64, 2, \"3.4\"],)}`, () => {
-            return defaultConnection.query({
-                out: 'p',
-                query: 'def p = {(parse_decimal[64, 2, \"1.1\"],); (parse_decimal[64, 2, \"2.2\"],); (parse_decimal[64, 2, \"3.4\"],)}',
-            }).then(res => {
-                assert(setsEqual(new Set(res.output[0].columns[0]), new Set([1.1,2.2,3.4])));
-            });
-        })
+        }).timeout(60000)
         it(`def p = {(1, 5); (2, 7); (3, 9)}`, () => {
             return defaultConnection.query({
                 out: 'p',
@@ -192,26 +184,61 @@ describe('LocalConnection', () => {
             }).then(res => {
                 let success = [];
                 success = [[1,2,3],[5,7,9]].map((X,i) => {
-                    return setsEqual(new Set(X), new Set(res.output[0].columns[i]));
+                    return setsEqual(new Set(X), new Set(res.resultOutput[0].columns[i]));
                 });
                 assert.deepStrictEqual(success, [true, true]);
             });
-        })
+        }).timeout(60000)
     })
-    
+
+    describe('#top-level query output', () => {
+        it(`def output = 2`, () => {
+            return defaultConnection.query({
+                query: 'def output = 2',
+            }).then(res => {
+                assert(res.txnOutput[0].columns[0][0] === 2);
+            });
+        }).timeout(6000)
+        it(`def output = {(1,); (2,); (3,)}`, () => {
+            return defaultConnection.query({
+                query: 'def output = {(1,); (2,); (3,)}',
+            }).then(res => {
+                assert(setsEqual(new Set(res.txnOutput[0].columns[0]), new Set([1,2,3])));
+            });
+        }).timeout(6000)
+        it(`def output = {(1.1,); (2.2,); (3.4,)}`, () => {
+            return defaultConnection.query({
+                query: 'def output = {(1.1,); (2.2,); (3.4,)}',
+            }).then(res => {
+                assert(setsEqual(new Set(res.txnOutput[0].columns[0]), new Set([1.1,2.2,3.4])));
+            });
+        }).timeout(6000)
+        it(`def output = {(1, 5); (2, 7); (3, 9)}`, () => {
+            return defaultConnection.query({
+                query: 'def output = {(1, 5); (2, 7); (3, 9)}',
+            }).then(res => {
+                let success = [];
+                success = [[1,2,3],[5,7,9]].map((X,i) => {
+                    return setsEqual(new Set(X), new Set(res.txnOutput[0].columns[i]));
+                });
+                assert.deepStrictEqual(success, [true, true]);
+            });
+        }).timeout(6000)
+    })
+
     describe('#list_edb', () => {
         it(`create_database() should execute without error`, () => {
             defaultConnection.defaultOpenMode = 'CREATE_OVERWRITE'
             return defaultConnection.create_database().then(res => {
                 assert(res.problems.length === 0);
             });
-        });
+        }).timeout(60000)
 
         it(`list_edb() should be empty`, () => {
             return defaultConnection.list_edb().then(res => {
                 assert(res.rels.length === 0);
             });
-        });
+        }).timeout(60000)
     })
 
     describe('#cardinality', () => {
@@ -220,20 +247,20 @@ describe('LocalConnection', () => {
             return defaultConnection.create_database().then(res => {
                 assert(res.problems.length === 0);
             });
-        });
+        }).timeout(60000)
         it(`def p = {(1,); (2,); (3,)} should persist without error`, () => {
             return defaultConnection.query({
                 out: 'p',
                 persist: ['p'],
                 query: 'def p = {(1,); (2,); (3,)}'
             }).then(res => {
-                assert(setsEqual(new Set(res.output[0].columns[0]), new Set([1,2,3])));
+                assert(setsEqual(new Set(res.resultOutput[0].columns[0]), new Set([1,2,3])));
             });
-        })
+        }).timeout(60000)
         it(`cardinality of relation p is equal to 3`, () => {
             return defaultConnection.cardinality('p').then(res => {
                 assert(res.result[0].columns[0][0] === 3);
             });
-        })
+        }).timeout(60000)
     })
 })

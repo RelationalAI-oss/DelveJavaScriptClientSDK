@@ -29,11 +29,11 @@ class LocalConnection extends Connection {
         if (typeof dbname === 'undefined' || dbname === '') {
             throw new Error('Must provide `dbname`.')
         }
-        
+
         // Set _dbname
         this._dbname = dbname
     }
-    
+
     /**
      * Get name of database
      */
@@ -58,13 +58,13 @@ class LocalConnection extends Connection {
 
             let action = new sdk.CardinalityAction()
             action.type = 'CardinalityAction'
-            
+
             if (typeof relname !== 'undefined' && relname !== '') {
                 action.relname = relname
             }
 
             this.runAction(action)
-                .then(res => {     
+                .then(res => {
                     const tr = res.transactionResult;
                     const result = tr.actions[0].result.result;
                     const problems = tr.problems;
@@ -109,7 +109,7 @@ class LocalConnection extends Connection {
         }
 
         return new Promise((resolve, reject) => {
-            let action = new sdk.ModifyWorkspaceAction() 
+            let action = new sdk.ModifyWorkspaceAction()
             action.type = 'ModifyWorkspaceAction'
             action.delete_source = []
             action.delete_source.push(sourceName)
@@ -162,7 +162,7 @@ class LocalConnection extends Connection {
      * @return {Object} - {rels, problems}
      */
     list_edb(relname) {
-        return new Promise((resolve, reject) => { 
+        return new Promise((resolve, reject) => {
             let action = new sdk.ListEdbAction()
             action.type = 'ListEdbAction'
 
@@ -208,13 +208,13 @@ class LocalConnection extends Connection {
      * referenced by `this`
      */
     //load_csv() {}
-    
+
     /**
      * Load a JSON file *local* to the Delve Server
      * referenced by `this`
      */
     //load_json() {}
-    
+
     /**
      * Query a local Delve server
      * @param {Object} params - User specified override values.
@@ -224,25 +224,22 @@ class LocalConnection extends Connection {
      * @param {string} [params.path=''] -
      * @param {string[]} [params.inputs=[]] -
      * @param {string[]} [params.persist=[]] - Name(s) of relation(s) to persist.
-     * @return {Object} - {output, problems}
+     * @return {Object} - {txnOutput, resultOutput, problems}
      */
     query(params) {
-        // Check if `outputs` is valid, exit if not.
-        if (typeof params.out === 'undefined' || params.out === null || params.out.length === null || params.out.length === 0) {
-            throw new Error("`params.outputs` array must have values.")
-        }
-
         return new Promise((resolve, reject) => {
             let action = new sdk.QueryAction()
             action.source = new sdk.Source()
             action.source.value = params.query || ''
             action.source.type = 'Source'
-            
+
             action.outputs = []
-            action.outputs.push(params.out)
-        
+            if (params.out) {
+                action.outputs.push(params.out)
+            }
+
             action.source.name = params.name || 'query'
-            action.source.path = params.path || '' 
+            action.source.path = params.path || ''
             action.inputs = params.inputs || []
             action.persist = params.persist || []
             action.type = 'QueryAction'
@@ -251,13 +248,14 @@ class LocalConnection extends Connection {
             if (params.hasOwnProperty('persist') && params.persist.length > 0) {
                 txnParams.isReadOnly = false
             }
-            
+
             this.runAction(action, txnParams)
                 .then(res => {
                     const tr = res.transactionResult;
-                    const output = tr.actions[0].result.output;
+                    const txnOutput = tr.output;
+                    const resultOutput = tr.actions[0].result.output;
                     const problems = tr.problems;
-                    resolve({output, problems});
+                    resolve({txnOutput, resultOutput, problems});
                 })
                 .catch(error => reject(error))
         })
