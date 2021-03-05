@@ -3581,7 +3581,7 @@ let
   args = {
     name = "rai_db_sdk";
     packageName = "rai_db_sdk";
-    version = "1.1.3";
+    version = "1.2.0";
     src = ./.;
     dependencies = [
       sources."@babel/cli-7.12.13"

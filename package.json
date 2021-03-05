@@ -1,6 +1,6 @@
 {
   "name": "delve_client_sdk",
-  "version": "1.1.8",
+  "version": "1.2.0",
   "description": "This_is_a_Client_SDK_for_Delve_API",
   "license": "MIT",
   "main": "dist/index.js",
