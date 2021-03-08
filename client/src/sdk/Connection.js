@@ -1,115 +1,102 @@
-const sdk = require('../index.js');
+import { DefaultApi } from '../index.js';
+import ApiClient from '../ApiClient.js';
 
-/** Class representing a Connection. */
+/**
+ * Class representing a connection to the Rel server
+ */
 class Connection {
-    /**
-     * Create a Connection
-     * @param {Object} [params] - User specified override values.
-     * @param {string} [params.scheme="http"] - Connection scheme.
-     * @param {string} [params.host="127.0.0.1"] -Address of running server.
-     * @param {number} [params.port=8010] - Port of running server. *Must be an Integer.*
-     * @param {string} [params.debugLevel=0] - Desired debugging level.
-     * @param {number} [params.connectionTimeout=300] - Connection timeout duration.
-     * @param {Transaction.ModeEnum} [params.defaultOpenMode=OPEN]
-     */
-    constructor(params) {
-        const _params = typeof params === 'undefined' ? new Object() : params
-        
-        this.scheme = _params.scheme || "http"
-        this.host = _params.host || "127.0.0.1"
-        this.port = _params.port || 8010
-        this.debugLevel = _params.debugLevel || 0
-        this.connectionTimeout = _params.connectionTimeout || 300 // seconds
-        this.defaultOpenMode = _params.defaultOpenMode || sdk.Transaction.ModeEnum.OPEN
-    }
+  /**
+   * Create a connection
+   * @param {String} [params.basePath] - The base URL against which to resolve every API call's (relative) path.
+   * The default is http://127.0.0.1:8010.
+   * @param {Array.<String>} [params.authentications] - The authentication methods to be included for all API calls.
+   * This is a placeholder for eventual use with the cloud connection.
+   * @param {Array.<String>} [params.defaultHeaders] - The default HTTP headers to be included for all API calls.
+   * The default is {}
+   * @param {Number} [params.timeout] - The default HTTP timeout for all API calls. The default is 60000
+   * @param {Boolean} [params.cache] - If set to false an additional timestamp parameter is added to all API GET
+   * calls to prevent browser caching. The default is true
+   * @param {Boolean} [params.enableCookies] - If set to true, the client will save the cookies from each server
+   * response, and return them in the next request.
+   */
+  constructor(params = {}) {
+    const apiClient = new ApiClient();
+    this._defaultApi = new DefaultApi(apiClient);
+    this._api = this._defaultApi.apiClient;
 
-    /**
-     * Get connection scheme
-     */
-    get scheme() {
-        return this._scheme
+    if (params.basePath) {
+      this._api.basePath = params.basePath;
     }
+    if (params.authentications) {
+      this._api.authentications = params.authentications;
+    }
+    if (params.defaultHeaders) {
+      this._api.defaultHeaders = params.defaultHeaders;
+    }
+    if (params.hasOwnProperty('timeout')) {
+      this._api.timeout = params.timeout;
+    }
+    if (params.hasOwnProperty('cache')) {
+      this._api.cache = params.cache;
+    }
+    if (params.hasOwnProperty('enableCookies')) {
+      this._api.enableCookies = params.enableCookies;
+    }
+  }
 
-    /**
-     * Setter for scheme
-     */
-    set scheme(s) {
-        this._scheme = s
-    }
+  get api() {
+    return this._api;
+  }
 
-    /**
-     * Get connection host
-     */
-    get host() {
-        return this._host
-    }
+  get defaultApi() {
+    return this._defaultApi;
+  }
 
-    /**
-     * Setter for host
-     */
-    set host(addr) {
-        this._host = addr
-    }
+  get transactionPost() {
+    return this._transactionPost;
+  }
 
-    /**
-     * Get connection port
-     */
-    get port() {
-        return this._port
-    }
+  get basePath() {
+    return this._api.basePath;
+  }
+  set basePath(basePath) {
+    this._api.basePath = basePath;
+  }
 
-    /**
-     * Setter for port
-     */
-    set port(p) {
-        this._port = p
-    }
+  get authentications() {
+    return this._api.authentications;
+  }
+  set authentications(authentications) {
+    this._api.authentications = authentications;
+  }
 
-    /**
-     * Get debug level.
-     * @return {number} Current debug level.
-     */
-    get debugLevel() {
-        return this._debugLevel
-    }
+  get defaultHeaders() {
+    return this._api.defaultHeaders;
+  }
+  set defaultHeaders(defaultHeaders) {
+    this._api.defaultHeaders = defaultHeaders;
+  }
 
-    /**
-     * Set debug level.
-     * @param {number} level - Desired debug level.
-     */
-    set debugLevel(level) {
-        this._debugLevel = level
-    }
+  get cache() {
+    return this._api.cache;
+  }
+  set cache(cache) {
+    this._api.cache = cache;
+  }
 
-    /**
-     * Get duration of connection timeout (seconds).
-     * @return {number} Current connection timeout in seconds.
-     */
-    get connectionTimeout() {
-        return this._connectionTimeout
-    }
+  get timeout() {
+    return this._api.timeout;
+  }
+  set timeout(timeout) {
+    this._api.timeout = timeout;
+  }
 
-    /**
-     * Set duration of connection timeout (seconds).
-     * @param {number} duration - Duration of connection timeout, in seconds.
-     */
-    set connectionTimeout(duration) {
-        this._connectionTimeout = duration
-    }
-
-    /**
-     * Get connection defaultOpenMode
-     */
-    get defaultOpenMode() {
-        return this._defaultOpenMode
-    }
-
-    /**
-     * Setter for defaultOpenMode
-     */
-    set defaultOpenMode(mode) {
-        this._defaultOpenMode = mode
-    }
+  get enableCookies() {
+    return this._api.enableCookies;
+  }
+  set enableCookies(enableCookies) {
+    this._api.enableCookies = enableCookies;
+  }
 }
 
-module.exports = Connection
+export default Connection;
