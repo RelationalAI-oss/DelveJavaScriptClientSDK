@@ -16,8 +16,6 @@ describe ('LocalConnection', () => {
 
       return lc.createDatabase(dbname, true).then(res => {
         assert.notStrictEqual(res.error, null);
-        assert.strictEqual(res.error.errno, -3008);
-        assert.strictEqual(res.error.code, 'ENOTFOUND');
       });
     }).timeout(60000);
   });

@@ -1,24 +1,46 @@
 const assert = require('assert');
 import LocalConnection from '../../src/sdk/LocalConnection.js';
 
-const dbname = `sdk-unit-tests-db`;
-const uniqueDbname = `${dbname}-${(new Date).getTime()}`;
 const defaultSources = ["intrinsics", "stdlib", "ml"];
+const incrementQuery =
+`
+def insert[:x] = x + 1
+def delete[:x] = x
+def output = x
+`;
+
+// LocalConnection variable for reuse in tests
+let lc;
 
 // Helper function to determine set equality elementwise
 const setsEqual = (a,b) => a.size === b.size && [...a].every(v => b.has(v))
-let lc = new LocalConnection();
 
-const initializeDatabase = () => it('initializes the database for tests', () => {
+const initializeDatabase = (dbname) => it('initializes the connection and database for tests', () => {
+  lc = new LocalConnection();
   return lc.createDatabase(dbname, true).then(res => {
     assert.strictEqual(res.result.problems.length, 0);
     assert.strictEqual(res.error, null);
   });
 }).timeout(60000);
 
+//
+// Create unique names based on time and incrementing index value.
+// Guarantees unique database names across individual tests and
+// running instances of this test suite.
+//
+let nameIndex = 0;
+function createUniqueName(prefix) {
+  return `${prefix}${Date.now()}${nameIndex++}`;
+}
+
 describe('RelAPIMixin', () => {
 
   describe('#createDatabase', () => {
+    const uniqueDbname = createUniqueName('db');
+    const dbname = createUniqueName('db');
+
+    lc = new LocalConnection();
+
     it('creates a database with create-and-overwrite', () => {
       return lc.createDatabase(dbname, true).then(res => {
         assert.strictEqual(res.result.problems.length, 0);
@@ -33,9 +55,10 @@ describe('RelAPIMixin', () => {
     }).timeout(60000);
     it('should return error status 422 when we create again without overwrite', () => {
       return lc.createDatabase(dbname, false).then(res => {
-        assert.strictEqual(res.result, null);
         assert.notStrictEqual(res.error, null);
         assert.strictEqual(res.error.status, 422);
+        assert.notStrictEqual(res.result, null);
+        assert.strictEqual(res.result.aborted, true);
       });
     }).timeout(60000);
     it(`creates a new database called ${uniqueDbname} without overwrite when it does not already exist`, () => {
@@ -47,9 +70,10 @@ describe('RelAPIMixin', () => {
   });
 
   describe('#source management', () => {
-    initializeDatabase();
+    const dbname = createUniqueName('db');
+    initializeDatabase(dbname);
 
-    it(`test-1.delve should include the keys [${defaultSources.join()}]`, () => {
+    it(`listSources for ${dbname} should include the keys [${defaultSources.join()}]`, () => {
       return lc.listSources(dbname).then(res => {
         assert.notStrictEqual(res.result.actions, null);
         assert.notStrictEqual(res.result.actions[0], null);
@@ -99,7 +123,8 @@ describe('RelAPIMixin', () => {
   });
 
   describe('#query', () => {
-    initializeDatabase();
+    const dbname = createUniqueName('db');
+    initializeDatabase(dbname);
 
     it('def bar = 2', () => {
       return lc.query(dbname, 'def bar = 2', true, ['bar']).then(res => {
@@ -129,7 +154,8 @@ describe('RelAPIMixin', () => {
   });
 
   describe('#top-level query', () => {
-    initializeDatabase();
+    const dbname = createUniqueName('db');
+    initializeDatabase(dbname);
 
     it('def bar = 2', () => {
       return lc.query(dbname, 'def bar = 2\ndef output = bar').then(res => {
@@ -159,7 +185,8 @@ describe('RelAPIMixin', () => {
   });
 
   describe('#both standard and top-level query', () => {
-    initializeDatabase();
+    const dbname = createUniqueName('db');
+    initializeDatabase(dbname);
 
     it('def bar = 2', () => {
       return lc.query(dbname, 'def bar = 2\ndef output = bar', true, ['bar']).then(res => {
@@ -196,10 +223,9 @@ describe('RelAPIMixin', () => {
       return lc.query(dbname, 'ic {}').then(res => {
         assert.notStrictEqual(res.error, null);
         assert.strictEqual(res.error.status, 422);
-        // TODO(rjb) - Need to resolve issue #45
-        // https://github.com/RelationalAI/rai-ux/issues/45
-        //
-        //assert.notStrictEqual(res.result, null);
+        assert.notStrictEqual(res.result, null);
+        assert.strictEqual(res.result.aborted, true);
+        assert(res.result.problems.length > 0);
       });
     }).timeout(60000);
     it(`'def p =' should return problems`, () => {
@@ -211,19 +237,13 @@ describe('RelAPIMixin', () => {
   });
 
   describe('#query with update', () => {
-    initializeDatabase();
+    const dbname = createUniqueName('db');
+    initializeDatabase(dbname);
 
-    const incrementQuery =
-    `
-    def insert[:x] = x + 1
-    def delete[:x] = x
-    def output = x
-    `;
-
-    it(`should install 'def insert[:x] = 1' without error into 'test.delve' via #installSource`, () => {
-      return lc.installSource(dbname, 'test.delve', 'def insert[:x] = 1').then(res => {
-        assert.strictEqual(res.result.problems.length, 0);
+    it(`should install insert 'def insert[:x] = 1' without error via an update query`, () => {
+      return lc.query(dbname, 'def insert[:x] = 1', false).then(res => {
         assert.strictEqual(res.error, null);
+        assert.strictEqual(res.result.problems.length, 0);
       });
     }).timeout(60000);
     it('should return 2 via incrementing x', () => {
@@ -238,15 +258,11 @@ describe('RelAPIMixin', () => {
         assert.strictEqual(res.result.output[0].columns[0][0], 3);
       });
     }).timeout(60000);
-    it('should do something for listEdb', () => {
-      return lc.listEdb(dbname, 'x').then(res => {
-        assert.strictEqual(res.error, null);
-      });
-    }).timeout(60000);
   });
 
   describe('#cardinality', () => {
-    initializeDatabase();
+    const dbname = createUniqueName('db');
+    initializeDatabase(dbname);
 
     it(`def cardinalityTest = {(1,); (2,); (3,)} should insert without error`, () => {
       return lc.query(dbname, 'def insert[:cardinalityTest] = {(1,); (2,); (3,)}', false).then(res => {
@@ -263,7 +279,8 @@ describe('RelAPIMixin', () => {
   });
 
   describe('#listEdb', () => {
-    initializeDatabase();
+    const dbname = createUniqueName('db');
+    initializeDatabase(dbname);
 
     it(`def foo = {(1,); (2,); (3,)} and def foo = 'Hi' should insert without error`, () => {
       return lc.query(dbname, `def insert[:foo] = {(1,); (2,); (3,)}\ndef insert[:foo] = "Hi"`, false).then(res => {
@@ -279,6 +296,133 @@ describe('RelAPIMixin', () => {
         assert.strictEqual(res.result.actions[0].result.rels[0].type, 'RelKey');
         assert.strictEqual(res.result.actions[0].result.rels[1].name, 'foo');
         assert.strictEqual(res.result.actions[0].result.rels[1].type, 'RelKey');
+      });
+    }).timeout(60000);
+  });
+
+  describe('#transaction version', () => {
+    let trackedVersion = 0;
+    const newDbName = createUniqueName('db');
+
+    const dbname = createUniqueName('db');
+    initializeDatabase(dbname);
+
+    it(`connects to database ${dbname} and the sdk sets the connection's transaction version`, () => {
+      return lc.connectToDatabase(dbname).then(res => {
+        assert.strictEqual(res.error, null);
+        assert(res.result.version > 0);
+        assert.strictEqual(lc.getTransactionVersion(dbname), res.result.version);
+      });
+    }).timeout(60000);
+    it(`connects again to database ${dbname} using the current transaction version`, () => {
+      const testVersion = lc.getTransactionVersion(dbname);
+      return lc.connectToDatabase(dbname).then(res => {
+        assert.strictEqual(res.error, null);
+        assert.strictEqual(lc.getTransactionVersion(dbname), testVersion);
+        assert.strictEqual(res.result.version, testVersion);
+      });
+    }).timeout(60000);
+    it(`inserts a new Map entry upon the creation of a new database`, () => {
+      return lc.createDatabase(newDbName, true).then(res => {
+        assert.strictEqual(res.error, null);
+        trackedVersion = lc.getTransactionVersion(newDbName);
+        assert(trackedVersion > 0);
+      });
+    }).timeout(60000);
+    it(`connects to ${dbname}`, () => {
+      return lc.connectToDatabase(dbname).then(res => {
+        assert.strictEqual(res.error, null);
+        assert(lc.getTransactionVersion(dbname) > 0);
+      });
+    }).timeout(60000);
+    it(`connects to ${newDbName} and has transaction version ${trackedVersion}`, () => {
+      return lc.connectToDatabase(newDbName).then(res => {
+        assert.strictEqual(res.error, null);
+        assert.strictEqual(lc.getTransactionVersion(newDbName), trackedVersion);
+      });
+    }).timeout(60000);
+    it(`properly fails to find a non-existing larger value version of ${dbname}`, () => {
+      const testVersion = lc.getTransactionVersion(dbname) + 1;
+      lc.setTransactionVersion(dbname, testVersion);
+      return lc.connectToDatabase(dbname).then(res => {
+        assert.notStrictEqual(res.error, null);
+        assert.notStrictEqual(res.result, null);
+        assert(res.result.problems.length > 0);
+      });
+    }).timeout(60000);
+  });
+
+  describe('#cloneDatabase', () => {
+    const uniqueCloneName = createUniqueName('clone');
+
+    const dbname = createUniqueName('db');
+    initializeDatabase(dbname);
+
+    it(`should install 'def foo = {(1,);(2,);(3,)}' without error into test-1.delve via #installSource`, () => {
+      return lc.installSource(dbname, 'test-1.delve', 'def foo = {(1,);(2,);(3,)}').then(res => {
+        assert.strictEqual(res.result.problems.length, 0);
+        assert.strictEqual(res.error, null);
+      });
+    }).timeout(60000);
+    it(`should list test-1.delve in the result for #listSources`, () => {
+      return lc.listSources(dbname).then(res => {
+        assert.strictEqual(res.error, null);
+        assert.strictEqual(res.result.problems.length, 0);
+        assert.strictEqual(res.result.actions[0].result.sources.length, defaultSources.length + 1);
+        let match = false;
+        for (let i = 0; i < (defaultSources.length + 1); i++) {
+          if (res.result.actions[0].result.sources[i].name === 'test-1.delve') {
+            match = true;
+          }
+        }
+        assert(match);
+      });
+    }).timeout(60000);
+    it(`should create ${uniqueCloneName} as a clone of ${dbname} without overwrite`, () => {
+      return lc.cloneDatabase(uniqueCloneName, dbname, false).then(res => {
+        assert.strictEqual(res.error, null);
+        assert.strictEqual(res.result.problems.length, 0);
+      });
+    }).timeout(60000);
+    it(`the clone should list test-1.delve in the result for #listSources`, () => {
+      return lc.listSources(uniqueCloneName).then(res => {
+        assert.strictEqual(res.error, null);
+        assert.strictEqual(res.result.problems.length, 0);
+        assert.strictEqual(res.result.actions[0].result.sources.length, defaultSources.length + 1);
+        let match = false;
+        for (let i = 0; i < (defaultSources.length + 1); i++) {
+          if (res.result.actions[0].result.sources[i].name === 'test-1.delve') {
+            match = true;
+          }
+        }
+        assert(match);
+      });
+    }).timeout(60000);
+    it(`should fail to create ${uniqueCloneName} again as a clone of ${dbname} without overwrite`, () => {
+      return lc.cloneDatabase(uniqueCloneName, dbname, false).then(res => {
+        assert.notStrictEqual(res.error, null);
+        assert.notStrictEqual(res.result, null);
+        assert(res.result.problems.length > 0);
+      });
+    }).timeout(60000);
+    it(`should create ${uniqueCloneName} again as a clone of ${dbname} with overwrite`, () => {
+      return lc.cloneDatabase(uniqueCloneName, dbname, true).then(res => {
+        assert.strictEqual(res.error, null);
+        assert.strictEqual(res.result.problems.length, 0);
+      });
+    }).timeout(60000);
+    it(`the clone should list test-1.delve in the result for #listSources`, () => {
+      return lc.listSources(uniqueCloneName).then(res => {
+        assert.strictEqual(res.error, null);
+        assert.strictEqual(res.result.problems.length, 0);
+        assert.strictEqual(res.result.actions[0].result.sources.length, defaultSources.length + 1);
+        let match = false;
+        for (let i = 0; i < (defaultSources.length + 1); i++) {
+          if (res.result.actions[0].result.sources[i].name === 'test-1.delve') {
+            match = true;
+          }
+        }
+        assert(match);
       });
     }).timeout(60000);
   });

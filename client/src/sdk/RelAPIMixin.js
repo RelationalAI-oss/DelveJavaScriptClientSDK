@@ -34,15 +34,9 @@ function RelAPIMixin(Base) {
         transaction.dbname = dbname;
         transaction.readonly = isReadOnly;
         transaction.actions = actions;
+        transaction.version = this.getTransactionVersion(dbname);
 
-        try {
-          this.defaultApi.transactionPost(transaction, (error, result, response) => {
-            resolve({error, result, response});
-          });
-        }
-        catch(e) {
-          reject(e);
-        }
+        this._transactionPost(transaction, resolve, reject);
       });
     }
 
@@ -272,6 +266,36 @@ function RelAPIMixin(Base) {
     }
 
     /**
+     * Create a new database instance by cloning from an existing database, with all of the
+     * same state as the old database but with a new name.
+     *
+     * If overwrite=true is passed, an existing database at `cloneName` will be overwritten
+     * with `dbName`'s contents.
+     *
+     * @param {String} cloneName - The name of the new, cloned database
+     * @param {String} dbName - The name of the database from which to create the clone
+     * @param {Boolean} overwrite - If true, overwrites an existing database of name `cloneName`
+     * @returns {Promise} - Resolves to object: {error, result, response} where
+     * `result` is a `TransactionResult`.
+     */
+    cloneDatabase(cloneName, dbName, overwrite) {
+      const mode = overwrite
+        ? Transaction.ModeEnum.CLONE_OVERWRITE
+        : Transaction.ModeEnum.CLONE;
+
+      return new Promise((resolve, reject) => {
+        let transaction = new Transaction();
+        transaction.mode = mode;
+        transaction.dbname = cloneName;
+        transaction.source_dbname = dbName;
+        transaction.readonly = false;
+        transaction.actions = [];
+
+        this._transactionPost(transaction, resolve, reject);
+      });
+    }
+
+    /**
      * List Extensional Databases in database `dbname` with the relation name `relname`
      *
      * @param {String} dbname - The name of the database
@@ -299,6 +323,26 @@ function RelAPIMixin(Base) {
       const action = this.cardinalityAction(actionName, relname);
 
       return this.runAction(dbname, action, true, Transaction.ModeEnum.OPEN);
+    }
+
+    //
+    // Internal helper calling `transactionPost` while managing
+    // the transaction version.
+    //
+    _transactionPost(transaction, resolve, reject) {
+      const dbname = transaction.dbname;
+      let self = this;
+      try {
+        this.defaultApi.transactionPost(transaction, (error, result, response) => {
+          if (result && result.version > self.getTransactionVersion(dbname)) {
+            self.setTransactionVersion(dbname, result.version);
+          }
+          resolve({error, result, response});
+        });
+      }
+      catch(e) {
+        reject(e);
+      }
     }
   }
 

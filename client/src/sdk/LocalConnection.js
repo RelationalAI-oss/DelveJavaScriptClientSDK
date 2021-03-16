@@ -1,12 +1,12 @@
-import Connection from './Connection.js';
+import ConnectionBase from './ConnectionBase.js';
 import RelAPIMixin from './RelAPIMixin.js';
 
-const Base = RelAPIMixin(Connection);
+const Base = RelAPIMixin(ConnectionBase);
 
 /**
  * Class representing a local connection to the Rel Server
  *
- * @inherits Connection
+ * @inherits ConnectionBase
  * @mixes RelAPIMixin
  */
 class LocalConnection extends Base {
