@@ -4,6 +4,8 @@ import {
   LabeledAction,
   ListEdbAction,
   ListSourceAction,
+  LoadData,
+  LoadDataAction,
   ModifyWorkspaceAction,
   QueryAction,
   Source,
@@ -172,6 +174,30 @@ function RelAPIMixin(Base) {
     }
 
     /**
+     * Constructs an action to load JSON data
+     *
+     * @param {String} name - Name for this action
+     * @param {String} data - String data in JSON format
+     * @param {String} path - Path or url to JSON file if `data` is null
+     * @param {String} relname - Relation name
+     * @returns {LabledAction}
+     */
+     loadJSONAction(name, data, path, relname) {
+      let loadData = new LoadData();
+      loadData.content_type = 'application/json';
+      loadData.data = data;
+      loadData.path = path;
+      loadData.key = [];
+
+      let action = new LoadDataAction();
+      action.rel = relname;
+      action.value = loadData;
+      action.type = 'LoadDataAction';
+
+      return this.createLabeledAction(name, action)
+    }
+
+    /**
      * Query the database `dbname`
      *
      * @param {String} dbname - The database to connect to
@@ -323,6 +349,25 @@ function RelAPIMixin(Base) {
       const action = this.cardinalityAction(actionName, relname);
 
       return this.runAction(dbname, action, true, Transaction.ModeEnum.OPEN);
+    }
+
+    /**
+     * Import a JSON string or a JSON file
+     * Deprecated - Use the language-internal query instead.
+     *
+     * @param {String} dbname - The name of the database
+     * @param {String} data - A string representing the JSON to import. Provide either `data` or `path`
+     * @param {String} path - Path to a JSON file. Provide either `data` or `path`
+     * @param {String} relname - The relation name to use for referencing the JSON data
+     * @returns {Promise} - Resolves to object: {error, result, response} where
+     * `result` is a `TransactionResult`.
+     */
+    loadJSON(dbname, data, path, relname, actionName = 'action') {
+      console.warn('loadJSON is deprecated. Use the language-internal query instead.');
+
+      const action = this.loadJSONAction(actionName, data, path, relname);
+
+      return this.runAction(dbname, action, false, Transaction.ModeEnum.OPEN);
     }
 
     //
