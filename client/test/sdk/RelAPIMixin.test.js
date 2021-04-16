@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 const os = require('os');
 import LocalConnection from '../../src/sdk/LocalConnection.js';
 
-const defaultSources = ["intrinsics", "stdlib", "ml"];
+const defaultSources = ["alglib", "intrinsics", "stdlib", "ml"];
 const incrementQuery =
 `
 def insert[:x] = x + 1
