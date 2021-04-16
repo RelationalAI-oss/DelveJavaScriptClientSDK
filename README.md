@@ -93,6 +93,15 @@ module: {
 }
 ```
 
+### Running Tests
+
+To run the tests, cd into one of the directories below (e.g. `client`), and then after
+running `npm install` per above, you can run:
+
+```shell
+    npm run test
+```
+
 ## Getting Started
 
 Please follow the [installation](#installation) instruction and execute the following JS code:
