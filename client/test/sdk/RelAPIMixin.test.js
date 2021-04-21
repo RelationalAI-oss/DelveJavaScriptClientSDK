@@ -3,7 +3,6 @@ const fs = require('fs').promises;
 const os = require('os');
 import LocalConnection from '../../src/sdk/LocalConnection.js';
 
-const defaultSources = ["intrinsics", "stdlib", "ml"];
 const incrementQuery =
 `
 def insert[:x] = x + 1
@@ -75,13 +74,13 @@ describe('RelAPIMixin', () => {
     const dbname = createUniqueName('db');
     initializeDatabase(dbname);
 
-    it(`listSources for ${dbname} should include the keys [${defaultSources.join()}]`, () => {
+    it(`listSources for ${dbname} should include at least one file`, () => {
       return lc.listSources(dbname).then(res => {
         assert.notStrictEqual(res.result.actions, null);
         assert.notStrictEqual(res.result.actions[0], null);
         assert.notStrictEqual(res.result.actions[0].result, null);
         assert.notStrictEqual(res.result.actions[0].result.sources, null);
-        assert(setsEqual(new Set(res.result.actions[0].result.sources.map(x => x.name)), new Set(defaultSources)));
+        assert.notStrictEqual(res.result.actions[0].result.sources.length, 0);
       });
     }).timeout(60000);
     it(`should install 'def foo = {(1,);(2,);(3,)}' without error into test-1.delve via #installSource`, () => {
@@ -94,9 +93,9 @@ describe('RelAPIMixin', () => {
       return lc.listSources(dbname).then(res => {
         assert.strictEqual(res.error, null);
         assert.strictEqual(res.result.problems.length, 0);
-        assert.strictEqual(res.result.actions[0].result.sources.length, defaultSources.length + 1);
+        assert.notStrictEqual(res.result.actions[0].result.sources.length, 0);
         let match = false;
-        for (let i = 0; i < (defaultSources.length + 1); i++) {
+        for (let i = 0; i < (res.result.actions[0].result.sources.length); i++) {
           if (res.result.actions[0].result.sources[i].name === 'test-1.delve') {
             match = true;
           }
@@ -117,9 +116,16 @@ describe('RelAPIMixin', () => {
         assert.strictEqual(res.result.problems.length, 0);
       });
     }).timeout(60000);
-    it(`should be only ${defaultSources.length} sources installed now`, () => {
+    it(`test-1.delve should no longer be installed`, () => {
       return lc.listSources(dbname).then(res => {
-        assert.strictEqual(res.result.actions[0].result.sources.length, defaultSources.length);
+        assert.notStrictEqual(res.result.actions[0].result.sources.length, 0);
+        let match = false;
+        for (let i = 0; i < (res.result.actions[0].result.sources.length); i++) {
+          if (res.result.actions[0].result.sources[i].name === 'test-1.delve') {
+            match = true;
+          }
+        }
+        assert(!match);
       });
     }).timeout(60000);
   });
@@ -471,9 +477,9 @@ describe('RelAPIMixin', () => {
       return lc.listSources(dbname).then(res => {
         assert.strictEqual(res.error, null);
         assert.strictEqual(res.result.problems.length, 0);
-        assert.strictEqual(res.result.actions[0].result.sources.length, defaultSources.length + 1);
+        assert.notStrictEqual(res.result.actions[0].result.sources.length, 0);
         let match = false;
-        for (let i = 0; i < (defaultSources.length + 1); i++) {
+        for (let i = 0; i < (res.result.actions[0].result.sources.length); i++) {
           if (res.result.actions[0].result.sources[i].name === 'test-1.delve') {
             match = true;
           }
@@ -491,9 +497,9 @@ describe('RelAPIMixin', () => {
       return lc.listSources(uniqueCloneName).then(res => {
         assert.strictEqual(res.error, null);
         assert.strictEqual(res.result.problems.length, 0);
-        assert.strictEqual(res.result.actions[0].result.sources.length, defaultSources.length + 1);
+        assert.notStrictEqual(res.result.actions[0].result.sources.length, 0);
         let match = false;
-        for (let i = 0; i < (defaultSources.length + 1); i++) {
+        for (let i = 0; i < (res.result.actions[0].result.sources.length); i++) {
           if (res.result.actions[0].result.sources[i].name === 'test-1.delve') {
             match = true;
           }
@@ -518,9 +524,9 @@ describe('RelAPIMixin', () => {
       return lc.listSources(uniqueCloneName).then(res => {
         assert.strictEqual(res.error, null);
         assert.strictEqual(res.result.problems.length, 0);
-        assert.strictEqual(res.result.actions[0].result.sources.length, defaultSources.length + 1);
+        assert.notStrictEqual(res.result.actions[0].result.sources.length, 0);
         let match = false;
-        for (let i = 0; i < (defaultSources.length + 1); i++) {
+        for (let i = 0; i < (res.result.actions[0].result.sources.length); i++) {
           if (res.result.actions[0].result.sources[i].name === 'test-1.delve') {
             match = true;
           }
