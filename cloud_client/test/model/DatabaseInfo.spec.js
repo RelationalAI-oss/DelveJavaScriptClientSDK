@@ -56,43 +56,43 @@
 
     it('should have the property accountName (base name: "account_name")', function() {
       // uncomment below and update the code to test the property accountName
-      //var instane = new RaiCloudSdk.DatabaseInfo();
+      //var instance = new RaiCloudSdk.DatabaseInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new RaiCloudSdk.DatabaseInfo();
+      //var instance = new RaiCloudSdk.DatabaseInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property region (base name: "region")', function() {
       // uncomment below and update the code to test the property region
-      //var instane = new RaiCloudSdk.DatabaseInfo();
+      //var instance = new RaiCloudSdk.DatabaseInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new RaiCloudSdk.DatabaseInfo();
+      //var instance = new RaiCloudSdk.DatabaseInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property createdBy (base name: "created_by")', function() {
       // uncomment below and update the code to test the property createdBy
-      //var instane = new RaiCloudSdk.DatabaseInfo();
+      //var instance = new RaiCloudSdk.DatabaseInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property defaultComputeName (base name: "default_compute_name")', function() {
       // uncomment below and update the code to test the property defaultComputeName
-      //var instane = new RaiCloudSdk.DatabaseInfo();
+      //var instance = new RaiCloudSdk.DatabaseInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instane = new RaiCloudSdk.DatabaseInfo();
+      //var instance = new RaiCloudSdk.DatabaseInfo();
       //expect(instance).to.be();
     });
 

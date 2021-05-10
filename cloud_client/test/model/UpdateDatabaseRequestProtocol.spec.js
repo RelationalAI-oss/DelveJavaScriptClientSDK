@@ -56,25 +56,25 @@
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new RaiCloudSdk.UpdateDatabaseRequestProtocol();
+      //var instance = new RaiCloudSdk.UpdateDatabaseRequestProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property defaultComputeName (base name: "default_compute_name")', function() {
       // uncomment below and update the code to test the property defaultComputeName
-      //var instane = new RaiCloudSdk.UpdateDatabaseRequestProtocol();
+      //var instance = new RaiCloudSdk.UpdateDatabaseRequestProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property removeDefaultCompute (base name: "remove_default_compute")', function() {
       // uncomment below and update the code to test the property removeDefaultCompute
-      //var instane = new RaiCloudSdk.UpdateDatabaseRequestProtocol();
+      //var instance = new RaiCloudSdk.UpdateDatabaseRequestProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property dryrun (base name: "dryrun")', function() {
       // uncomment below and update the code to test the property dryrun
-      //var instane = new RaiCloudSdk.UpdateDatabaseRequestProtocol();
+      //var instance = new RaiCloudSdk.UpdateDatabaseRequestProtocol();
       //expect(instance).to.be();
     });
 

@@ -56,13 +56,13 @@
 
     it('should have the property user (base name: "user")', function() {
       // uncomment below and update the code to test the property user
-      //var instane = new RaiCloudSdk.CreateUserResponseProtocol();
+      //var instance = new RaiCloudSdk.CreateUserResponseProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property privateKey (base name: "private_key")', function() {
       // uncomment below and update the code to test the property privateKey
-      //var instane = new RaiCloudSdk.CreateUserResponseProtocol();
+      //var instance = new RaiCloudSdk.CreateUserResponseProtocol();
       //expect(instance).to.be();
     });
 

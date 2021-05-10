@@ -56,7 +56,7 @@
 
     it('should have the property credits (base name: "credits")', function() {
       // uncomment below and update the code to test the property credits
-      //var instane = new RaiCloudSdk.ComputeCreditsInfo();
+      //var instance = new RaiCloudSdk.ComputeCreditsInfo();
       //expect(instance).to.be();
     });
 

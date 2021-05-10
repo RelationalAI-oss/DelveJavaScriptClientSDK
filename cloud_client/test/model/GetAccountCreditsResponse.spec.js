@@ -56,25 +56,25 @@
 
     it('should have the property startPeriod (base name: "start_period")', function() {
       // uncomment below and update the code to test the property startPeriod
-      //var instane = new RaiCloudSdk.GetAccountCreditsResponse();
+      //var instance = new RaiCloudSdk.GetAccountCreditsResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property endPeriod (base name: "end_period")', function() {
       // uncomment below and update the code to test the property endPeriod
-      //var instane = new RaiCloudSdk.GetAccountCreditsResponse();
+      //var instance = new RaiCloudSdk.GetAccountCreditsResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property compute (base name: "compute")', function() {
       // uncomment below and update the code to test the property compute
-      //var instane = new RaiCloudSdk.GetAccountCreditsResponse();
+      //var instance = new RaiCloudSdk.GetAccountCreditsResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property storage (base name: "storage")', function() {
       // uncomment below and update the code to test the property storage
-      //var instane = new RaiCloudSdk.GetAccountCreditsResponse();
+      //var instance = new RaiCloudSdk.GetAccountCreditsResponse();
       //expect(instance).to.be();
     });
 

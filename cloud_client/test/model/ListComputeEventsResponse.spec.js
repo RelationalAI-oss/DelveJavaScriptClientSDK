@@ -56,7 +56,7 @@
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instane = new RaiCloudSdk.ListComputeEventsResponse();
+      //var instance = new RaiCloudSdk.ListComputeEventsResponse();
       //expect(instance).to.be();
     });
 

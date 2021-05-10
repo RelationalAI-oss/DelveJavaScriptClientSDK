@@ -56,19 +56,19 @@
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new RaiCloudSdk.DeleteComputeStatus();
+      //var instance = new RaiCloudSdk.DeleteComputeStatus();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instane = new RaiCloudSdk.DeleteComputeStatus();
+      //var instance = new RaiCloudSdk.DeleteComputeStatus();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new RaiCloudSdk.DeleteComputeStatus();
+      //var instance = new RaiCloudSdk.DeleteComputeStatus();
       //expect(instance).to.be();
     });
 

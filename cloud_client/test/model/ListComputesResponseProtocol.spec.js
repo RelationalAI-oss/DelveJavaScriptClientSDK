@@ -56,7 +56,7 @@
 
     it('should have the property computes (base name: "computes")', function() {
       // uncomment below and update the code to test the property computes
-      //var instane = new RaiCloudSdk.ListComputesResponseProtocol();
+      //var instance = new RaiCloudSdk.ListComputesResponseProtocol();
       //expect(instance).to.be();
     });
 

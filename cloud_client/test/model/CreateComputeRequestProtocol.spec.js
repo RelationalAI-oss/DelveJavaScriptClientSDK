@@ -56,25 +56,25 @@
 
     it('should have the property region (base name: "region")', function() {
       // uncomment below and update the code to test the property region
-      //var instane = new RaiCloudSdk.CreateComputeRequestProtocol();
+      //var instance = new RaiCloudSdk.CreateComputeRequestProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new RaiCloudSdk.CreateComputeRequestProtocol();
+      //var instance = new RaiCloudSdk.CreateComputeRequestProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property size (base name: "size")', function() {
       // uncomment below and update the code to test the property size
-      //var instane = new RaiCloudSdk.CreateComputeRequestProtocol();
+      //var instance = new RaiCloudSdk.CreateComputeRequestProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property dryrun (base name: "dryrun")', function() {
       // uncomment below and update the code to test the property dryrun
-      //var instane = new RaiCloudSdk.CreateComputeRequestProtocol();
+      //var instance = new RaiCloudSdk.CreateComputeRequestProtocol();
       //expect(instance).to.be();
     });
 

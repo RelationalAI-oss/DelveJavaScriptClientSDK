@@ -56,31 +56,31 @@
 
     it('should have the property eventId (base name: "event_id")', function() {
       // uncomment below and update the code to test the property eventId
-      //var instane = new RaiCloudSdk.ComputeEventInfo();
+      //var instance = new RaiCloudSdk.ComputeEventInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property accountName (base name: "account_name")', function() {
       // uncomment below and update the code to test the property accountName
-      //var instane = new RaiCloudSdk.ComputeEventInfo();
+      //var instance = new RaiCloudSdk.ComputeEventInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property computeId (base name: "compute_id")', function() {
       // uncomment below and update the code to test the property computeId
-      //var instane = new RaiCloudSdk.ComputeEventInfo();
+      //var instance = new RaiCloudSdk.ComputeEventInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property event (base name: "event")', function() {
       // uncomment below and update the code to test the property event
-      //var instane = new RaiCloudSdk.ComputeEventInfo();
+      //var instance = new RaiCloudSdk.ComputeEventInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property time (base name: "time")', function() {
       // uncomment below and update the code to test the property time
-      //var instane = new RaiCloudSdk.ComputeEventInfo();
+      //var instance = new RaiCloudSdk.ComputeEventInfo();
       //expect(instance).to.be();
     });
 

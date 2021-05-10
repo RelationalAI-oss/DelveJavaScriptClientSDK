@@ -56,7 +56,7 @@
 
     it('should have the property compute (base name: "compute")', function() {
       // uncomment below and update the code to test the property compute
-      //var instane = new RaiCloudSdk.CreateComputeResponseProtocol();
+      //var instance = new RaiCloudSdk.CreateComputeResponseProtocol();
       //expect(instance).to.be();
     });
 

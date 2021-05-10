@@ -56,7 +56,7 @@
 
     it('should have the property databases (base name: "databases")', function() {
       // uncomment below and update the code to test the property databases
-      //var instane = new RaiCloudSdk.ListDatabasesResponseProtocol();
+      //var instance = new RaiCloudSdk.ListDatabasesResponseProtocol();
       //expect(instance).to.be();
     });
 

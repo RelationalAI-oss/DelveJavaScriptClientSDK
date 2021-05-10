@@ -56,13 +56,13 @@
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new RaiCloudSdk.DeleteComputeRequestProtocol();
+      //var instance = new RaiCloudSdk.DeleteComputeRequestProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property dryrun (base name: "dryrun")', function() {
       // uncomment below and update the code to test the property dryrun
-      //var instane = new RaiCloudSdk.DeleteComputeRequestProtocol();
+      //var instance = new RaiCloudSdk.DeleteComputeRequestProtocol();
       //expect(instance).to.be();
     });
 

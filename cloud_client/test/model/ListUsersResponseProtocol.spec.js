@@ -56,7 +56,7 @@
 
     it('should have the property users (base name: "users")', function() {
       // uncomment below and update the code to test the property users
-      //var instane = new RaiCloudSdk.ListUsersResponseProtocol();
+      //var instance = new RaiCloudSdk.ListUsersResponseProtocol();
       //expect(instance).to.be();
     });
 

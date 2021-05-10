@@ -56,73 +56,73 @@
 
     it('should have the property accountName (base name: "account_name")', function() {
       // uncomment below and update the code to test the property accountName
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property createdBy (base name: "created_by")', function() {
       // uncomment below and update the code to test the property createdBy
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property size (base name: "size")', function() {
       // uncomment below and update the code to test the property size
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property region (base name: "region")', function() {
       // uncomment below and update the code to test the property region
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property infrastructure (base name: "infrastructure")', function() {
       // uncomment below and update the code to test the property infrastructure
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property requestedOn (base name: "requested_on")', function() {
       // uncomment below and update the code to test the property requestedOn
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property createdOn (base name: "created_on")', function() {
       // uncomment below and update the code to test the property createdOn
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property deletedOn (base name: "deleted_on")', function() {
       // uncomment below and update the code to test the property deletedOn
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new RaiCloudSdk.ComputeInfoProtocol();
+      //var instance = new RaiCloudSdk.ComputeInfoProtocol();
       //expect(instance).to.be();
     });
 

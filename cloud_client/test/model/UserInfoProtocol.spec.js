@@ -56,31 +56,31 @@
 
     it('should have the property accountName (base name: "account_name")', function() {
       // uncomment below and update the code to test the property accountName
-      //var instane = new RaiCloudSdk.UserInfoProtocol();
+      //var instance = new RaiCloudSdk.UserInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property username (base name: "username")', function() {
       // uncomment below and update the code to test the property username
-      //var instane = new RaiCloudSdk.UserInfoProtocol();
+      //var instance = new RaiCloudSdk.UserInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new RaiCloudSdk.UserInfoProtocol();
+      //var instance = new RaiCloudSdk.UserInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property accessKey1 (base name: "access_key1")', function() {
       // uncomment below and update the code to test the property accessKey1
-      //var instane = new RaiCloudSdk.UserInfoProtocol();
+      //var instance = new RaiCloudSdk.UserInfoProtocol();
       //expect(instance).to.be();
     });
 
     it('should have the property createdBy (base name: "created_by")', function() {
       // uncomment below and update the code to test the property createdBy
-      //var instane = new RaiCloudSdk.UserInfoProtocol();
+      //var instance = new RaiCloudSdk.UserInfoProtocol();
       //expect(instance).to.be();
     });
 
