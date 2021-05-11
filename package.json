@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/RelationalAI-oss/DelveJavaScriptClientSDK#readme",
   "dependencies": {
-    "rai_cloud_sdk": "file:cloud_client",
     "rai_db_sdk": "file:client"
   }
 }
