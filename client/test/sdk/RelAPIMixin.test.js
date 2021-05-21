@@ -306,7 +306,7 @@ describe('RelAPIMixin', () => {
     const inputs2 = [
       {
         rel_key: {
-          values: ["DelveFixedSizeStrings.FixedSizeString{DelveFixedSizeStrings.Str128}"],
+          values: ["String"],
           name: 'query_cell_id',
           keys: [],
           type: 'RelKey',
@@ -316,7 +316,7 @@ describe('RelAPIMixin', () => {
       },
       {
         rel_key: {
-          values: ["DelveFixedSizeStrings.FixedSizeString{DelveFixedSizeStrings.Str128}"],
+          values: ["String"],
           name: 'query_value',
           keys: [],
           type: 'RelKey',
@@ -326,7 +326,7 @@ describe('RelAPIMixin', () => {
       },
       {
         rel_key: {
-          values: ["DelveFixedSizeStrings.FixedSizeString{DelveFixedSizeStrings.Str128}"],
+          values: ["String"],
           name: 'query_notebook_name',
           keys: [],
           type: 'RelKey',
