@@ -82,6 +82,14 @@ class TestHarness extends LitElement {
           this._createDatabase(dbname, computeName, true);
           break;
 
+        case 'cloneDBBtn':
+          dbname = root.getElementById('cloneSourceDBInput').value;
+          const cloneName = root.getElementById('cloneDestDBInput').value;
+          computeName = root.getElementById('cloneDBComputeInput').value;
+          computeName = computeName ?? (computeName.length > 0 ? computeName : null);
+          this._cloneDatabase(cloneName, dbname, computeName, true);
+          break;
+
         case 'runQueryBtn':
           dbname = root.getElementById('queryDBInput').value;
           computeName = root.getElementById('queryComputeInput').value;
@@ -210,7 +218,14 @@ class TestHarness extends LitElement {
         <div class="test-section-title">Create database</div>
         <input type="text" id="createDBInput" placeholder="Database name" />
         <input type="text" id="createDBComputeInput" placeholder="Compute name" />
-        <button id="createDBBtn">Create new database</button>
+        <button id="createDBBtn">Create/overwrite new database</button>
+      </div>
+      <div class="test-section">
+        <div class="test-section-title">Clone database</div>
+        <input type="text" id="cloneSourceDBInput" placeholder="Source database name" />
+        <input type="text" id="cloneDestDBInput" placeholder="Destination clone name" />
+        <input type="text" id="cloneDBComputeInput" placeholder="Compute name" />
+        <button id="cloneDBBtn">Clone with overwrite</button>
       </div>
       <div class="test-section">
         <div class="test-section-title">Query</div>
@@ -307,6 +322,20 @@ class TestHarness extends LitElement {
     try {
       const response = await this._raiConnection.createDatabase(dbname, compute, overwrite);
       console.log('Create database: ', response);
+
+      if (response.result) {
+        this._listDatabases();
+      }
+    }
+    catch(error) {
+      console.error(error);
+    }
+  }
+
+  async _cloneDatabase(cloneName, dbname, compute, overwrite) {
+    try {
+      const response = await this._raiConnection.cloneDatabase(cloneName, dbname, compute, overwrite);
+      console.log('Clone database: ', response);
 
       if (response.result) {
         this._listDatabases();
