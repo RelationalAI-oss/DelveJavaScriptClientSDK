@@ -6,6 +6,7 @@
   "dependencies": {
     "compression": "1.7.4",
     "dotenv": "8.2.0",
+    "elix": "15.0.0",
     "express": "4.17.1",
     "lit": "2.0.0-rc.1",
     "litjsx": "robbear/litjsx",
@@ -21,9 +22,9 @@
     "node": "14.15.5"
   },
   "scripts": {
-    "build": "npm run clean && node tasks/buildTimestamp.js && npm run webpack",
+    "build": "npm run clean && node tasks/buildTimestamp.js && npm run webpack-dev",
     "clean": "rm -rf client/generated && mkdir -p client/generated",
-    "devbuild": "npm run clean && node tasks/buildTimestamp.js && npm run webpack-dev",
+    "prodbuild": "npm run clean && node tasks/buildTimestamp.js && npm run webpack",
     "start": "node server/app.js",
     "webpack": "webpack --config webpack.config.js",
     "webpack-dev": "webpack --config webpack.config.dev.js"
