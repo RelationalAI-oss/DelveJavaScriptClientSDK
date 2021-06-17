@@ -113,6 +113,30 @@ import UpdateActionResult from './model/UpdateActionResult';
 import WorkspaceLoadProblem from './model/WorkspaceLoadProblem';
 import DefaultApi from './api/DefaultApi';
 
+import ComputeCreditsInfo from './model/ComputeCreditsInfo';
+import ComputeEventInfo from './model/ComputeEventInfo';
+import ComputeInfoProtocol from './model/ComputeInfoProtocol';
+import CreateComputeRequestProtocol from './model/CreateComputeRequestProtocol';
+import CreateComputeResponseProtocol from './model/CreateComputeResponseProtocol';
+import CreateUserRequestProtocol from './model/CreateUserRequestProtocol';
+import CreateUserResponseProtocol from './model/CreateUserResponseProtocol';
+import DatabaseInfo from './model/DatabaseInfo';
+import DeleteComputeRequestProtocol from './model/DeleteComputeRequestProtocol';
+import DeleteComputeResponseProtocol from './model/DeleteComputeResponseProtocol';
+import DeleteComputeStatus from './model/DeleteComputeStatus';
+import GetAccountCreditsResponse from './model/GetAccountCreditsResponse';
+import ListComputeEventsResponse from './model/ListComputeEventsResponse';
+import ListComputesResponseProtocol from './model/ListComputesResponseProtocol';
+import ListDatabasesResponseProtocol from './model/ListDatabasesResponseProtocol';
+import ListUsersResponseProtocol from './model/ListUsersResponseProtocol';
+import StorageCreditsInfo from './model/StorageCreditsInfo';
+import UpdateDatabaseRequestProtocol from './model/UpdateDatabaseRequestProtocol';
+import UserInfoProtocol from './model/UserInfoProtocol';
+
+import Connection from './sdk/Connection';
+import RelAPIMixin from './sdk/RelAPIMixin';
+import RAICloudAPIMixin from './sdk/RAICloudAPIMixin';
+
 
 /**
 * This_is_a_Client_SDK_for_Delve_API.<br>
@@ -744,5 +768,138 @@ export {
     * The DefaultApi service constructor.
     * @property {module:api/DefaultApi}
     */
-    DefaultApi
+    DefaultApi,
+
+    /**
+     * The ComputeCreditsInfo model constructor.
+     * @property {module:model/ComputeCreditsInfo}
+     */
+    ComputeCreditsInfo,
+
+    /**
+     * The ComputeEventInfo model constructor.
+     * @property {module:model/ComputeEventInfo}
+     */
+    ComputeEventInfo,
+
+    /**
+     * The ComputeInfoProtocol model constructor.
+     * @property {module:model/ComputeInfoProtocol}
+     */
+    ComputeInfoProtocol,
+
+    /**
+     * The CreateComputeRequestProtocol model constructor.
+     * @property {module:model/CreateComputeRequestProtocol}
+     */
+    CreateComputeRequestProtocol,
+
+    /**
+     * The CreateComputeResponseProtocol model constructor.
+     * @property {module:model/CreateComputeResponseProtocol}
+     */
+    CreateComputeResponseProtocol,
+
+    /**
+     * The CreateUserRequestProtocol model constructor.
+     * @property {module:model/CreateUserRequestProtocol}
+     */
+    CreateUserRequestProtocol,
+
+    /**
+     * The CreateUserResponseProtocol model constructor.
+     * @property {module:model/CreateUserResponseProtocol}
+     */
+    CreateUserResponseProtocol,
+
+    /**
+     * The DatabaseInfo model constructor.
+     * @property {module:model/DatabaseInfo}
+     */
+    DatabaseInfo,
+
+    /**
+     * The DeleteComputeRequestProtocol model constructor.
+     * @property {module:model/DeleteComputeRequestProtocol}
+     */
+    DeleteComputeRequestProtocol,
+
+    /**
+     * The DeleteComputeResponseProtocol model constructor.
+     * @property {module:model/DeleteComputeResponseProtocol}
+     */
+    DeleteComputeResponseProtocol,
+
+    /**
+     * The DeleteComputeStatus model constructor.
+     * @property {module:model/DeleteComputeStatus}
+     */
+    DeleteComputeStatus,
+
+    /**
+     * The GetAccountCreditsResponse model constructor.
+     * @property {module:model/GetAccountCreditsResponse}
+     */
+    GetAccountCreditsResponse,
+
+    /**
+     * The ListComputeEventsResponse model constructor.
+     * @property {module:model/ListComputeEventsResponse}
+     */
+    ListComputeEventsResponse,
+
+    /**
+     * The ListComputesResponseProtocol model constructor.
+     * @property {module:model/ListComputesResponseProtocol}
+     */
+    ListComputesResponseProtocol,
+
+    /**
+     * The ListDatabasesResponseProtocol model constructor.
+     * @property {module:model/ListDatabasesResponseProtocol}
+     */
+    ListDatabasesResponseProtocol,
+
+    /**
+     * The ListUsersResponseProtocol model constructor.
+     * @property {module:model/ListUsersResponseProtocol}
+     */
+    ListUsersResponseProtocol,
+
+    /**
+     * The StorageCreditsInfo model constructor.
+     * @property {module:model/StorageCreditsInfo}
+     */
+    StorageCreditsInfo,
+
+    /**
+     * The UpdateDatabaseRequestProtocol model constructor.
+     * @property {module:model/UpdateDatabaseRequestProtocol}
+     */
+    UpdateDatabaseRequestProtocol,
+
+    /**
+     * The UserInfoProtocol model constructor.
+     * @property {module:model/UserInfoProtocol}
+     */
+    UserInfoProtocol,
+
+    /**
+     * The Connection sdk constructor.
+     * @property {module:sdk/Connection}
+     */
+     Connection,
+
+    /**
+     * The RelAPIMixin sdk constructor.
+     * @property {module:sdk/RelAPIMixin}
+     */
+    RelAPIMixin,
+
+    /**
+     * The RAICloudAPIMixin sdk constructor.
+     * @property {module:sdk/RAICloudAPIMixin}
+     */
+    RAICloudAPIMixin
+
 };

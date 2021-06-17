@@ -1,115 +1,111 @@
-const sdk = require('../index.js');
+import { DefaultApi } from '../index.js';
+import ApiClient from '../ApiClient.js';
+import RelAPIMixin from './RelAPIMixin.js';
+import RAICloudAPIMixin from './RAICloudAPIMixin.js';
 
-/** Class representing a Connection. */
-class Connection {
-    /**
-     * Create a Connection
-     * @param {Object} [params] - User specified override values.
-     * @param {string} [params.scheme="http"] - Connection scheme.
-     * @param {string} [params.host="127.0.0.1"] -Address of running server.
-     * @param {number} [params.port=8010] - Port of running server. *Must be an Integer.*
-     * @param {string} [params.debugLevel=0] - Desired debugging level.
-     * @param {number} [params.connectionTimeout=300] - Connection timeout duration.
-     * @param {Transaction.ModeEnum} [params.defaultOpenMode=OPEN]
-     */
-    constructor(params) {
-        const _params = typeof params === 'undefined' ? new Object() : params
-        
-        this.scheme = _params.scheme || "http"
-        this.host = _params.host || "127.0.0.1"
-        this.port = _params.port || 8010
-        this.debugLevel = _params.debugLevel || 0
-        this.connectionTimeout = _params.connectionTimeout || 300 // seconds
-        this.defaultOpenMode = _params.defaultOpenMode || sdk.Transaction.ModeEnum.OPEN
-    }
+/**
+ * Class representing a connection to the RAI Infrastructure,
+ * including the degenerate case of a local server.
+ *
+ * @mixes RelAPIMixin
+ * @mixes RAICloudAPIMixin
+ */
+class Connection extends RelAPIMixin(RAICloudAPIMixin(class {})) {
+  /**
+   * Create a connection
+   *
+   * @param {Object} params Optional parameters
+   * @param {String} params.basePath - The base URL against which to resolve every API call's (relative) path.
+   * The default is http://127.0.0.1:8010.
+   * @param {Number} params.timeout - The default HTTP timeout for all API calls. The default is 60000
+   * @param {String} params.accessToken - The API access token
+   */
+  constructor(params = {}) {
+    super(params);
 
-    /**
-     * Get connection scheme
-     */
-    get scheme() {
-        return this._scheme
-    }
+    const apiClient = new ApiClient();
+    this._defaultApi = new DefaultApi(apiClient);
+    this._api = this._defaultApi.apiClient;
+    this._versionMap = new Map()
 
-    /**
-     * Setter for scheme
-     */
-    set scheme(s) {
-        this._scheme = s
+    if (params.hasOwnProperty('basePath')) {
+      this._api.basePath = params.basePath;
     }
+    if (params.hasOwnProperty('timeout')) {
+      this._api.timeout = params.timeout;
+    }
+    if (params.hasOwnProperty('isLocalServer')) {
+      this.isLocalServer = params.isLocalServer;
+    }
+    if (params.hasOwnProperty('accessToken')) {
+      this.accessToken = params.accessToken;
+    } else {
+      this.accessToken = '';
+    }
+  }
 
-    /**
-     * Get connection host
-     */
-    get host() {
-        return this._host
-    }
+  get isLocalServer() {
+    return !!this._isLocalServer;
+  }
+  set isLocalServer(isLocalServer) {
+    this._isLocalServer = isLocalServer;
+  }
 
-    /**
-     * Setter for host
-     */
-    set host(addr) {
-        this._host = addr
-    }
+  get accessToken() {
+    return this._accessToken;
+  }
+  set accessToken(accessToken) {
+    this._accessToken = accessToken;
 
-    /**
-     * Get connection port
-     */
-    get port() {
-        return this._port
+    this._api.authentications = {
+      'BearerAuth': {
+        type: 'bearer',
+        accessToken: this._accessToken
+      }
     }
+  }
 
-    /**
-     * Setter for port
-     */
-    set port(p) {
-        this._port = p
-    }
+  get api() {
+    return this._api;
+  }
 
-    /**
-     * Get debug level.
-     * @return {number} Current debug level.
-     */
-    get debugLevel() {
-        return this._debugLevel
-    }
+  get defaultApi() {
+    return this._defaultApi;
+  }
 
-    /**
-     * Set debug level.
-     * @param {number} level - Desired debug level.
-     */
-    set debugLevel(level) {
-        this._debugLevel = level
-    }
+  get basePath() {
+    return this._api.basePath;
+  }
+  set basePath(basePath) {
+    this._api.basePath = basePath;
+  }
 
-    /**
-     * Get duration of connection timeout (seconds).
-     * @return {number} Current connection timeout in seconds.
-     */
-    get connectionTimeout() {
-        return this._connectionTimeout
-    }
+  get timeout() {
+    return this._api.timeout;
+  }
+  set timeout(timeout) {
+    this._api.timeout = timeout;
+  }
 
-    /**
-     * Set duration of connection timeout (seconds).
-     * @param {number} duration - Duration of connection timeout, in seconds.
-     */
-    set connectionTimeout(duration) {
-        this._connectionTimeout = duration
-    }
+  /**
+   * Returns the database's current transaction version value.
+   *
+   * @param {String} dbname - The name of the database
+   */
+  getTransactionVersion(dbname) {
+    const version = this._versionMap.get(dbname);
+    return version == null ? 0 : version;
+  }
 
-    /**
-     * Get connection defaultOpenMode
-     */
-    get defaultOpenMode() {
-        return this._defaultOpenMode
-    }
-
-    /**
-     * Setter for defaultOpenMode
-     */
-    set defaultOpenMode(mode) {
-        this._defaultOpenMode = mode
-    }
+  /**
+   * Sets the database's current transaction version value.
+   *
+   * @param {String} dbname - The name of the database
+   * @param {Int} transactionVersion - The database's transaction version value
+   */
+  setTransactionVersion(dbname, transactionVersion) {
+    this._versionMap.set(dbname, transactionVersion);
+  }
 }
 
-module.exports = Connection
+export default Connection;
